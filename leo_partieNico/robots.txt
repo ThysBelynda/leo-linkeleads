@@ -1,0 +1,4 @@
+Sitemap: http://www.linkeleads.com/sitemap.txt
+User-agent: *
+Disallow: /leo/
+Disallow: /lukas/

@@ -1,0 +1,385 @@
+@font-face {
+	font-family: 'Calibri';
+	src: url('font/Calibri.ttf') format('truetype');
+}
+
+body
+{
+	margin: 0px;
+	padding: 0px;
+	background: url("img/backgroundaccueil.png") fixed no-repeat white;
+	font-family: "Calibri";
+}
+
+#shadow
+{
+	
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 3;
+	opacity: 1;
+}
+
+#headeraccueil
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 60px;
+	background-color: #3989C3;
+	color: white;
+	font-weight: bold;
+}
+
+#headeraccueil > p
+{
+	position: relative;
+	top: 5px;
+}
+
+#cercleLeo
+{
+	width: 50px;
+	height: 50px;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 20px;
+	border-radius: 50%;
+	background-color: white;
+	z-index: 1;
+}
+
+#leoIndex
+{
+	position: relative;
+	bottom: 10px;
+	right: 4px;
+	width: 60px;
+	height: 60px;
+}
+
+#boutonConnexion
+{
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	width: 300px;
+	padding: 5px;
+	border: none;
+	border-radius: 5px;
+	background-color: white;
+	font-weight: bold;
+}
+
+#lienConnexion
+{
+	color: #3989C3;
+	text-decoration: none;
+}
+
+#firstbody
+{
+	height: 60%;
+	color: white;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+h1
+{
+	margin-top: 6%;
+	font-size: 1.7em;
+	font-weight: bold;
+	text-align: center;
+}
+
+#boutonInscription
+{
+	width: 350px;
+	height: 40px;
+	margin: auto;
+	margin-top: 50px;
+	border-radius: 3px;
+	background-color: #3989C3;
+	font-weight: bold;
+	text-align: center;
+}
+
+#boutonInscription > p
+{
+	position: relative;
+	top: 9px;
+	font-size: 21px;
+}
+
+#lienInscription
+{
+	color: white;
+	text-decoration: none;
+}
+
+#secondbody
+{
+	position: absolute;
+	bottom: 60px;
+	left: 0px;
+	width: 100%;
+	height: 200px;
+	background-color: white;
+	color: black;
+	text-align: center;
+}
+
+h2
+{
+	margin-top: 30px;
+	font-size: 1.7em;
+}
+
+#secondbody > p
+{
+	width: 70%;
+	margin: auto;
+	font-size: 1.4em;
+}
+
+.lienBleu
+{
+	color: blue;
+}
+
+/* ---------------------------------------------- */
+/*		FOOTER				  */
+/* ---------------------------------------------- */
+
+footer
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 60px;
+	background-color: #515151;
+	color: #D8D8D8;
+}
+
+#centerFoot
+{
+	margin-top: 20px;
+	text-align: center;
+}
+
+#questions
+{
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+}
+
+#txtQuestions
+{
+	position: relative;
+	top: 6px;
+}
+
+#socialNetwork
+{
+	position: absolute;
+	bottom: 3px;
+	right: 15px;
+}
+
+#linkedin
+{
+	width: 40px;
+	height: 40px;
+}
+
+
+/* ---------------------------------------------- */
+/*		POP UP CONNEXION		  */
+/* ---------------------------------------------- */
+
+#popupConnexion
+{
+	display: none;
+	position: absolute;
+	left: 50%;
+	width: 400px;
+	height: 450px;
+	margin-top: 50vh;
+	margin-left: -200px;
+	border-radius: 5px;
+	background-color: #E0E0E0;
+	transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 5;
+}
+
+#signInForm
+{
+	margin: auto;
+	margin-bottom: 60px;
+}
+
+#signInForm > input[type="password"]
+{
+	margin-bottom: 5px;
+}
+
+#mdpOubli
+{
+	margin-top: 0px;
+	font-size: 0.9em;
+}
+
+/* ---------------------------------------------- */
+/*		POP UP INSCRIPTION		  */
+/* ---------------------------------------------- */
+
+#popupInscription
+{
+	display: none;
+	position: absolute;
+	left: 50%;
+	width: 400px;
+	height: 550px;
+	margin-top: 50vh;
+	margin-left: -200px;
+	border-radius: 5px;
+	background-color: #E0E0E0;
+	transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 5;
+}
+
+#signUpForm
+{
+	margin: auto;
+	margin-bottom: 0px;	
+}
+
+/* ---------------------------------------------- */
+/*		POP UP PASSWORD FORGOT		  */
+/* ---------------------------------------------- */
+
+#motDePasseOublie
+{
+	display: none;
+	position: absolute;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: 50vh;
+	margin-left: -200px;
+	border-radius: 5px;
+	background-color: #E0E0E0;
+	transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 5;
+}
+
+#forgotForm
+{
+	margin: auto;
+}
+
+#titleMdp
+{
+	margin-bottom: 0px;
+}
+
+#forgotForm > input[type="submit"]
+{
+	background-color: #4180FF;
+	color: white;
+	font-size: 1em;
+}
+
+/* ---------------------------------------------- */
+/*		LES POP UP			  */
+/* ---------------------------------------------- */
+
+#closePopupConnexion, #closePopupInscription, #closePopupOublie, #closePopupValidee
+{
+	width: 30px;
+	position: relative;
+	left: 360px;
+	top: 10px;
+	height: 30px;
+	margin-bottom: 0px;
+}
+
+#signInForm, #signUpForm, #forgotForm
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 70%;
+}
+
+#signInForm > input, #signUpForm > input, #forgotForm > input
+{
+	height: 30px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	border: none;
+	background-color: white;
+}
+
+#signInForm > input[type="submit"], #signUpForm > input[type="submit"]
+{
+	background-color: #4180FF;
+	color: white;
+	font-size: 1.2em;
+}
+
+#popupConnexion > p, #popupInscription > p, #motDePasseOublie > p
+{
+	font-size: 0.9em;
+	text-align: center;
+}
+
+/* ---------------------------------------------- */
+/*		INSCRIPTION VALIDÉE		  */
+/* ---------------------------------------------- */
+
+#inscriptionValidee, #emailDeConfirmationEnvoye
+{
+	display: none;
+	position: absolute;
+	left: 50%;
+	width: 400px;
+	height: 250px;
+	margin-top: 50vh;
+	margin-left: -200px;
+	border-radius: 5px;
+	background-color: #E0E0E0;
+	transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 5;
+}
+
+#pourlaforme
+{
+	width: 70%;
+	margin: auto;
+	text-align: center;
+}
+
+#titleValidee
+{
+	color: green;
+}
+
+#imgValidee
+{
+	width: 50px;
+	height: 50px;
+}

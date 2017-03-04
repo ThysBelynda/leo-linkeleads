@@ -1,0 +1,140 @@
+@font-face {
+	font-family: 'Calibri';
+	src: url('../font/Calibri.ttf') format('truetype');
+}
+
+body
+{
+	background: url("ravenna.png") repeat;
+	font-family: "Calibri";
+	margin: 0px;
+	padding: 0px;
+}
+
+/* PAGE PAR DEFAUT */
+
+#contentDefault
+{
+	margin-top: 45vh;
+	transform: translateY(-50%);
+}
+
+#contentDefault > h1, #contentBoss > h1
+{
+	text-align: center;
+}
+
+form
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+input
+{
+	margin: auto;
+	margin-bottom: 10px;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+input[type="password"]
+{
+	padding-left: 10px;
+}
+
+/* PAGE AVEC BON MOT DE PASSE */
+
+#leoBossLeft, #leoBossRight
+{
+	position: absolute;
+	top: 10px;
+	width: 150px;
+	height: auto;
+}
+
+#leoBossLeft
+{
+	left: 10px;
+}
+
+#leoBossRight
+{
+	right: 10px;
+}
+
+h2
+{
+	text-align: center;
+}	
+
+#contentLukas, #listeYanclis
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#listeYanclis
+{
+	width: 80%;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.yanclis
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#topList
+{
+	font-weight: bold;
+}
+
+#contentLukas > p, #listeYanclis > p
+{
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.id, .prenom, .email, .nom
+{
+	overflow: auto;
+}
+
+.id
+{
+	width: 25px;
+	max-width: 25px;
+	min-width: 25px;
+}
+
+.prenom
+{
+	width: 100px;
+	max-width: 100px;
+	min-width: 100px;
+}
+
+.email
+{	
+	width: 250px;
+	max-width: 250px;
+	min-width: 250px;
+}
+
+.nom
+{
+	width: 200px;
+	max-width: 200px;
+	min-width: 200px;
+}

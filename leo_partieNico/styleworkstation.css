@@ -1,0 +1,1243 @@
+@font-face {
+	font-family: 'Calibri';
+	src: url('font/Calibri.ttf') format('truetype');
+}
+
+body
+{
+	font-family: "Calibri";
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ------------------------------------------------ */
+/*		HEADER				    */
+/* ------------------------------------------------ */
+
+header
+{
+	width: 100%;
+	height: 90px;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: #0085CC;
+	color: white;
+	text-align: center;
+	font-size: 0.8em;
+}
+
+#icoLeft
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+
+#backLeo
+{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: white;
+	margin-top: 15px;
+	margin-left: 20px;
+}
+
+#leoMenu
+{
+	width: 70px;
+	height: 70px;
+	position: relative;
+	bottom: 10px;
+	right: 4px;
+}
+
+.figureMenu
+{
+	display: flex;
+	flex-direction: column;
+	justiy-content: center;
+	text-align: center;
+}
+
+.icoMenu
+{
+	width: 30px;
+	height: 30px;
+	margin-top: 25px;
+	margin-left: 60px;
+	margin-bottom: 5px;
+}
+
+#icoProspection
+{
+	width: 40px;
+	height: 40px;	
+	margin-top: 20px;
+	margin-left: 43px;
+}
+
+#icoMessage
+{
+	position: relative;
+	right: 8px;
+}
+
+#icoReporting
+{
+	position: relative;
+	right: 9px;
+}
+
+#icoParametres
+{
+	position: relative;
+	right: 10px;
+}
+
+.textMenu
+{
+	margin-top: 0px;
+	margin-left: 40px;
+}
+
+.lienMenu
+{
+	color: white;
+	text-decoration: none;
+	position: relative;
+	bottom: 5px;
+}
+
+#icoRight
+{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#textAide
+{
+	position: relative;
+	left: 9px;
+}
+
+#situationCompte
+{
+	width: 130px;
+	text-align: left;
+	padding-left: 30px;
+	margin-left: 30px;
+	border-left: 1px solid #D9D9D9;
+}
+
+#identifiant
+{
+	margin-bottom: 0px;
+	font-weight: bold;
+}
+
+#rank
+{
+	margin-top: 0px;
+	margin-bottom: 3px;
+	font-size: 10px;
+}
+
+#upgrade
+{
+	margin-top: 0px;
+	background-color: white;
+	border: 1px solid #0085CC;
+	border-radius: 5px;
+	color: #0085CC;
+}
+
+/* -------------------------------------------------- */
+/*		PROSPECTION			      */
+/* -------------------------------------------------- */
+
+#unSurTrois
+{
+	display: block;
+}
+
+#title
+{
+	margin-top: 15px;
+	text-align: center;
+	font-weight: normal;	
+	font-size: 1.6em;
+}
+
+#content
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+	height: 430px;
+	margin: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+	border: 2px solid #D9D9D9;
+	background-color: #F2F2F2;
+}
+
+#cadreLeo
+{
+	width: 90%;
+	height: 135px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding: 0px;
+	text-align: center;
+	background-color: white;
+	border: 2px solid #D9D9D9;
+	overflow: hidden;
+}
+
+#imageLeo
+{
+	float: left;
+	position: relative;
+	left: 30px;
+	bottom: 0px;	
+	margin: 0px;
+}
+
+#paragrapheLeoProspect
+{
+	width: 55%;
+	margin-top: 3px;
+	margin-left: 175px;
+	padding-bottom: 0px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border: 1px solid #7F7F7F;
+	border-radius: 15px;
+	font-family: 'Calibri';
+	font-size: 15px;
+	line-height: 16px;
+}
+
+#tableauProspection
+{
+	width: 90%;
+	height: 155px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding: 0px;
+	padding-bottom: 5px;
+	background-color: white;
+	border: 2px solid #D9D9D9;
+}
+
+#colonnesProspection
+{
+	height: 30px;
+	margin: 0px;
+	padding: 0px;
+	padding-left: 2px;
+	background-color: #44546A;
+}
+
+#profilsRecoltes
+{
+	height: 125px;
+	margin-top: 5px;
+	padding-bottom: -10px;
+	overflow: auto;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+#suivantProspecter
+{
+	width: auto;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding: 6px;
+	background-color: white;
+	border: 2px solid #0070C0;
+	border-radius: 5px;
+	color: #0070C0;
+	font-weight: bold;
+}
+
+#tableTH
+{
+	border-spacing: 0px 8px;
+}
+
+#tableTD
+{
+	border-spacing: 2px 2px;
+}
+
+table
+{
+	text-align: left;
+}
+
+th
+{
+	color: white;
+	font-family: 'Calibri';
+	font-size: 0.9em;
+	font-weight: bold;
+	overflow: auto;
+}
+
+td
+{
+	font-size: 0.9em;
+	overflow: auto;
+}
+
+.prenom
+{
+	width: 60px;
+	max-width: 60px;
+}
+
+.nom
+{
+	width: 80px;
+	max-width: 80px;
+}
+
+.entreprise
+{
+	width: 95px;
+	max-width: 95px;
+}
+
+.profession
+{
+	width: 150px;
+	max-width: 150px;
+	text-align: left;
+}
+
+.croix
+{
+	width: 35px;
+	max-width: 35px;
+	text-align: center;
+}
+
+.redcross
+{
+	width: 15px;
+	height: 15px;
+}
+
+#preFooter
+{
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	border-top: 1px solid #E1E1E1;
+	text-align: center;
+}
+
+.blueAndBold
+{
+	color: #3366FF;
+	font-weight: bold;
+}
+
+/* -------------------------------------------------- */
+/*		PROSPECTER - 2/3
+/* -------------------------------------------------- */
+
+#deuxSurTrois
+{
+	display: none;
+}
+
+#paragrapheLeoProspect23
+{
+	width: 55%;
+	margin-top: 7px;
+	margin-left: 175px;
+	padding-bottom: 0px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border: 1px solid #7F7F7F;
+	border-radius: 15px;
+	font-family: 'Calibri';
+	font-size: 15px;
+	line-height: 16px;
+}
+
+#blocActions
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 90%;
+	height: 190px;
+	margin-top: 10px;
+	font-size: 0.8em;
+}
+
+#blocVisite, #blocInvitation, #blocMessage
+{
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	height: auto;
+	padding-bottom: 0px;
+	border: 2px solid #D9D9D9;
+	background-color: white;	
+	text-align: center;
+}
+
+.infosActions
+{
+	position: relative;
+	left: 113px;
+	top: 2px;
+	width: 20px;
+	height: 20px;
+}
+
+.imageAction
+{
+	width: 77px;
+	height: 77px;
+	margin: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#imageMessage
+{
+	position: relative;
+	top: 5px;
+	width: 65px;
+	height: 65px;
+	margin-bottom: 12px;
+}
+
+.txtBlocAction
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#txtActionMessage
+{
+	position: relative;
+	bottom: 3px;
+}	
+
+.selection
+{
+	padding-top: 3px;
+	padding-bottom: 1px;
+	border-top: 1px solid #D9D9D9;
+	color: #A0A0A0;
+	font-size: 1.1em;
+}
+
+#selectVisite
+{
+	position: relative;
+	top: 22px;
+}
+
+#selectInvit
+{
+	position: relative;
+	top: 6px;
+}
+
+#selectMessage
+{
+	position: relative;
+	bottom: 13px;
+}
+
+#boutons23
+{
+	margin-bottom: 0px;
+}
+
+#boutonPrecedent23, #boutonSuivant23, #boutonCommencer33, #boutonPrecedent33, #boutonReporting43, #boutonRecommencer43
+{
+	width: 150px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	padding: 4px;
+	border: 2px solid #0070C0;
+	border-radius: 5px;
+	background-color: white;
+	color: #0070C0;
+	font-weight: bold;
+}
+
+#boutonPrecedent23
+{
+	margin-right: 20px;
+}
+
+/* -------------------------------------------------- */
+/*		PROSPECTER - 3/3
+/* -------------------------------------------------- */
+
+#troisSurTrois
+{
+	display: none;
+}
+
+#cadreLeo33
+{
+	width: 90%;
+	height: 203px;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	padding: 0px;
+	text-align: center;
+	background-color: white;
+	border: 2px solid #D9D9D9;
+	overflow: hidden;
+}
+
+#paragrapheLeoProspect33
+{
+	width: 55%;
+	margin-top: 3px;
+	margin-left: 175px;
+	padding-bottom: 0px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border: 1px solid #7F7F7F;
+	border-radius: 15px;
+	font-family: 'Calibri';
+	font-size: 15px;
+	line-height: 16px;
+}
+
+#imageLeo33
+{
+	float: left;
+	position: relative;
+	left: 30px;
+	top: 63px;	
+	margin: 0px;
+}
+
+#boutons33
+{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+
+#boutonCommencer33
+{
+	margin-bottom: 0px;
+}
+
+#boutonPrecedent33
+{
+	margin-top: 5px;
+}
+
+#txtPreFooter33
+{
+	font-size: 0.9em;
+}
+
+/* -------------------------------------------------- */
+/*		PROSPECTER - Leo is Working
+/* -------------------------------------------------- */
+
+#leoIsWorking
+{
+	display: none;
+}
+
+#paragrapheLeoProspect43
+{
+	width: 55%;
+	margin-top: 6px;
+	margin-left: 175px;
+	padding-bottom: 0px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border: 1px solid #7F7F7F;
+	border-radius: 15px;
+	font-family: 'Calibri';
+	font-size: 15px;
+	line-height: 16px;
+}
+
+#paragrapheLeoProspect43 > p > a
+{
+	text-decoration: none;
+}
+
+#boutons43
+{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 30px;
+}
+
+#boutonReporting43, #boutonRecommencer43
+{
+	width: 230px;
+	padding: 6px;
+	position: relative;
+	top: 20px;
+}
+
+#boutonReporting43
+{
+	margin-bottom: 0px;
+}
+
+#boutonReporting43 > a
+{
+	color: #0070C0;
+	text-decoration: none;
+}
+
+#boutonRecommencer43
+{
+	margin-top: 10px;
+}
+
+/* ---------------------------------------------- */
+/* 		MESSAGE 			  */
+/* ---------------------------------------------- */
+
+#formSettings
+{
+	display: flex;
+	flex-direction: column;
+	justify-direction: center;
+	align-items: center;
+	width: 90%;
+	height: 450px;
+	margin-top: 20px;
+}
+
+#messageEnregistre
+{
+	width: 90%;
+	height: 450px;
+	margin-bottom: 20px;
+	padding: 10px;
+	border: 2px solid #D9D9D9;
+	overflow: auto;
+	color: #7F7F7F;
+	font-family: "Calibri";
+	font-size: 0.9em;
+}
+
+#parametresSubmit
+{
+	width: 100px;
+	height: 50px;
+	margin-bottom: 15px;
+	border: 2px solid #0070C0;
+	border-radius: 5px;
+	background-color: white;
+	color: #0070C0;
+	
+}
+
+/* ---------------------------------------------- */
+/* 		AIDE 				  */
+/* ---------------------------------------------- */
+
+#blocVideo
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
+#blocTitreVideo
+{
+	width: 500px;
+	height: auto;
+	background-color: #0085CC;
+}
+
+#titreVideo
+{
+	font-size: 1.2em;
+	font-weight: normal;
+	color: white;
+	text-align: center;
+}
+
+#faislemouv
+{
+	width: 500px;
+	height: 300px;
+	border: none;
+}
+
+#msgAide
+{
+	margin-top: 40px;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+#blocContactAide
+{
+	display: flex;
+	flex-direction: row;
+	justiy-content: center;
+	align-items: center;
+	margin: auto;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.logoContact
+{
+	width: 50px;
+	height: auto;
+	margin-right: 10px;
+}
+
+#leolinkeleadsTxt
+{
+	margin-right: 50px;
+
+}
+
+/* ---------------------------------------------- */
+/*		PARAMÈTRES			  */
+/* ---------------------------------------------- */
+
+#menuParametres
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	height: 60px;
+	background-color: #F5F5F5;
+	color: #ABABAB;
+	font-size: 1.2em;
+}
+
+.interdit
+{
+	color: #ABABAB;
+	text-decoration: none;
+}
+
+#deconnexion
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 80px;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+}
+
+#imgDeconnexion
+{
+	width: 150px;
+	height: 150px;
+	margin-bottom: 0px;
+}
+
+#boutonDeconnexion
+{
+	width: 350px;
+	height: 50px;
+	margin: auto;
+	border-radius: 5px;
+	background-color: #3989C3;
+}
+
+#lienDeconnexion
+{
+	position: relative;
+	bottom: 10px;
+	color: white;
+	text-decoration: none;
+}
+
+#infosCompte
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+#modifierInfos
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#modifierEmail, #modifierPassword
+{
+	display: flex;
+	flex-direction: column;
+	justiy-content: center;
+	background-color: #E0E0E0;
+	width: 370px; 
+	height: auto;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+#modifierEmail
+{
+	margin-right: 50px;
+}
+
+.titreModif
+{
+	color: black;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.formModif
+{
+	padding-left: 30px;
+	text-align: center;
+}
+
+.alignGauche
+{
+	text-align: left;
+}
+
+input[type="email"], input[type="password"]
+{
+	width: 300px;
+	height: 20px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+input[type="submit"]
+{
+	width: auto;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid #0070C0;
+	border-radius: 5px;
+	background-color: white;
+	color: #0070C0;
+}
+
+#fonctionnementLeo
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+#fonctionLeo
+{
+	margin-bottom: 25px;
+	color: black;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align: center;
+}
+
+#explicationsFonctions
+{
+	width: 70%;
+	margin: auto;
+	font-size: 1.1em;
+	text-align: left;
+}
+
+#explicationsFonctions > li
+{
+	margin-bottom: 10px;
+}
+
+#lienAideVideo
+{
+	text-decoration: none;
+}
+
+.emFonctionLeo
+{
+	color: #0070C0;
+}
+
+#facturesCB
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin-top: 50px;
+}
+
+#abonnement, #factures, #carteBancaire
+{
+	width: 330px;
+	height: auto;
+	padding: 15px;
+	border-radius: 5px;
+	background-color: #E0E0E0;
+}
+
+.txtAbo
+{	
+	margin-bottom: 5px;
+}
+
+.listeAbo
+{
+	margin-top: 5px;
+}
+
+.boutonFactures
+{
+	width: 310px;
+	height: 30px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	border: 1px solid #0070C0;
+	border-radius: 5px;
+	background-color: white;
+	color: #0070C0;
+	text-align: center;
+}
+
+/* ---------------------------------------------- */
+/*		UPGRADE				  */
+/* ---------------------------------------------- */
+
+#wrapperUp
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+#junior
+{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.tete
+{
+	width: 300px;
+	height: 70px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 15px;
+	border-radius: 5px;
+	color: white;
+	font-size: 1em;
+	text-align: center;	
+}
+
+.titreUpgrade
+{
+	margin-bottom: 0px;
+	font-size: 1.2em;
+}
+
+.txtTete
+{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#teteRecommander
+{
+	border: 2px solid #8448B0;
+	background-color: #8448B0;
+}
+
+#teteJunior
+{
+	border: 2px solid #00BEF3;
+	background-color: #00BEF3;
+}
+
+#teteExpert
+{
+	border: 2px solid #0085CC;
+	background-color: #0085CC;
+}
+
+.corps
+{
+	width: 300px;
+	height: 300px;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+}
+
+#corpsRecommander
+{
+	border: 2px solid #8448B0;
+	color: #8E8E8E;
+}
+
+#introRecommander
+{
+	margin-top: 25px;
+	color: black;
+	font-weight: bold;
+}
+
+.txtRecommander
+{
+	margin-top: 25px;
+}
+
+#corpsJunior
+{
+	border: 2px solid #00BEF3;
+}
+
+#introJunior
+{
+	color: #00BEF3;
+}
+
+#corpsExpert
+{
+	border: 2px solid #0085CC;
+}
+
+#introExpert
+{
+	color: #0085CC;
+}
+
+.optionsDisponibles
+{
+	width: 90%;
+	margin: auto;
+	margin-top: 25px;
+	font-size: 1.2em;
+	text-align: left;
+}
+
+.valider
+{
+	width: 30px;
+	height: 30px;
+	float: right;
+	position: relative;
+	bottom: 7px;
+}
+
+.pied
+{
+	width: 300px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	border-radius: 5px;
+	color: white;
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+}
+
+#piedRecommander
+{
+	border: 2px solid #8448B0;
+	background-color: #8448B0;
+}
+
+#piedJunior
+{
+	border: 2px solid #00BEF3;
+	background-color: #00BEF3;
+}
+
+#piedExpert
+{
+	border: 2px solid #0085CC;
+	background-color: #0085CC;
+}
+
+/* ---------------------------------------------- */
+/*		FOOTER				  */
+/* ---------------------------------------------- */
+
+footer
+{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 60px;
+	background-color: #515151;
+	color: #D8D8D8;
+}
+
+#centerFoot
+{
+	margin-top: 20px;
+	text-align: center;
+}
+
+#questions
+{
+	position: absolute;
+	bottom: 0px;
+	left: 10px;
+}
+
+#txtQuestions
+{
+	position: relative;
+	top: 6px;
+}
+
+#socialNetwork
+{
+	position: absolute;
+	bottom: 3px;
+	right: 15px;
+}
+
+#linkedin
+{
+	width: 40px;
+	height: 40px;
+}
+
+
+/* ---------------------------------------------- */
+/*		POPUP CONNAISSANCE LEO		  */
+/* ---------------------------------------------- */
+
+#shadow
+{	
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	z-index: 3;
+	opacity: 0.35;
+}
+
+#popupconnaissanceleo
+{
+	display: block;
+	position: absolute;
+	left: 50%;
+	width: 400px;
+	height: 350px;
+	margin-top: 50vh;
+	margin-left: -200px;
+	border-radius: 5px;
+	background-color: #E0E0E0;
+	transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 5;
+}
+
+#connaissanceForm
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 70%;
+	margin: auto;
+	margin-top: 15px;
+}
+
+#titleConnaissance
+{
+	text-align: center;
+}
+
+.flexrow
+{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;	
+}
+
+.flexrow > label
+{
+	margin-left: 10px;
+}
+
+#connaissanceForm > input
+{
+	height: 30px;
+	margin-bottom: 20px;
+	padding-left: 10px;
+	border: none;
+	background-color: white;
+}
+
+
+#connaissanceForm > input[type="radio"]
+{
+	background-color: white;
+}
+
+#connaissanceForm > input[type="submit"]
+{
+	background-color: #4180FF;
+	color: white;
+	font-size: 1.2em;
+}
