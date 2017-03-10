@@ -194,7 +194,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <img src="img/courrier.png" height="100px" width="100px">
             </div>
         </div>
-
     </div>
 </div>
 
@@ -241,7 +240,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <p>Leo démarche à votre place sur Linkedin jusqu'à <strong>1000 prospects/mois !</strong></p>
     </div>
 </div>
-
 
 
 <div class="pricing" align="center">
@@ -329,9 +327,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <br>
     <br>
-
 </div>
-
 
 <div class="footer">
     <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads</p>
@@ -404,37 +400,36 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     </form>
 </div>
 
-<div id="pop">
-    <button type="button" value="Close" id="closegreen" style="float: right">Close</button>
-</div>
-
 <?php if ( isset($_GET['valid']) ){
 
-    if ($_GET['valid'] == 0){
-    ?>
-        <script>
-        $('#form').show();
-        </script>
-    <?php
+    $_GET['valid'] = (int) $_GET['valid'];
 
-    } else if ($_GET['valid'] == 1){
+    if ($_GET['valid'] >= 0 AND $_GET['valid'] < 2){
+
+        if ($_GET['valid'] == 0){
+            ?>
+            <script>
+                $('#form').show();
+            </script>
+        <?php
+
+        } else if ($_GET['valid'] == 1){
         ?>
-        <script>
-            $('#form').show();
-        </script>
-    <?php
+            <script>
+                $('#form').show();
+            </script>
+            <?php
 
+        } else{
+            echo 'attention je ne sais pas pq';
+        }
     } else{
-        echo 'attention je ne sais pas pq';
+        header('Location: test.php');
     }
 
 } ?>
 
 <script>
-    $('#submit').submit(function () {
-        $('#pop').show();
-    });
-
     //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
     $('#try').click(function(){
         $('#form').show();
@@ -475,6 +470,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
      })*/
 </script>
 
+<!--FADE STYLE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <!-- Modal -->
 <!--
 <form action="index.php" method="post">
