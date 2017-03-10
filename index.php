@@ -1,3 +1,66 @@
+<?php
+include ('config/config.php');
+/*
+if ( !empty($_POST['name'])){
+    echo 'yes';
+} else {
+    echo 'attention c vide';
+}*/
+
+
+if (( isset($_POST['name']) && !empty($_POST['name']) )
+    && ( isset($_POST['firstname']) && !empty($_POST['firstname']) )
+    && ( isset($_POST['email']) && !empty($_POST['email']) ) ) {
+
+    $name=$_POST['name'];
+    $firstname=$_POST['firstname'];
+    $email=$_POST['email'];
+
+    $sqlEmails='SELECT id FROM users WHERE email = :email';
+
+    $reqCheckEmails = $db->prepare($sqlEmails);
+    $reqCheckEmails->execute(
+        array(
+            'email'=> $email
+        )
+    );
+
+    $result = $reqCheckEmails->fetch();
+
+    if (!$result){
+
+        $sql='INSERT INTO users(name, firstname, email) VALUES (:name, :firstname, :email)';
+
+        $req = $db->prepare($sql);
+        $req->execute(
+            array(
+                'name'=> $name,
+                'firstname'=> $firstname,
+                'email'=> $email
+            )
+        );
+
+        $destinataire = $_POST['email'];
+        $sujet = 'Linkeleads - Confirmation PreLaunching';
+        $entete = 'From: team@linkeleads.com';
+        $message = 'Bienvenue sur Linkeleads,
+        Veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur internet.
+        ------------
+        Ceci est un mail automatique. Merci de ne pas y répondre.';
+
+        mail($destinataire, $sujet, $message, $entete);
+
+        header('Location: index.php?valid=1');
+
+    } else {
+        header('Location: index.php?valid=0');
+    }
+
+} else {
+    //header('Location: index.php');
+}
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -14,46 +77,6 @@
 </head>
 
 <body>
-
-<?php
-include ('config/config.php');
-
-if(!empty($_POST['name']) && (!empty($_POST['firstname'])) && (!empty($_POST['email'])) ){
-
-    $name=$_POST['name'];
-    $firstname=$_POST['firstname'];
-    $email=$_POST['email'];
-
-    $sql='INSERT INTO users(name, firstname, email) VALUES (:name, :firstname, :email)';
-
-    $req = $db->prepare($sql);
-    $req->execute(
-        array(
-            'name'=> $name,
-            'firstname'=> $firstname,
-            'email'=> $email
-        )
-    );
-
-} else {
-    echo 'error!!!!!!!!!!!!!!!';
-}
-
-?>
-
-<form action="index.php" method="post">
-    <div class="form-group">
-        <label>Nom</label>
-        <input name="name" type="text">
-
-        <label for="usr">Prénom</label>
-        <input name="firstname" type="text">
-
-        <label for="usr">Adresse e-mail</label>
-        <input name="email" type="email">
-
-        <button id="submit" type="submit" value="Envoyer">Envoyer</button>
-</form>
 
 <div class="navbar">
     <nav class="navbar navbar-default">
@@ -316,6 +339,7 @@ if(!empty($_POST['name']) && (!empty($_POST['firstname'])) && (!empty($_POST['em
 
 </div>
 
+
 <div class="footer">
     <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads</p>
     <div class="asap">
@@ -332,52 +356,88 @@ if(!empty($_POST['name']) && (!empty($_POST['firstname'])) && (!empty($_POST['em
     </div>
 </div>
 
-
-
-<!--
 <div id="form">
+    <button type="button" value="Close" id="close" style="float: right">Close</button>
     <form action="index.php" method="post">
         <div class="form-group">
-            <label for="usr">Nom</label>
-            <input name="name" type="text" class="form-control" id="nameUsr">
-
-            <div id="errorName" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+            <label>Nom</label>
+            <input class="test" name="name" type="text" id="userName" required>
+            <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
 
             <label for="usr">Prénom</label>
-            <input name="firstname" type="text" class="form-control" id="firstnameUsr">
-
-            <div id="errorFirstname" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+            <input class="test" name="firstname" type="text" id="userFirstname" required>
+            <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
 
             <label for="usr">Adresse e-mail</label>
-            <input name="email" type="email" class="form-control" id="emailUsr">
+            <input class="test" name="email" type="email" id="userEmail" required>
+            <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
 
-            <div id="errorEmail" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+            <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
+            <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
 
-            <button id="submit" type="button" value="Envoyer" class="btn btn-default">Envoyer</button>
+        </div>
     </form>
 </div>
--->
+
+<div id="pop">
+
+</div>
+
+<?php
+if ( isset($_GET['valid']) && ($_GET['valid'] == 0)) {
+?>
+    <script>
+        $('#form').show();
+    </script>
+<?php
+} else{ ?>
+    <script>
+        $('#pop').show();
+    </script>
+    <?php
+}
+?>
+
 <script>
-    $("#submit").click(function () {
-        if ($("#nameUsr").val() == ""){
-            $("#errorName").show();
-        } else {
-            $("#errorName").hide();
-        }
-        if ($("#firstnameUsr").val() == ""){
-            $("#errorFirstname").show();
-        } else {
-            $("#errorFirstname").hide();
-        }
-        if ($("#emailUsr").val() == ""){
-            $("#errorEmail").show();
-        } else {
-            $("#errorEmail").hide();
-        }
+    $('#submit').submit(function () {
+        $('#pop').show();
     });
+
+    //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
+    $('#try').click(function(){
+        $('#form').show();
+    });
+
+    $('#close').click(function () {
+        $('#form').hide();
+    });
+
+    //DESACTIVER LE BOUTTON SI TOUS LES CHAMPS NE SONT PAS REMPLIS
+    /*$(document).ready(function(){
+        $('#submit').attr('disabled',true);
+    });
+
+    $('.test').keyup(function(){
+        if( ($("#userName").val() !=0) && ($("#userFirstname").val().length !=0) && ($("#userEmail").val().length !=0) ){
+            $('#submit').attr('disabled', false);
+        }
+
+        else{
+            $('#submit').attr('disabled',true);
+        }
+    });*/
+
+    //TESTS
+    //$( "#submit" ).prop( "disabled", true );
+
+    /*$('#submit').click(function () {
+     if ($('#userName').val() == "") {
+     $('#error1').show();
+     } else {
+     $('#error1').hide();
+     }
+     })*/
 </script>
-
-
 
 <!-- Modal -->
 <!--
@@ -409,31 +469,6 @@ if(!empty($_POST['name']) && (!empty($_POST['firstname'])) && (!empty($_POST['em
 <!--</div><!-- /.modal-dialog -->
 <!--</div><!-- /.modal -->
 <!--</form>-->
-
-<script>
-    /*
-     $('#try').click(function(){
-     $('#form').modal({
-     show:true
-     })
-     });
-     $('#try2').click(function(){
-     $('#form').modal({
-     show:true
-     })
-     });
-     $('#try3').click(function(){
-     $('#form').modal({
-     show:true
-     })
-     });
-     $('#try4').click(function(){
-     $('#form').modal({
-     show:true
-     })
-     });
-     */
-</script>
 
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
