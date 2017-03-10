@@ -53,8 +53,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         header('Location: test.php');
     }
 }
-
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -367,6 +365,38 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <input class="test" name="email" type="email" id="userEmail" >
             <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
 
+            <div id="valid" style="display: none; color: green;">Insciption validée!</div>
+            <div id="noValid" style="display: none; color: red;">Attention cet email existe deja</div>
+
+
+            <?php
+            if ( isset($_GET['valid']) && ($_GET['valid'] == 1)) {
+                ?>
+                <script>
+                    $('#valid').show();
+                </script>
+            <?php
+            } else{ ?>
+                <script>
+                    $('#valid').hide();
+                </script>
+                <?php
+            };
+
+            if ( isset($_GET['valid']) && ($_GET['valid'] == 0)) {
+                ?>
+                <script>
+                    $('#noValid').show();
+                </script>
+            <?php
+            } else{ ?>
+                <script>
+                    $('#noValid').hide();
+                </script>
+                <?php
+            };
+            ?>
+
             <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
             <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
 
@@ -375,36 +405,30 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 </div>
 
 <div id="pop">
-
+    <button type="button" value="Close" id="closegreen" style="float: right">Close</button>
 </div>
 
-<?php
-if ( isset($_GET['valid']) && ($_GET['valid'] == 0)) {
-    ?>
-    <script>
-        $('#form').show();
-    </script>
-<?php
-} else{ ?>
-    <script>
-        $('#form').hide();
-    </script>
-    <?php
-};
+<?php if ( isset($_GET['valid']) ){
 
-if ( isset($_GET['valid']) && ($_GET['valid'] == 1)) {
+    if ($_GET['valid'] == 0){
     ?>
-    <script>
-        $('#pop').show();
-    </script>
-<?php
-} else{ ?>
-    <script>
-        $('#pop').hide();
-    </script>
+        <script>
+        $('#form').show();
+        </script>
     <?php
-}
-?>
+
+    } else if ($_GET['valid'] == 1){
+        ?>
+        <script>
+            $('#form').show();
+        </script>
+    <?php
+
+    } else{
+        echo 'attention je ne sais pas pq';
+    }
+
+} ?>
 
 <script>
     $('#submit').submit(function () {
@@ -418,6 +442,10 @@ if ( isset($_GET['valid']) && ($_GET['valid'] == 1)) {
 
     $('#close').click(function () {
         $('#form').hide();
+    });
+
+    $('#closegreen').click(function () {
+        $('#pop').hide();
     });
 
     //DESACTIVER LE BOUTTON SI TOUS LES CHAMPS NE SONT PAS REMPLIS
