@@ -1,64 +1,59 @@
 <?php
 include ('config/config.php');
-/*
-if ( !empty($_POST['name'])){
-    echo 'yes';
-} else {
-    echo 'attention c vide';
-}*/
 
+if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email']) ) {
 
-if (( isset($_POST['name']) && !empty($_POST['name']) )
-    && ( isset($_POST['firstname']) && !empty($_POST['firstname']) )
-    && ( isset($_POST['email']) && !empty($_POST['email']) ) ) {
+    if (!empty($_POST['name']) && !empty($_POST['firstname']) && !empty($_POST['email']) ){
 
-    $name=$_POST['name'];
-    $firstname=$_POST['firstname'];
-    $email=$_POST['email'];
+        $name=$_POST['name'];
+        $firstname=$_POST['firstname'];
+        $email=$_POST['email'];
 
-    $sqlEmails='SELECT id FROM users WHERE email = :email';
+        $sqlEmails='SELECT id FROM users WHERE email = :email';
 
-    $reqCheckEmails = $db->prepare($sqlEmails);
-    $reqCheckEmails->execute(
-        array(
-            'email'=> $email
-        )
-    );
-
-    $result = $reqCheckEmails->fetch();
-
-    if (!$result){
-
-        $sql='INSERT INTO users(name, firstname, email) VALUES (:name, :firstname, :email)';
-
-        $req = $db->prepare($sql);
-        $req->execute(
+        $reqCheckEmails = $db->prepare($sqlEmails);
+        $reqCheckEmails->execute(
             array(
-                'name'=> $name,
-                'firstname'=> $firstname,
                 'email'=> $email
             )
         );
 
-        $destinataire = $_POST['email'];
-        $sujet = 'Linkeleads - Confirmation PreLaunching';
-        $entete = 'From: team@linkeleads.com';
-        $message = 'Bienvenue sur Linkeleads,
+        $result = $reqCheckEmails->fetch();
+
+        if (!$result){
+
+            $sql='INSERT INTO users(name, firstname, email) VALUES (:name, :firstname, :email)';
+
+            $req = $db->prepare($sql);
+            $req->execute(
+                array(
+                    'name'=> $name,
+                    'firstname'=> $firstname,
+                    'email'=> $email
+                )
+            );
+
+            $destinataire = $_POST['email'];
+            $sujet = 'Linkeleads - Confirmation PreLaunching';
+            $entete = 'From: team@linkeleads.com';
+            $message = 'Bienvenue sur Linkeleads,
         Veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur internet.
         ------------
         Ceci est un mail automatique. Merci de ne pas y répondre.';
 
-        mail($destinataire, $sujet, $message, $entete);
+            mail($destinataire, $sujet, $message, $entete);
 
-        header('Location: index.php?valid=1');
+            header('Location: index.php?valid=1');
+
+        } else {
+            header('Location: index.php?valid=0');
+        }
 
     } else {
-        header('Location: index.php?valid=0');
+        header('Location: test.php');
     }
-
-} else {
-    //header('Location: index.php');
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -361,15 +356,15 @@ if (( isset($_POST['name']) && !empty($_POST['name']) )
     <form action="index.php" method="post">
         <div class="form-group">
             <label>Nom</label>
-            <input class="test" name="name" type="text" id="userName" required>
+            <input class="test" name="name" type="text" id="userName" >
             <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
 
             <label for="usr">Prénom</label>
-            <input class="test" name="firstname" type="text" id="userFirstname" required>
+            <input class="test" name="firstname" type="text" id="userFirstname" >
             <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
 
             <label for="usr">Adresse e-mail</label>
-            <input class="test" name="email" type="email" id="userEmail" required>
+            <input class="test" name="email" type="email" id="userEmail" >
             <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
 
             <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
@@ -385,14 +380,27 @@ if (( isset($_POST['name']) && !empty($_POST['name']) )
 
 <?php
 if ( isset($_GET['valid']) && ($_GET['valid'] == 0)) {
-?>
+    ?>
     <script>
         $('#form').show();
     </script>
 <?php
 } else{ ?>
     <script>
+        $('#form').hide();
+    </script>
+    <?php
+};
+
+if ( isset($_GET['valid']) && ($_GET['valid'] == 1)) {
+    ?>
+    <script>
         $('#pop').show();
+    </script>
+<?php
+} else{ ?>
+    <script>
+        $('#pop').hide();
     </script>
     <?php
 }
@@ -414,18 +422,18 @@ if ( isset($_GET['valid']) && ($_GET['valid'] == 0)) {
 
     //DESACTIVER LE BOUTTON SI TOUS LES CHAMPS NE SONT PAS REMPLIS
     /*$(document).ready(function(){
-        $('#submit').attr('disabled',true);
-    });
+     $('#submit').attr('disabled',true);
+     });
 
-    $('.test').keyup(function(){
-        if( ($("#userName").val() !=0) && ($("#userFirstname").val().length !=0) && ($("#userEmail").val().length !=0) ){
-            $('#submit').attr('disabled', false);
-        }
+     $('.test').keyup(function(){
+     if( ($("#userName").val() !=0) && ($("#userFirstname").val().length !=0) && ($("#userEmail").val().length !=0) ){
+     $('#submit').attr('disabled', false);
+     }
 
-        else{
-            $('#submit').attr('disabled',true);
-        }
-    });*/
+     else{
+     $('#submit').attr('disabled',true);
+     }
+     });*/
 
     //TESTS
     //$( "#submit" ).prop( "disabled", true );
