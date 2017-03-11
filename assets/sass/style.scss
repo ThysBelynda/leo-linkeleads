@@ -38,50 +38,44 @@ $stapethree: rgba(70, 134, 213, 0.88);
 }
 
 /*-------------------------------------------NAVBAR------------------------------------------------------*/
-
-.navbar{
-  border:0;
-  border-radius: 0;
+.navbar-fixed-top{
   background-color: $leocoloreye;
-  margin-bottom: 0;
-  position: fixed;
-  z-index: 1000;
+  border: none;
+  padding: 0 15px 0 15px;
 }
 
+
 .navbar-header{
-  width:4%;
+  //width:4%;
 }
 
 .navbar-header img{
   background-color: white;
   border-radius: 50px;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .navbar-text{
   font-size: 16px;
-  margin: 1% 0 0 1%;
+  //color: whitesmoke;
+  //margin-right: 150px;
 }
 
 .navbar-default .navbar-text{
-  color: white;
+  color: #eeeeee;
 }
 
 .navbar-right{
-  width: 15%;
-  margin-right:1%;
-}
-
-.container-fluid{
-  padding-top:3px;
+  //width: 15%;
+  margin: 0;
 }
 
 #try{
   font-size:16px;
-  background-color: rgb(0, 132, 191);
+  background-color: rgb(118, 194, 209);
   color: white;
-  border: solid 1px rgb(0, 132, 191);
-  border-radius: 20px;
+  border: solid 1px rgb(118, 194, 209);
+  border-radius: 2px;
 
   &:hover{
     color: white;
@@ -93,7 +87,7 @@ $stapethree: rgba(70, 134, 213, 0.88);
 
 @media (max-width: 1024px) {
   .navbar-right{
-    width: 15%;
+    //width: 15%;
   }
 
   #try{
@@ -106,7 +100,7 @@ $stapethree: rgba(70, 134, 213, 0.88);
 }
 
 .navbar-btn{
-  margin-top: 5px;
+  //margin-top: 5px;
 }
 
 /*-------------------------------------------HEADER------------------------------------------------------*/
@@ -141,9 +135,9 @@ $stapethree: rgba(70, 134, 213, 0.88);
 #try2{
   margin-top: 40px;
   font-size: 20px;
-  background-color: rgb(0, 132, 191);
+  background-color: rgb(118, 194, 209);
   border: none;
-  border-radius: 40px;
+  border-radius: 2px;
 
   &:hover{
     color: white;
@@ -189,7 +183,7 @@ $stapethree: rgba(70, 134, 213, 0.88);
   p{
     padding: 13% 2% 0 2%;
     font-size: 18px;
-    text-align: justify;
+    text-align: center;
   }
 }
 

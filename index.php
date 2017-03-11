@@ -46,7 +46,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             header('Location: index.php?valid=1');
 
         } else {
-            header('Location: index.php?valid=0');
+            header('Location: index.php?valid=2');
         }
 
     } else {
@@ -71,13 +71,24 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
 <body>
 
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header">
+        <img alt="alex" src="img/Leoface.png" height="40" width="40">
+    </div>
+    <p class="navbar-text">Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong></p>
+    <div class="navbar-right">
+        <button class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
+    </div>
+</nav>
+
+<!--
 <div class="navbar">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <div class="navbar-header">
                     <a class="icon" href="#">
-                        <img alt="alex" src="img/Leoface.png" height="80%" width="80%">
+                        <img alt="alex" src="img/Leoface.png" height="40" width="40">
                     </a>
                 </div>
 
@@ -90,12 +101,13 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
     </nav>
 </div>
+-->
 
 <div class="header" data-stellar-ratio="10">
 
     <div class="slogan" align="center">
         <h1>Trouvez de nouveaux clients grâce à Leo</h1>
-        <p>Découvrez Léo, l'assistant virtuel de prospection commerciale</p>
+        <p>Découvrez Leo, l'assistant virtuel de prospection commerciale</p>
         <button id="try2" class="btn btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
     </div>
 </div>
@@ -365,69 +377,12 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div id="noValid" style="display: none; color: red;">Attention cet email existe deja</div>
 
 
-            <?php
-            if ( isset($_GET['valid']) && ($_GET['valid'] == 1)) {
-                ?>
-                <script>
-                    $('#valid').show();
-                </script>
-            <?php
-            } else{ ?>
-                <script>
-                    $('#valid').hide();
-                </script>
-                <?php
-            };
-
-            if ( isset($_GET['valid']) && ($_GET['valid'] == 0)) {
-                ?>
-                <script>
-                    $('#noValid').show();
-                </script>
-            <?php
-            } else{ ?>
-                <script>
-                    $('#noValid').hide();
-                </script>
-                <?php
-            };
-            ?>
-
             <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
             <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
 
         </div>
     </form>
 </div>
-
-<?php if ( isset($_GET['valid']) ){
-
-    $_GET['valid'] = (int) $_GET['valid'];
-
-    if ($_GET['valid'] >= 0 AND $_GET['valid'] < 2){
-
-        if ($_GET['valid'] == 0){
-            ?>
-            <script>
-                $('#form').show();
-            </script>
-        <?php
-
-        } else if ($_GET['valid'] == 1){
-        ?>
-            <script>
-                $('#form').show();
-            </script>
-            <?php
-
-        } else{
-            echo 'attention je ne sais pas pq';
-        }
-    } else{
-        header('Location: test.php');
-    }
-
-} ?>
 
 <script>
     //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
@@ -506,3 +461,61 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
 </body>
 </html>
+<?php if ( isset($_GET['valid']) ){
+
+    $_GET['valid'] = (int) $_GET['valid'];
+
+    if ($_GET['valid'] >= 1 AND $_GET['valid'] <= 2){
+
+        if ($_GET['valid'] == 2){
+            ?>
+            <script>
+                $('#form').show();
+                $('#noValid').show();
+            </script>
+            <?php
+
+        } else if ($_GET['valid'] == 1){
+            ?>
+            <script>
+                $('#form').show();
+                $('#valid').show();
+            </script>
+            <?php
+
+        } else{
+            echo 'attention je ne sais pas pq';
+        }
+
+    } else{
+        //echo 'hey';
+        //header('Location: test.php');
+    }
+}
+/*
+if ( isset($_GET['valid']) && ($_GET['valid'] == 1)) {
+    ?>
+    <script>
+        $('#valid').show();
+    </script>
+<?php
+} else{ ?>
+    <script>
+        $('#valid').hide();
+    </script>
+    <?php
+};
+
+if ( isset($_GET['valid']) && ($_GET['valid'] == 2)) {
+    ?>
+    <script>
+        $('#noValid').show();
+    </script>
+<?php
+} else{ ?>
+    <script>
+        $('#noValid').hide();
+    </script>
+    <?php
+};
+*/

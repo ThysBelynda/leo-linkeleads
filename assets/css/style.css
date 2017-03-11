@@ -23,59 +23,42 @@ body {
   display: none; }
 
 /*-------------------------------------------NAVBAR------------------------------------------------------*/
-.navbar {
-  border: 0;
-  border-radius: 0;
+.navbar-fixed-top {
   background-color: #283e4a;
-  margin-bottom: 0;
-  position: fixed;
-  z-index: 1000; }
-
-.navbar-header {
-  width: 4%; }
+  border: none;
+  padding: 0 15px 0 15px; }
 
 .navbar-header img {
   background-color: white;
   border-radius: 50px;
-  margin-top: 4px; }
+  margin-top: 5px; }
 
 .navbar-text {
-  font-size: 16px;
-  margin: 1% 0 0 1%; }
+  font-size: 16px; }
 
 .navbar-default .navbar-text {
-  color: white; }
+  color: #eeeeee; }
 
 .navbar-right {
-  width: 15%;
-  margin-right: 1%; }
-
-.container-fluid {
-  padding-top: 3px; }
+  margin: 0; }
 
 #try {
   font-size: 16px;
-  background-color: #0084bf;
+  background-color: #76c2d1;
   color: white;
-  border: solid 1px #0084bf;
-  border-radius: 20px; }
+  border: solid 1px #76c2d1;
+  border-radius: 2px; }
   #try:hover {
     color: white;
     transition: 0.2s;
     border: solid 1px white; }
 
 @media (max-width: 1024px) {
-  .navbar-right {
-    width: 15%; }
-
   #try {
     font-size: 14px; }
 
   .navbar-text {
     font-size: 14px; } }
-.navbar-btn {
-  margin-top: 5px; }
-
 /*-------------------------------------------HEADER------------------------------------------------------*/
 .header {
   background-image: url("../../img/ourclients.jpg");
@@ -100,9 +83,9 @@ body {
 #try2 {
   margin-top: 40px;
   font-size: 20px;
-  background-color: #0084bf;
+  background-color: #76c2d1;
   border: none;
-  border-radius: 40px; }
+  border-radius: 2px; }
   #try2:hover {
     color: white;
     box-shadow: white 0 0 15px 3px;
@@ -133,7 +116,7 @@ body {
   .users p, .time p, .messenger p {
     padding: 13% 2% 0 2%;
     font-size: 18px;
-    text-align: justify; }
+    text-align: center; }
 
 .linkedin {
   background-color: #eeeeee;
