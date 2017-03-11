@@ -134,30 +134,30 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             </div>
         </div>
         <div class="row">
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="users">
-                        <div class="profils">
-                            <img src="img/user-7.png" width="40px" height="40px">
-                        </div>
-                        <p>Parce que vos prospects font partie des <strong>450 millions</strong> d'utilisateurs.</p>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="users">
+                    <div class="profils">
+                        <img src="img/user-7.png" width="40px" height="40px">
                     </div>
+                    <p>Parce que vos prospects font partie des <strong>450 millions</strong> d'utilisateurs.</p>
                 </div>
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="time">
-                        <div class="hourglass">
-                            <img src="img/wait.png" width="40px" height="40px">
-                        </div>
-                        <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong> pas semaine.</p>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="time">
+                    <div class="hourglass">
+                        <img src="img/wait.png" width="40px" height="40px">
                     </div>
+                    <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong> pas semaine.</p>
                 </div>
-                <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="messenger">
-                        <div class="mail">
-                            <img src="img/mail.png" width="40px" height="40px">
-                        </div>
-                        <p>Parce que <strong>93%</strong> des messages que vous adressez à vos prospects seront lus.</p>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="messenger">
+                    <div class="mail">
+                        <img src="img/mail.png" width="40px" height="40px">
                     </div>
+                    <p>Parce que <strong>93%</strong> des messages que vous adressez à vos prospects seront lus.</p>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -211,8 +211,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <div class="row">
 
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <h4>Leo démarche à votre place sur Linkedin jusqu'à <br><strong>1000 prospects/mois !</strong></h4>
-
                 <div class="one"> <p>1</p> </div>
 
                 <div class="border"></div>
@@ -245,6 +243,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 </div>
             </div>
         </div>
+        <h1>Leo démarche à votre place sur Linkedin jusqu'à <strong>1000 prospects/mois !</strong></h1>
+
     </div>
 
 
@@ -267,9 +267,9 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                             <br><br>
                             <i class="fa fa-check-circle" aria-hidden="true"></i>
                             <br><br>
-                            <i class="fa fa-times-circle" aria-hidden="true"></i>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
                             <br><br>
-                            <i class="fa fa-times-circle" aria-hidden="true"></i>
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
                         </p>
                     </div>
                 </div>
@@ -336,20 +336,22 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     </div>
 
     <div class="footer">
-        <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads</p>
-        <div class="asap">
-            <p><strong>N'hésitez pas à me contacter, je vous répondrai ASAP :</strong></p>
-        </div>
-        <div class="contact">
-            <div class="lin">
-                <a href="#"><img src="img/linkedin.png" height="40px" width="40px"></a>
-            </div>
-
-            <div class="gmail">
-                <a href="#"><img src="img/gmail.png" height="40px" width="40px"></a>
-            </div>
-        </div>
     </div>
+
+    <!--<div class="footer">
+        <div class="p-left">
+            <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads</p>
+        </div>
+
+        <div class="p-right" align="right">
+            <p>
+                <strong>N'hésitez pas à me contacter, je vous répondrai ASAP :</strong>
+                <a href="#"><img src="img/linkedin.png" height="40px" width="40px"></a>
+                <a href="#"><img src="img/gmail.png" height="40px" width="40px"></a>
+            </p>
+        </div>
+    </div>-->
+
 
     <div id="form">
         <button type="button" value="Close" id="close" style="float: right">Close</button>

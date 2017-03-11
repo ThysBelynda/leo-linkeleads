@@ -118,8 +118,8 @@ body {
     text-align: center; }
 
 .linkedin {
-  background-color: #eeeeee;
-  padding-bottom: 5%; }
+  background-color: white;
+  padding: 2% 0 3% 0; }
 
 .levier h1 {
   color: #283e4a;
@@ -135,7 +135,7 @@ body {
 
 /*-------------------------------------------MISSIONS------------------------------------------------------*/
 .missions {
-  background-color: white;
+  background-color: #eeeeee;
   padding: 5% 0 8% 0; }
   .missions h1 {
     padding: 0 10% 8% 10%;
@@ -160,19 +160,13 @@ body {
 
 /*-------------------------------------------COMMENT------------------------------------------------------*/
 .comment {
-  padding: 1% 0 8% 0;
+  padding: 3% 0 8% 0;
   background-color: #283e4a;
   height: 340px; }
-  .comment h4 {
+  .comment h1 {
     color: #eeeeee;
-    font-size: 35px;
-    padding-bottom: 30px; }
-
-.analyse {
-  padding-top: 5%;
-  font-size: 27px;
-  font-weight: 900;
-  color: white; }
+    font-size: 40px;
+    margin-top: 25px; }
 
 /*
 .screen1{
@@ -194,7 +188,7 @@ body {
 .one, .two, .three {
   display: inline-block;
   border-radius: 200px;
-  background-color: rgba(0, 132, 191, 0.4);
+  background-color: #3c87b4;
   font-size: 40px;
   width: 70px;
   height: 70px;
@@ -209,7 +203,7 @@ body {
   font-size: 18px; }
 
 .two {
-  background-color: rgba(0, 132, 191, 0.7); }
+  background-color: #54a3c2; }
 
 #two {
   color: white;
@@ -218,7 +212,7 @@ body {
   font-size: 18px; }
 
 .three {
-  background-color: #0084bf; }
+  background-color: #76c2d1; }
 
 #three {
   color: white;
@@ -278,8 +272,8 @@ body {
   color: #ca0000; }
 
 .juniorprice, .proprice {
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
   padding: 2% 0 0% 0;
   color: white;
   letter-spacing: 1px;
@@ -308,40 +302,40 @@ body {
   margin-top: 3%;
   width: 94%;
   font-size: 27px;
-  border-radius: 60px;
+  border-radius: 2px;
   padding: 15px 0 15px; }
+
+.btn-success {
+  background-color: #28c268;
+  border: 1px solid #28c268; }
 
 /*-------------------------------------------CONTACT------------------------------------------------------*/
 .portrait {
   padding: 0 0 5%; }
 
-.btn-info {
-  background-color: #0084bf;
-  margin-bottom: 1%;
+#try4 {
   font-size: 20px;
-  border-radius: 40px;
-  border: 1px solid rgba(0, 132, 191, 0.5); }
+  background-color: #76c2d1;
+  color: white;
+  border: solid 1px #76c2d1;
+  border-radius: 2px;
+  margin-bottom: 20px; }
+  #try4:hover {
+    color: white;
+    transition: 0.2s;
+    border: solid 1px white; }
 
 .contact {
   padding: 0 0 2% 0;
-  display: inline-flex; }
-
-.asap {
-  margin-top: 5%;
-  font-size: 14px; }
-
-.lin {
-  padding-right: 8%; }
-
-.gmail {
-  padding-left: 8%; }
+  display: inline-block; }
 
 .button-test {
   font-size: 12px; }
 
+/*-------------------------------------------FOOTER------------------------------------------------------*/
 .footer {
-  padding: 2% 10% 1%;
   background-color: #283e4a;
-  color: white; }
+  color: white;
+  height: 50px; }
 
 /*# sourceMappingURL=style.css.map */
