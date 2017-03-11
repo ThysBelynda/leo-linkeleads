@@ -110,17 +110,16 @@ body {
 
 /*-------------------------------------------LINKEDIN------------------------------------------------------*/
 .users, .time, .messenger {
-  margin-top: 10%;
-  width: 80%;
-  padding: 6% 0 4% 0; }
+  margin-top: 5%;
+  width: 80%; }
   .users p, .time p, .messenger p {
-    padding: 13% 2% 0 2%;
+    padding: 13% 0 0 0;
     font-size: 18px;
     text-align: center; }
 
 .linkedin {
   background-color: #eeeeee;
-  padding-bottom: 8%; }
+  padding-bottom: 5%; }
 
 .levier h1 {
   color: #283e4a;
@@ -128,8 +127,8 @@ body {
 
 .mail, .hourglass, .profils {
   background-color: whitesmoke;
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   border-radius: 150px;
   border: 1px solid whitesmoke;
   padding-top: 20px; }
@@ -161,11 +160,13 @@ body {
 
 /*-------------------------------------------COMMENT------------------------------------------------------*/
 .comment {
-  padding: 5% 0 8% 0;
-  background-color: #283e4a; }
-  .comment h1 {
-    padding: 0 10% 6% 10%;
-    color: white; }
+  padding: 1% 0 8% 0;
+  background-color: #283e4a;
+  height: 340px; }
+  .comment h4 {
+    color: #eeeeee;
+    font-size: 35px;
+    padding-bottom: 30px; }
 
 .analyse {
   padding-top: 5%;
@@ -199,31 +200,31 @@ body {
   height: 70px;
   color: #eeeeee; }
   .one p, .two p, .three p {
-    padding-top: 8px; }
+    padding-top: 7px; }
 
 #one {
   color: white;
-  margin: 10% 15% 10% 15%;
+  margin: 10% 10% 10% 10%;
   text-align: center;
-  font-size: 20px; }
+  font-size: 18px; }
 
 .two {
   background-color: rgba(0, 132, 191, 0.7); }
 
 #two {
   color: white;
-  margin: 10% 15% 10% 15%;
+  margin: 10% 10% 10% 10%;
   text-align: center;
-  font-size: 20px; }
+  font-size: 18px; }
 
 .three {
   background-color: #0084bf; }
 
 #three {
   color: white;
-  margin: 10% 15% 10% 15%;
+  margin: 10% 10% 10% 10%;
   text-align: center;
-  font-size: 20px; }
+  font-size: 18px; }
 
 .stapes {
   text-align: center;
@@ -231,7 +232,7 @@ body {
 
 .border {
   display: inline-block;
-  width: 25%;
+  width: 28%;
   border-top: 3px solid #eeeeee; }
 
 /*-------------------------------------------PRICING------------------------------------------------------*/
