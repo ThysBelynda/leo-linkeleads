@@ -220,6 +220,57 @@ $stapethree: rgba(70, 134, 213, 0.88);
 }
 /*-------------------------------------------MISSIONS------------------------------------------------------*/
 
+.mi {
+  background-color: #eeeeee;
+  padding: 5% 0 8% 0;
+
+  h1 {
+    margin: 0;
+    padding: 0 10% 3% 10%;
+    color: $leocoloreye;
+  }
+
+  img {
+    float: left;
+    vertical-align: middle;
+    margin: 10px;
+    padding: 5px;
+  }
+}
+
+.title{
+  background-color: white;
+  display: inline-block;
+  font-size: 18px;
+  width: 460px;
+  margin-top:60px;
+  box-shadow: 0 0 50px 8px rgb(255, 255, 255);
+
+  p {
+    padding-top: 20px;
+    font-size: 22px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: $leocoloreye;
+  }
+}
+
+.text{
+  //background-color: white;
+  display: inline-block;
+  padding:10px 20px 0 0;
+  font-size: 18px;
+  width: 460px;
+
+  p{
+    padding: 10px 0 10px 0;
+    color: $leocoloreye;
+    font-weight: bolder;
+    font-size: 18px;
+  }
+
+}
+/*
 .missions{
   background-color: #eeeeee;
   padding: 5% 0 8% 0;
@@ -242,16 +293,16 @@ $stapethree: rgba(70, 134, 213, 0.88);
     padding: 16px;
   }
 }
-
-.missions h3{
-  border-top: 2px solid rgb(0, 0, 0);
-  padding-top: 5%;
-  font-size: 19px;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  margin: 0;
-  text-transform: uppercase;
-}
+*/
+//.missions h3{
+  //border-top: 2px solid rgb(0, 0, 0);
+  //padding-top: 5%;
+  //font-size: 19px;
+  //font-weight: bold;
+  //color: rgb(0, 0, 0);
+  //margin: 0;
+  //text-transform: uppercase;
+//}
 
 /*-------------------------------------------COMMENT------------------------------------------------------*/
 

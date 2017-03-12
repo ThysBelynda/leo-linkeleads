@@ -160,7 +160,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             </div>
         </div>
     </div>
-
+<!--
     <div class="missions" align="center">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -206,6 +206,61 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             </div>
         </div>
     </div>
+-->
+
+    <div class="mi" align="center">
+        <h1>Quelles sont les <strong>missions</strong> que Leo peut réaliser pour vous ?</h1>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="title" align="right">
+                            <img src="img/loupe.png" height="50" width="50">
+                            <p>
+                                <strong>Consulter des profils</strong>
+                            </p>
+                        </div>
+                        <div class="text" align="right">
+                            <p>Pour vous faire connaître de vos cibles.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="title" align="right">
+                            <img src="img/reseau.png" height="50" width="50">
+                            <p>
+                                <strong>Entrer en relation</strong>
+                            </p>
+                        </div>
+                        <div class="text" align="right">
+                            <p>Pour élargir votre réseau professionnel.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="title" align="right">
+                            <img src="img/chat.png" height="50" width="50">
+                            <p>
+                                <strong>Engager des conversations</strong>
+                            </p>
+                        </div>
+                        <div class="text" align="right">
+                            <p>Pour présenter et vendre vos offres à vos cibles.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="title" align="right">
+                            <img src="img/courrier.png" height="50" width="50">
+                            <p>
+                                <strong>Extraire des coordonnées</strong>
+                            </p>
+                        </div>
+                        <div class="text" align="right">
+                            <p>Pour mener des campagnes d'e-mailing ciblées.</p>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+
 
     <div class="comment" align="center">
         <div class="row">

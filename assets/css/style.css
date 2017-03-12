@@ -144,30 +144,68 @@ body {
   font-weight: bold; }
 
 /*-------------------------------------------MISSIONS------------------------------------------------------*/
-.missions {
+.mi {
   background-color: #eeeeee;
   padding: 5% 0 8% 0; }
-  .missions h1 {
-    padding: 0 10% 8% 10%;
+  .mi h1 {
+    margin: 0;
+    padding: 0 10% 3% 10%;
+    color: #283e4a; }
+  .mi img {
+    float: left;
+    vertical-align: middle;
+    margin: 10px;
+    padding: 5px; }
+
+.title {
+  background-color: white;
+  display: inline-block;
+  font-size: 18px;
+  width: 460px;
+  margin-top: 60px;
+  box-shadow: 0 0 50px 8px white; }
+  .title p {
+    padding-top: 20px;
+    font-size: 22px;
+    margin-right: 20px;
+    text-transform: uppercase;
     color: #283e4a; }
 
-.cards p {
-  text-align: center;
+.text {
+  display: inline-block;
+  padding: 10px 20px 0 0;
   font-size: 18px;
-  padding: 5% 10% 10% 10%; }
-.cards img {
-  border-bottom: 2px solid black;
-  padding: 16px; }
+  width: 460px; }
+  .text p {
+    padding: 10px 0 10px 0;
+    color: #283e4a;
+    font-weight: bolder;
+    font-size: 18px; }
 
-.missions h3 {
-  border-top: 2px solid black;
-  padding-top: 5%;
-  font-size: 19px;
-  font-weight: bold;
-  color: black;
-  margin: 0;
-  text-transform: uppercase; }
+/*
+.missions{
+  background-color: #eeeeee;
+  padding: 5% 0 8% 0;
 
+  h1{
+    padding:0 10% 8% 10%;
+    color: $leocoloreye;
+  }
+}
+
+.cards{
+  p{
+    text-align: center;
+    font-size:18px;
+    padding: 5% 10% 10% 10%;
+  }
+
+  img{
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding: 16px;
+  }
+}
+*/
 /*-------------------------------------------COMMENT------------------------------------------------------*/
 .comment {
   padding: 3% 0 1% 0;
