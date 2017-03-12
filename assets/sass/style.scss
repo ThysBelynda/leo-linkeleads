@@ -111,7 +111,7 @@ $stapethree: rgba(70, 134, 213, 0.88);
   background-position-y: 50px;
   background-attachment: fixed;
   background-size: 100%;
-  height: 437px;
+  height: 425px;
   color:white;
   position: relative;
 
@@ -171,6 +171,12 @@ $stapethree: rgba(70, 134, 213, 0.88);
   background: #eeeeee;
 }
 
+#leo{
+  color: rgb(63, 90, 129);
+  display: inline-block;
+  font-weight: bold;
+}
+
 /*-------------------------------------------LINKEDIN------------------------------------------------------*/
 
 .users, .time, .messenger{
@@ -207,6 +213,11 @@ $stapethree: rgba(70, 134, 213, 0.88);
   padding-top: 20px;
 }
 
+#linkedin{
+  color: rgb(63, 90, 129);
+  display: inline-block;
+  font-weight: bold;
+}
 /*-------------------------------------------MISSIONS------------------------------------------------------*/
 
 .missions{
@@ -227,17 +238,17 @@ $stapethree: rgba(70, 134, 213, 0.88);
   }
 
   img{
-    border-bottom: 2px solid rgb(0, 132, 191);
+    border-bottom: 2px solid rgb(0, 0, 0);
     padding: 16px;
   }
 }
 
 .missions h3{
-  border-top: 2px solid rgb(0, 132, 191);
+  border-top: 2px solid rgb(0, 0, 0);
   padding-top: 5%;
   font-size: 19px;
   font-weight: bold;
-  color: rgb(0, 132, 191);
+  color: rgb(0, 0, 0);
   margin: 0;
   text-transform: uppercase;
 }
@@ -245,9 +256,8 @@ $stapethree: rgba(70, 134, 213, 0.88);
 /*-------------------------------------------COMMENT------------------------------------------------------*/
 
 .comment{
-  padding: 3% 0 8% 0;
+  padding: 3% 0 1% 0;
   background-color: $leocoloreye;
-  height: 340px;
 
   h1{
     color: #eeeeee;
@@ -277,7 +287,7 @@ $stapethree: rgba(70, 134, 213, 0.88);
 .one{
   display: inline-block;
   border-radius: 200px;
-  background-color: rgb(60, 135, 180);
+  background-color: rgb(73, 170, 213);
   font-size: 40px;
   width : 70px;
   height: 70px;
@@ -297,7 +307,7 @@ $stapethree: rgba(70, 134, 213, 0.88);
 
 .two{
   @extend .one;
-  background-color: rgb(84, 163, 194);
+  background-color: rgb(74, 182, 211);
 }
 
 #two{
@@ -311,7 +321,6 @@ $stapethree: rgba(70, 134, 213, 0.88);
   @extend .one;
   background-color: rgb(118, 194, 209);
 }
-
 
 #three{
   color:white;
@@ -328,7 +337,7 @@ $stapethree: rgba(70, 134, 213, 0.88);
 .border{
   display : inline-block;
   width: 28%;
-  border-top : 3px solid $backgroundcolor;
+  border-top : 3px solid #eeeeee;
 }
 
 
@@ -464,13 +473,12 @@ $stapethree: rgba(70, 134, 213, 0.88);
   }
 }
 
-.contact{
-  padding:0 0 2% 0;
-  display:inline-block;
-}
-
 .button-test{
   font-size:12px;
+}
+
+#last p{
+  padding-bottom: 50px;
 }
 
 
@@ -478,6 +486,17 @@ $stapethree: rgba(70, 134, 213, 0.88);
 
 .footer{
   background-color: $leocoloreye;
-  color: white;
-  height: 50px;
+  color: #eeeeee;
+  font-size: 15px;
 }
+
+.footer p{
+  padding: 15px;
+  margin: 0;
+}
+
+.footer img{
+  float: right;
+  margin: 10px 6px 6px 6px;
+}
+

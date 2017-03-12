@@ -66,7 +66,7 @@ body {
   background-position-y: 50px;
   background-attachment: fixed;
   background-size: 100%;
-  height: 437px;
+  height: 425px;
   color: white;
   position: relative; }
   .header h1 {
@@ -108,6 +108,11 @@ body {
 .leo {
   background: #eeeeee; }
 
+#leo {
+  color: #3f5a81;
+  display: inline-block;
+  font-weight: bold; }
+
 /*-------------------------------------------LINKEDIN------------------------------------------------------*/
 .users, .time, .messenger {
   margin-top: 5%;
@@ -133,6 +138,11 @@ body {
   border: 1px solid whitesmoke;
   padding-top: 20px; }
 
+#linkedin {
+  color: #3f5a81;
+  display: inline-block;
+  font-weight: bold; }
+
 /*-------------------------------------------MISSIONS------------------------------------------------------*/
 .missions {
   background-color: #eeeeee;
@@ -146,23 +156,22 @@ body {
   font-size: 18px;
   padding: 5% 10% 10% 10%; }
 .cards img {
-  border-bottom: 2px solid #0084bf;
+  border-bottom: 2px solid black;
   padding: 16px; }
 
 .missions h3 {
-  border-top: 2px solid #0084bf;
+  border-top: 2px solid black;
   padding-top: 5%;
   font-size: 19px;
   font-weight: bold;
-  color: #0084bf;
+  color: black;
   margin: 0;
   text-transform: uppercase; }
 
 /*-------------------------------------------COMMENT------------------------------------------------------*/
 .comment {
-  padding: 3% 0 8% 0;
-  background-color: #283e4a;
-  height: 340px; }
+  padding: 3% 0 1% 0;
+  background-color: #283e4a; }
   .comment h1 {
     color: #eeeeee;
     font-size: 40px;
@@ -188,7 +197,7 @@ body {
 .one, .two, .three {
   display: inline-block;
   border-radius: 200px;
-  background-color: #3c87b4;
+  background-color: #49aad5;
   font-size: 40px;
   width: 70px;
   height: 70px;
@@ -203,7 +212,7 @@ body {
   font-size: 18px; }
 
 .two {
-  background-color: #54a3c2; }
+  background-color: #4ab6d3; }
 
 #two {
   color: white;
@@ -325,17 +334,24 @@ body {
     transition: 0.2s;
     border: solid 1px white; }
 
-.contact {
-  padding: 0 0 2% 0;
-  display: inline-block; }
-
 .button-test {
   font-size: 12px; }
+
+#last p {
+  padding-bottom: 50px; }
 
 /*-------------------------------------------FOOTER------------------------------------------------------*/
 .footer {
   background-color: #283e4a;
-  color: white;
-  height: 50px; }
+  color: #eeeeee;
+  font-size: 15px; }
+
+.footer p {
+  padding: 15px;
+  margin: 0; }
+
+.footer img {
+  float: right;
+  margin: 10px 6px 6px 6px; }
 
 /*# sourceMappingURL=style.css.map */

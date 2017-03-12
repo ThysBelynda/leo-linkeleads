@@ -116,7 +116,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
                 <div class="prospection" align="center">
-                    <h1>Pourquoi confier vos actions de prospection à <strong>Leo</strong> ?</h1>
+                    <h1>Pourquoi confier vos actions de prospection à <p id="leo">Leo</p> ?</h1>
                     <div class="description">
                         <p>Autonome, Leo décuple vos opportunités commerciales en démarchant à votre place les prospects que vous ciblez sur Linkedin. <strong>En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</strong></p>
                     </div>
@@ -129,7 +129,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
                 <div class="levier" align="center">
-                    <h1>Pourquoi faire de <strong>Linkedin</strong> un levier commercial ?</h1>
+                    <h1>Pourquoi faire de <p id="linkedin">Linkedin</p> un levier commercial ?</h1>
                 </div>
             </div>
         </div>
@@ -211,15 +211,15 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <div class="row">
 
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="one"> <p>1</p> </div>
+                <div class="one"> <p><strong>1</strong></p> </div>
 
                 <div class="border"></div>
 
-                <div class="two"> <p>2</p> </div>
+                <div class="two"> <p><strong>2</strong></p> </div>
 
                 <div class="border"></div>
 
-                <div class="three"> <p>3</p> </div>
+                <div class="three"> <p><strong>3</strong></p> </div>
 
             </div>
         </div>
@@ -243,8 +243,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 </div>
             </div>
         </div>
-        <h1>Leo démarche à votre place sur Linkedin jusqu'à <strong>1000 prospects/mois !</strong></h1>
-
+        <!--<h1>Leo démarche à votre place sur Linkedin jusqu'à <strong>1000 prospects/mois !</strong></h1>-->
     </div>
 
 
@@ -317,7 +316,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
     </div>
 
-
     <div id="last" align="center">
         <div class="portrait">
             <img src="img/Leosmile.png" height="125px" width="125px">
@@ -336,124 +334,134 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     </div>
 
     <div class="footer">
-    </div>
-
-    <!--<div class="footer">
-        <div class="p-left">
-            <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads</p>
-        </div>
-
-        <div class="p-right" align="right">
-            <p>
-                <strong>N'hésitez pas à me contacter, je vous répondrai ASAP :</strong>
-                <a href="#"><img src="img/linkedin.png" height="40px" width="40px"></a>
-                <a href="#"><img src="img/gmail.png" height="40px" width="40px"></a>
-            </p>
-        </div>
-    </div>-->
-
-
-    <div id="form">
-        <button type="button" value="Close" id="close" style="float: right">Close</button>
-        <form action="index.php" method="post">
-            <div class="form-group">
-                <label>Nom</label>
-                <input class="test" name="name" type="text" id="userName" >
-                <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
-
-                <label for="usr">Prénom</label>
-                <input class="test" name="firstname" type="text" id="userFirstname" >
-                <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
-
-                <label for="usr">Adresse e-mail</label>
-                <input class="test" name="email" type="email" id="userEmail" >
-                <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
-
-                <div id="valid" style="display: none; color: green;">Insciption validée!</div>
-                <div id="noValid" style="display: none; color: red;">Attention cet email existe deja</div>
-
-
-                <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
-                <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
-
+        <div class="row">
+            <div class="col-lg-10">
+                <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads.</p>
             </div>
-        </form>
+            <div class="col-lg-2">
+                    <!--<strong>N'hésitez pas à me contacter, je vous répondrai ASAP :</strong>-->
+                    <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
+                    <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>
+            </div>
+        </div>
     </div>
 
-    <script>
-        //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
-        $('#try').click(function(){
-            $('#form').show();
-        });
+        <!--<div class="footer">
+            <div class="p-left">
+                <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads</p>
+            </div>
 
-        $('#close').click(function () {
-            $('#form').hide();
-        });
+            <div class="p-right" align="right">
+                <p>
+                    <strong>N'hésitez pas à me contacter, je vous répondrai ASAP :</strong>
+                    <a href="#"><img src="img/linkedin.png" height="40px" width="40px"></a>
+                    <a href="#"><img src="img/gmail.png" height="40px" width="40px"></a>
+                </p>
+            </div>
+        </div>-->
 
-        $('#closegreen').click(function () {
-            $('#pop').hide();
-        });
 
-        //DESACTIVER LE BOUTTON SI TOUS LES CHAMPS NE SONT PAS REMPLIS
-        /*$(document).ready(function(){
-         $('#submit').attr('disabled',true);
-         });
+        <div id="form">
+            <button type="button" value="Close" id="close" style="float: right">Close</button>
+            <form action="index.php" method="post">
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input class="test" name="name" type="text" id="userName" >
+                    <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
 
-         $('.test').keyup(function(){
-         if( ($("#userName").val() !=0) && ($("#userFirstname").val().length !=0) && ($("#userEmail").val().length !=0) ){
-         $('#submit').attr('disabled', false);
-         }
+                    <label for="usr">Prénom</label>
+                    <input class="test" name="firstname" type="text" id="userFirstname" >
+                    <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
 
-         else{
-         $('#submit').attr('disabled',true);
-         }
-         });*/
+                    <label for="usr">Adresse e-mail</label>
+                    <input class="test" name="email" type="email" id="userEmail" >
+                    <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
 
-        //TESTS
-        //$( "#submit" ).prop( "disabled", true );
+                    <div id="valid" style="display: none; color: green;">Insciption validée!</div>
+                    <div id="noValid" style="display: none; color: red;">Attention cet email existe deja</div>
 
-        /*$('#submit').click(function () {
-         if ($('#userName').val() == "") {
-         $('#error1').show();
-         } else {
-         $('#error1').hide();
-         }
-         })*/
-    </script>
 
-    <!--FADE STYLE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-    <!-- Modal -->
-    <!--
-    <form action="index.php" method="post">
-        <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Inscription</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="usr">Nom</label>
-                            <input type="text" name="name" class="form-control" id="nameUsr" required>
-                            <div id="error1" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                            <label for="usr">Prénom</label>
-                            <input type="text" name="firstname" class="form-control" id="firstnameUsr" required>
-                            <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                            <label for="usr">Adresse e-mail</label>
-                            <input type="email" name="email" class="form-control" id="emailUsr" required>
-                            <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                    <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
+                    <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
+
+                </div>
+            </form>
+        </div>
+
+        <script>
+            //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
+            $('#try').click(function(){
+                $('#form').show();
+            });
+
+            $('#close').click(function () {
+                $('#form').hide();
+            });
+
+            $('#closegreen').click(function () {
+                $('#pop').hide();
+            });
+
+            //DESACTIVER LE BOUTTON SI TOUS LES CHAMPS NE SONT PAS REMPLIS
+            /*$(document).ready(function(){
+             $('#submit').attr('disabled',true);
+             });
+
+             $('.test').keyup(function(){
+             if( ($("#userName").val() !=0) && ($("#userFirstname").val().length !=0) && ($("#userEmail").val().length !=0) ){
+             $('#submit').attr('disabled', false);
+             }
+
+             else{
+             $('#submit').attr('disabled',true);
+             }
+             });*/
+
+            //TESTS
+            //$( "#submit" ).prop( "disabled", true );
+
+            /*$('#submit').click(function () {
+             if ($('#userName').val() == "") {
+             $('#error1').show();
+             } else {
+             $('#error1').hide();
+             }
+             })*/
+        </script>
+
+        <!--FADE STYLE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+        <!-- Modal -->
+        <!--
+        <form action="index.php" method="post">
+            <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title">Inscription</h4>
                         </div>
-                        <div class="modal-footer">
-                            <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="usr">Nom</label>
+                                <input type="text" name="name" class="form-control" id="nameUsr" required>
+                                <div id="error1" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                                <label for="usr">Prénom</label>
+                                <input type="text" name="firstname" class="form-control" id="firstnameUsr" required>
+                                <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                                <label for="usr">Adresse e-mail</label>
+                                <input type="email" name="email" class="form-control" id="emailUsr" required>
+                                <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
+                            </div>
                         </div>
-                    </div>
-                </div><!-- /.modal-content -->
-    <!--</div><!-- /.modal-dialog -->
-    <!--</div><!-- /.modal -->
-    <!--</form>-->
+                    </div><!-- /.modal-content -->
+        <!--</div><!-- /.modal-dialog -->
+        <!--</div><!-- /.modal -->
+        <!--</form>-->
 
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
     </body>
     </html>
