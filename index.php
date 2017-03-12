@@ -37,9 +37,9 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             $sujet = 'Linkeleads - Confirmation PreLaunching';
             $entete = 'From: team@linkeleads.com';
             $message = 'Bienvenue sur Linkeleads,
-        Veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur internet.
-        ------------
-        Ceci est un mail automatique. Merci de ne pas y répondre.';
+            Veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur internet.
+            ------------
+            Ceci est un mail automatique. Merci de ne pas y répondre.';
 
             mail($destinataire, $sujet, $message, $entete);
 
@@ -73,7 +73,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header">
-            <img alt="alex" src="img/Leoface.png" height="40" width="40">
+            <img alt="alex" src="img/Leosmile.png" height="40" width="40">
         </div>
         <p class="navbar-text">Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong></p>
         <div class="navbar-right">
@@ -107,7 +107,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
         <div class="slogan" align="center">
             <h1>Trouvez de nouveaux clients grâce à Leo</h1>
-            <p>Découvrez Leo, l'assistant virtuel de prospection commerciale</p>
+            <p>Découvrez Leo, l'assistant virtuel de prospection commerciale sur Linkedin</p>
             <button id="try2" class="btn btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
         </div>
     </div>
@@ -118,7 +118,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <div class="prospection" align="center">
                     <h1>Pourquoi confier vos actions de prospection à <p id="leo">Leo</p> ?</h1>
                     <div class="description">
-                        <p>Autonome, Leo décuple vos opportunités commerciales en démarchant à votre place les prospects que vous ciblez sur Linkedin. <strong>En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</strong></p>
+                        <p>Autonome, Leo décuple vos opportunités commerciales en démarchant pour vous les prospects que vous ciblez sur Linkedin. <strong>En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</strong></p>
                     </div>
                 </div>
             </div>
@@ -147,7 +147,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <div class="hourglass">
                         <img src="img/wait.png" width="40px" height="40px">
                     </div>
-                    <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong> pas semaine.</p>
+                    <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong>/semaine.</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -155,7 +155,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <div class="mail">
                         <img src="img/mail.png" width="40px" height="40px">
                     </div>
-                    <p>Parce que <strong>93%</strong> des messages que vous adressez à vos prospects seront lus.</p>
+                    <p>Parce que <strong>93%</strong> des messages que vous enverrez à vos prospects seront lus.</p>
                 </div>
             </div>
         </div>
@@ -209,7 +209,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 -->
 
     <div class="mi" align="center">
-        <h1>Quelles sont les <strong>missions</strong> que Leo peut réaliser pour vous ?</h1>
+        <h1>Quelles sont les <p id="mi">missions</p> que Leo peut réaliser pour vous ?</h1>
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="title" align="right">
@@ -239,11 +239,11 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         <div class="title" align="right">
                             <img src="img/chat.png" height="50" width="50">
                             <p>
-                                <strong>Engager des conversations</strong>
+                                <strong>Envoyer des messages</strong>
                             </p>
                         </div>
                         <div class="text" align="right">
-                            <p>Pour présenter et vendre vos offres à vos cibles.</p>
+                            <p>À plusieurs destinaires simultanément.</p>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -264,6 +264,12 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <div class="comment" align="center">
         <div class="row">
+            <div class="col-lg-12">
+                <h1>Leo démarche à votre place sur Linkedin jusqu'à <strong>1000 prospects/mois !</strong></h1>
+            </div>
+        </div>
+
+        <div class="row">
 
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="one"> <p><strong>1</strong></p> </div>
@@ -282,49 +288,37 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <div class="row">
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="stapes">
-                    <p id="one">Indiquez à Leo les prospects que vous ciblez depuis votre profil Linkedin</p>
+                    <p id="one">Indiquez à Leo les prospects que vous ciblez sur Linkedin</p>
                 </div>
             </div>
 
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="stapes">
-                    <p id="two">Indiquez à Leo les missions qu'il foit effectuer pour vous</p>
+                    <p id="two">Indiquez à Leo les missions qu'il doit effectuer pour vous</p>
                 </div>
             </div>
 
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="stapes">
-                    <p id="three">Laissez travailler Leo, il vous previent lorsqu'il termine</p>
+                    <p id="three">Laissez travailler Leo, il vous reporte l'ensemble de ses actions</p>
                 </div>
             </div>
         </div>
-        <!--<h1>Leo démarche à votre place sur Linkedin jusqu'à <strong>1000 prospects/mois !</strong></h1>-->
     </div>
 
 
     <div class="pricing" align="center">
-        <h1>Une rémunération simple et transparente</h1>
+        <h1>Un pricing simple et transparent</h1>
+
         <div class="row">
             <div class="col-sm-6 col-md-6 col-lg-offset-1 col-lg-5">
                 <div class="junior">
                     <div class="list">
                         <h2><strong>Leo Junior</strong></h2>
                         <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
-                        <h3><strong>500 clients</strong></h3>
+                        <h3 id="cinq"><strong>500 clients</strong></h3>
                         <br>
-                        <p>Reporting <br><br>Visite de profils cibles <br><br>Mise en relation <br><br>Envoi de messages <br><br>Extraction de coordonnées</p>
-                    </div>
-                    <div class="valid">
-                        <p><i class="fa fa-check-circle" aria-hidden="true"></i>
-                            <br><br>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                            <br><br>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                            <br><br>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                            <br><br>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </p>
+                        <p>Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br> Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i></p>
                     </div>
                 </div>
                 <div class="juniorprice">
@@ -340,17 +334,9 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <div class="list">
                         <h2><strong>Leo Expert</strong></h2>
                         <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
-                        <h3><strong>1000 clients</strong></h3>
+                        <h3 id="mille"><strong>1000 clients</strong></h3>
                         <br>
-                        <p>Reporting <br><br>Visite de profils cibles <br><br>Mise en relation <br><br>Envoi de messages <br><br>Extraction de coordonnées</p>
-                    </div>
-                    <div class="valid">
-                        <p><i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
-                            <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        </p>
+                        <p>Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br> Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i></p>
                     </div>
                 </div>
                 <div class="proprice">
@@ -364,16 +350,21 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
-                <div id="try3" class="btn btn-success btn-block btn-group-lg">
+                <!--<div id="try3" class="btn btn-success btn-block btn-group-lg">
                     Bénéficiez d'un essai <strong>gratuit</strong> de 30 jours
-                </div>
+                </div>-->
             </div>
+            <div class="gratis">
+                <h2>Prenez Leo à l'essai gratuitement pendant 30 jours. Décidez ensuite.</h2>
+            </div>
+            <button id="try3" class="btn btn-lg"><strong>Essayez gratuitement</strong></button>
+
         </div>
     </div>
 
     <div id="last" align="center">
         <div class="portrait">
-            <img src="img/Leosmile.png" height="125px" width="125px">
+            <img src="img/Leosmile.png" height="145" width="145">
             <h1>Engagez-moi, c’est sans engagement.</h1>
         </div>
 
@@ -391,9 +382,10 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     <div class="footer">
         <div class="row">
             <div class="col-lg-10">
-                <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads.</p>
+                <p>Leo est un assistant virtuel commercial développé par la société Linkeleads</p>
             </div>
             <div class="col-lg-2">
+                    <p>contact :</p>
                     <!--<strong>N'hésitez pas à me contacter, je vous répondrai ASAP :</strong>-->
                     <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
                     <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>
