@@ -73,7 +73,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header">
-            <img alt="alex" src="img/Leosmile.png" height="40" width="40">
+            <img alt="alex" src="img/Leosmile.png" height="38" width="38">
         </div>
         <p class="navbar-text">Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong></p>
         <div class="navbar-right">
@@ -137,7 +137,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="users">
                     <div class="profils">
-                        <img src="img/user-7.png" width="40px" height="40px">
+                        <img src="img/user-7.png" width="40" height="40">
                     </div>
                     <p>Parce que vos prospects font partie des <strong>450 millions</strong> d'utilisateurs.</p>
                 </div>
@@ -145,122 +145,73 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="time">
                     <div class="hourglass">
-                        <img src="img/wait.png" width="40px" height="40px">
+                        <img src="img/wait.png" width="40" height="40">
                     </div>
                     <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong>/semaine.</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="messenger">
+                <div class="messages">
                     <div class="mail">
-                        <img src="img/mail.png" width="40px" height="40px">
+                        <img src="img/mail.png" width="40" height="40">
                     </div>
                     <p>Parce que <strong>93%</strong> des messages que vous enverrez à vos prospects seront lus.</p>
                 </div>
             </div>
         </div>
     </div>
-<!--
+
     <div class="missions" align="center">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <h1>Quelles sont les <strong>missions</strong> que Leo peut réaliser pour vous ?</h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <h3><strong>Consulter des profils</strong></h3>
-                <div class="cards">
-                    <p class="pour">Pour vous faire connaître de vos cibles.</p>
-                    <img src="img/loupe.png" height="100px" width="100px">
-                </div>
-            </div>
-
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <h3><strong>Entrer en relation</strong></h3>
-                <div class="cards">
-                    <p class="pour">Pour élargir votre réseau professionnel.</p>
-                    <img src="img/reseau.png" height="100px" width="100px">
-                </div>
-            </div>
-
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <div class="titles">
-                    <h3><strong>Engager des conversations</strong></h3>
-                </div>
-                <div class="cards">
-                    <p class="pour">Pour présenter et vendre vos offres à vos cibles.</p>
-                    <img src="img/chat.png" height="100px" width="100px">
-                </div>
-            </div>
-
-            <div class="col-sm-3 col-md-3 col-lg-3">
-                <div class="titles">
-                    <h3><strong>Extraire des coordonnées</strong></h3>
-                </div>
-                <div class="cards">
-                    <p class="pour">Pour mener des campagnes d'e-mailing ciblées.</p>
-                    <img src="img/courrier.png" height="100px" width="100px">
-                </div>
-            </div>
-        </div>
-    </div>
--->
-
-    <div class="mi" align="center">
         <h1>Quelles sont les <p id="mi">missions</p> que Leo peut réaliser pour vous ?</h1>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="title" align="right">
-                            <img src="img/loupe.png" height="50" width="50">
-                            <p>
-                                <strong>Consulter des profils</strong>
-                            </p>
-                        </div>
-                        <div class="text" align="right">
-                            <p>Pour vous faire connaître de vos cibles.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="title" align="right">
-                            <img src="img/reseau.png" height="50" width="50">
-                            <p>
-                                <strong>Entrer en relation</strong>
-                            </p>
-                        </div>
-                        <div class="text" align="right">
-                            <p>Pour élargir votre réseau professionnel.</p>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="title" align="right">
+                    <img src="img/loupe.png" height="50" width="50">
+                    <p>
+                        <strong>Consulter des profils</strong>
+                    </p>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="title" align="right">
-                            <img src="img/chat.png" height="50" width="50">
-                            <p>
-                                <strong>Envoyer des messages</strong>
-                            </p>
-                        </div>
-                        <div class="text" align="right">
-                            <p>À plusieurs destinaires simultanément.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="title" align="right">
-                            <img src="img/courrier.png" height="50" width="50">
-                            <p>
-                                <strong>Extraire des coordonnées</strong>
-                            </p>
-                        </div>
-                        <div class="text" align="right">
-                            <p>Pour mener des campagnes d'e-mailing ciblées.</p>
-                        </div>
-                    </div>
+                <div class="text" align="right">
+                    <p>Pour vous faire connaître de vos cibles.</p>
                 </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="title" align="right">
+                    <img src="img/reseau.png" height="50" width="50">
+                    <p>
+                        <strong>Entrer en relation</strong>
+                    </p>
+                </div>
+                <div class="text" align="right">
+                    <p>Pour élargir votre réseau professionnel.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="title" align="right">
+                    <img src="img/chat.png" height="50" width="50">
+                    <p>
+                        <strong>Envoyer des messages</strong>
+                    </p>
+                </div>
+                <div class="text" align="right">
+                    <p>À plusieurs destinaires simultanément.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="title" align="right">
+                    <img src="img/courrier.png" height="50" width="50">
+                    <p>
+                        <strong>Extraire des coordonnées</strong>
+                    </p>
+                </div>
+                <div class="text" align="right">
+                    <p>Pour mener des campagnes d'e-mailing ciblées.</p>
+                </div>
+            </div>
+        </div>
     </div>
-
-
 
     <div class="comment" align="center">
         <div class="row">
@@ -288,24 +239,23 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <div class="row">
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="stapes">
-                    <p id="one">Indiquez à Leo les prospects que vous ciblez sur Linkedin</p>
+                    <p>Indiquez à Leo les prospects que vous ciblez sur Linkedin</p>
                 </div>
             </div>
 
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="stapes">
-                    <p id="two">Indiquez à Leo les missions qu'il doit effectuer pour vous</p>
+                    <p>Indiquez à Leo les missions qu'il doit effectuer pour vous</p>
                 </div>
             </div>
 
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="stapes">
-                    <p id="three">Laissez travailler Leo, il vous reporte l'ensemble de ses actions</p>
+                    <p>Laissez travailler Leo, il vous reporte l'ensemble de ses actions</p>
                 </div>
             </div>
         </div>
     </div>
-
 
     <div class="pricing" align="center">
         <h1>Un pricing simple et transparent</h1>
@@ -318,7 +268,13 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
                         <h3 id="cinq"><strong>500 clients</strong></h3>
                         <br>
-                        <p>Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br> Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i></p>
+                        <p>
+                            Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </p>
                     </div>
                 </div>
                 <div class="juniorprice">
@@ -336,30 +292,30 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
                         <h3 id="mille"><strong>1000 clients</strong></h3>
                         <br>
-                        <p>Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br> Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i></p>
+                        <p>
+                            Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </p>
                     </div>
                 </div>
-                <div class="proprice">
+                <div class="expertprice">
                     <p> <strong>99€ /mois</strong></p>
                     <div class="engagement">
                         <p>Sans engagement</p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
-                <!--<div id="try3" class="btn btn-success btn-block btn-group-lg">
-                    Bénéficiez d'un essai <strong>gratuit</strong> de 30 jours
-                </div>-->
-            </div>
-            <div class="gratis">
-                <h2>Prenez Leo à l'essai gratuitement pendant 30 jours. Décidez ensuite.</h2>
-            </div>
-            <button id="try3" class="btn btn-lg"><strong>Essayez gratuitement</strong></button>
 
         </div>
+
+        <div class="gratis">
+            <h2>Prenez Leo à l'essai gratuitement pendant 30 jours. Décidez ensuite.</h2>
+        </div>
+        <button id="try3" class="btn btn-lg"><strong>Essayez gratuitement</strong></button>
+
     </div>
 
     <div id="last" align="center">
@@ -367,16 +323,10 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <img src="img/Leosmile.png" height="145" width="145">
             <h1>Engagez-moi, c’est sans engagement.</h1>
         </div>
-
-        <br>
-
         <div class="button-test">
-            <button id="try4" type="button" class="btn btn-info btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <button id="try4" type="button" class="btn btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
             <p>À l'issue de cette période d'essai, vous déciderez de le garder ou non</p>
         </div>
-
-        <br>
-        <br>
     </div>
 
     <div class="footer">
@@ -385,133 +335,120 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <p>Leo est un assistant virtuel commercial développé par la société Linkeleads</p>
             </div>
             <div class="col-lg-2">
-                    <p>contact :</p>
-                    <!--<strong>N'hésitez pas à me contacter, je vous répondrai ASAP :</strong>-->
-                    <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
-                    <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>
+                <p>contact :</p>
+                <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
+                <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>
             </div>
         </div>
     </div>
 
-        <!--<div class="footer">
-            <div class="p-left">
-                <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads</p>
-            </div>
-
-            <div class="p-right" align="right">
-                <p>
-                    <strong>N'hésitez pas à me contacter, je vous répondrai ASAP :</strong>
-                    <a href="#"><img src="img/linkedin.png" height="40px" width="40px"></a>
-                    <a href="#"><img src="img/gmail.png" height="40px" width="40px"></a>
-                </p>
-            </div>
-        </div>-->
-
-
-        <div id="form">
-            <button type="button" value="Close" id="close" style="float: right">Close</button>
-            <form action="index.php" method="post">
-                <div class="form-group">
-                    <label>Nom</label>
-                    <input class="test" name="name" type="text" id="userName" >
-                    <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
-
-                    <label for="usr">Prénom</label>
-                    <input class="test" name="firstname" type="text" id="userFirstname" >
-                    <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
-
-                    <label for="usr">Adresse e-mail</label>
-                    <input class="test" name="email" type="email" id="userEmail" >
-                    <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
-
-                    <div id="valid" style="display: none; color: green;">Insciption validée!</div>
-                    <div id="noValid" style="display: none; color: red;">Attention cet email existe deja</div>
-
-
-                    <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
-                    <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
-
-                </div>
-            </form>
-        </div>
-
-        <script>
-            //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
-            $('#try').click(function(){
-                $('#form').show();
-            });
-
-            $('#close').click(function () {
-                $('#form').hide();
-            });
-
-            $('#closegreen').click(function () {
-                $('#pop').hide();
-            });
-
-            //DESACTIVER LE BOUTTON SI TOUS LES CHAMPS NE SONT PAS REMPLIS
-            /*$(document).ready(function(){
-             $('#submit').attr('disabled',true);
-             });
-
-             $('.test').keyup(function(){
-             if( ($("#userName").val() !=0) && ($("#userFirstname").val().length !=0) && ($("#userEmail").val().length !=0) ){
-             $('#submit').attr('disabled', false);
-             }
-
-             else{
-             $('#submit').attr('disabled',true);
-             }
-             });*/
-
-            //TESTS
-            //$( "#submit" ).prop( "disabled", true );
-
-            /*$('#submit').click(function () {
-             if ($('#userName').val() == "") {
-             $('#error1').show();
-             } else {
-             $('#error1').hide();
-             }
-             })*/
-        </script>
-
-        <!--FADE STYLE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-        <!-- Modal -->
-        <!--
+    <div id="form">
+        <button type="button" value="Close" id="close" style="float: right">Close</button>
         <form action="index.php" method="post">
-            <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4 class="modal-title">Inscription</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="usr">Nom</label>
-                                <input type="text" name="name" class="form-control" id="nameUsr" required>
-                                <div id="error1" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                                <label for="usr">Prénom</label>
-                                <input type="text" name="firstname" class="form-control" id="firstnameUsr" required>
-                                <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                                <label for="usr">Adresse e-mail</label>
-                                <input type="email" name="email" class="form-control" id="emailUsr" required>
-                                <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
-                            </div>
-                        </div>
-                    </div><!-- /.modal-content -->
-        <!--</div><!-- /.modal-dialog -->
-        <!--</div><!-- /.modal -->
-        <!--</form>-->
+            <div class="form-group">
+                <label>Nom</label>
+                <input class="test" name="name" type="text" id="userName" >
+                <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
 
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+                <label for="usr">Prénom</label>
+                <input class="test" name="firstname" type="text" id="userFirstname" >
+                <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
+
+                <label for="usr">Adresse e-mail</label>
+                <input class="test" name="email" type="email" id="userEmail" >
+                <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+
+                <div id="valid" style="display: none; color: green;">Insciption validée!</div>
+                <div id="noValid" style="display: none; color: red;">Attention cet email existe deja</div>
+
+
+                <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
+                <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+
+        //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
+        $('#try').click(function(){
+            $('#form').show();
+        });
+
+        $('#close').click(function () {
+            $('#form').hide();
+        });
+
+        $('#closegreen').click(function () {
+            $('#pop').hide();
+        });
+
+        //DESACTIVER LE BOUTTON SI TOUS LES CHAMPS NE SONT PAS REMPLIS
+        /*$(document).ready(function(){
+         $('#submit').attr('disabled',true);
+         });
+
+         $('.test').keyup(function(){
+         if( ($("#userName").val() !=0) && ($("#userFirstname").val().length !=0) && ($("#userEmail").val().length !=0) ){
+         $('#submit').attr('disabled', false);
+         }
+
+         else{
+         $('#submit').attr('disabled',true);
+         }
+         });*/
+
+        //TESTS
+        //$( "#submit" ).prop( "disabled", true );
+
+        /*$('#submit').click(function () {
+         if ($('#userName').val() == "") {
+         $('#error1').show();
+         } else {
+         $('#error1').hide();
+         }
+         })*/
+
+    </script>
+
+    <!--FADE STYLE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+    <!-- Modal -->
+    <!--
+    <form action="index.php" method="post">
+        <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title">Inscription</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="usr">Nom</label>
+                            <input type="text" name="name" class="form-control" id="nameUsr" required>
+                            <div id="error1" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                            <label for="usr">Prénom</label>
+                            <input type="text" name="firstname" class="form-control" id="firstnameUsr" required>
+                            <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                            <label for="usr">Adresse e-mail</label>
+                            <input type="email" name="email" class="form-control" id="emailUsr" required>
+                            <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
+                        </div>
+                    </div>
+                </div><!-- /.modal-content -->
+    <!--</div><!-- /.modal-dialog -->
+    <!--</div><!-- /.modal -->
+    <!--</form>-->
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
     </body>
     </html>
+
 <?php if ( isset($_GET['valid']) ){
 
     $_GET['valid'] = (int) $_GET['valid'];

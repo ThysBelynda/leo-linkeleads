@@ -22,6 +22,10 @@ body {
   padding: 30px;
   display: none; }
 
+h1 {
+  font-size: 35px;
+  color: #283e4a; }
+
 /*-------------------------------------------NAVBAR------------------------------------------------------*/
 .navbar-fixed-top {
   background-color: #283e4a;
@@ -31,11 +35,12 @@ body {
 .navbar-header img {
   background-color: white;
   border-radius: 50px;
-  margin-top: 5px;
+  margin-top: 6px;
   padding: 1px; }
 
 .navbar-text {
-  font-size: 16px; }
+  font-size: 16px;
+  color: whitesmoke; }
 
 .navbar-default .navbar-text {
   color: #eeeeee; }
@@ -43,23 +48,14 @@ body {
 .navbar-right {
   margin: 0; }
 
-#try {
+#try, #try2, #try2:hover, #try3, #try4 {
   font-size: 16px;
   background-color: #0077b5;
   color: white;
-  background-color: #0077b5;
   border-radius: 2px; }
-  #try:hover {
-    color: white;
-    transition: 0.2s;
-    border: solid 1px white; }
+  #try:hover, #try2:hover, #try3:hover, #try4:hover {
+    transition: 0.2s; }
 
-@media (max-width: 1024px) {
-  #try {
-    font-size: 14px; }
-
-  .navbar-text {
-    font-size: 14px; } }
 /*-------------------------------------------HEADER------------------------------------------------------*/
 .header {
   background-image: url("../../img/ourclients.jpg");
@@ -67,107 +63,77 @@ body {
   background-position-y: 50px;
   background-attachment: fixed;
   background-size: 100%;
-  height: 425px;
-  color: white;
-  position: relative; }
+  height: 437px;
+  color: white; }
   .header h1 {
     font-weight: bolder;
-    font-size: 45px; }
+    font-size: 45px;
+    color: white; }
   .header p {
     letter-spacing: 0.5px;
     font-size: 24px; }
 
 .slogan {
-  padding-top: 10%;
-  left: 250px; }
+  padding-top: 10%; }
 
 #try2 {
-  color: white;
   margin-top: 40px;
-  font-size: 20px;
-  background-color: #0077b5;
-  border: none;
-  border-radius: 2px; }
+  font-size: 20px; }
   #try2:hover {
-    color: white;
-    box-shadow: white 0 0 15px 3px;
-    transition: 0.2s;
-    border: none; }
+    font-size: 20px; }
 
 /*-------------------------------------------LEO------------------------------------------------------*/
-.prospection {
-  padding: 4% 0 3% 0; }
-  .prospection h1 {
-    color: #283e4a;
-    font-size: 35px; }
+.leo {
+  background: #eeeeee;
+  padding: 3% 0 4% 0; }
+
+#leo, #linkedin {
+  color: #0077b5;
+  display: inline-block; }
 
 .description {
-  padding: 1% 3% 3% 3%; }
+  padding: 1% 0 0 0; }
   .description p {
     font-size: 19px;
     text-align: center; }
 
-.leo {
-  background: #eeeeee; }
-
-#leo {
-  color: #0077b5;
-  display: inline-block;
-  font-weight: bold; }
-
 /*-------------------------------------------LINKEDIN------------------------------------------------------*/
-.users, .time, .messenger {
-  margin-top: 5%;
-  width: 90%; }
-  .users p, .time p, .messenger p {
-    padding: 13% 0 0 0;
-    font-size: 18px;
-    text-align: center; }
-
 .linkedin {
   background-color: white;
-  padding: 2% 0 3% 0; }
+  padding: 3% 0 4% 0; }
 
-.levier h1 {
-  color: #283e4a;
-  font-size: 35px; }
+.users, .time, .messages {
+  margin-top: 8%;
+  width: 90%; }
+  .users p, .time p, .messages p {
+    padding: 10% 0 0 0;
+    font-size: 18px;
+    text-align: center; }
 
 .mail, .hourglass, .profils {
   background-color: whitesmoke;
   width: 75px;
   height: 75px;
   border-radius: 150px;
-  border: 1px solid whitesmoke;
+  border: 1px solid #eeeeee;
   padding-top: 20px; }
 
-#linkedin {
-  color: #0077b5;
-  display: inline-block;
-  font-weight: bold; }
-
 /*-------------------------------------------MISSIONS------------------------------------------------------*/
-.mi {
+.missions {
   background-color: #eeeeee;
-  padding: 5% 0 8% 0; }
-  .mi h1 {
-    margin: 0;
-    padding: 0 10% 3% 10%;
-    color: #283e4a; }
-  .mi img {
+  padding: 3% 0 6% 0; }
+  .missions img {
     float: left;
-    vertical-align: middle;
     margin: 10px;
     padding: 5px; }
 
 #mi {
   color: #0077b5;
-  display: inline-block;
-  font-weight: bold; }
+  display: inline-block; }
 
 .title {
   background-color: white;
   display: inline-block;
-  font-size: 18px;
   width: 460px;
   margin-top: 60px;
   box-shadow: 0 0 50px 8px white; }
@@ -179,9 +145,7 @@ body {
     color: #283e4a; }
 
 .text {
-  display: inline-block;
   padding: 10px 20px 0 0;
-  font-size: 18px;
   width: 460px; }
   .text p {
     padding: 10px 0 10px 0;
@@ -189,56 +153,14 @@ body {
     font-weight: bolder;
     font-size: 18px; }
 
-/*
-.missions{
-  background-color: #eeeeee;
-  padding: 5% 0 8% 0;
-
-  h1{
-    padding:0 10% 8% 10%;
-    color: $leocoloreye;
-  }
-}
-
-.cards{
-  p{
-    text-align: center;
-    font-size:18px;
-    padding: 5% 10% 10% 10%;
-  }
-
-  img{
-    border-bottom: 2px solid rgb(0, 0, 0);
-    padding: 16px;
-  }
-}
-*/
 /*-------------------------------------------COMMENT------------------------------------------------------*/
 .comment {
   padding: 3% 0 1% 0;
   background-color: #283e4a; }
   .comment h1 {
-    margin: 0;
     color: #eeeeee;
     padding: 0 0 5% 0; }
 
-/*
-.screen1{
-  border-radius: 3px;
-  border-top: 2px solid $stapeone;
-  border-bottom: 2px solid $stapeone;
-}
-.screen2{
-  border-radius: 3px;
-  border-top: 2px solid $stapetwo ;
-  border-bottom: 2px solid $stapetwo;
-}
-.screen3 {
-  border-radius: 3px;
-  border-top: 2px solid $stapethree;
-  border-bottom: 2px solid $stapethree;
-}
-*/
 .one, .two, .three {
   display: inline-block;
   border-radius: 200px;
@@ -250,33 +172,17 @@ body {
   .one p, .two p, .three p {
     padding-top: 7px; }
 
-#one {
-  color: white;
-  margin: 10% 10% 10% 10%;
-  text-align: center;
-  font-size: 18px; }
-
 .two {
   background-color: #4e94bb; }
-
-#two {
-  color: white;
-  margin: 10% 10% 10% 10%;
-  text-align: center;
-  font-size: 18px; }
 
 .three {
   background-color: #0077b5; }
 
-#three {
+.stapes {
   color: white;
   margin: 10% 10% 10% 10%;
   text-align: center;
   font-size: 18px; }
-
-.stapes {
-  text-align: center;
-  font-size: 16px; }
 
 .border {
   display: inline-block;
@@ -284,101 +190,79 @@ body {
   border-top: 3px solid #eeeeee; }
 
 /*-------------------------------------------PRICING------------------------------------------------------*/
-.list {
-  padding: 3% 20px 5% 20px;
-  display: inline-block; }
-
 .pricing {
   background-color: #eeeeee;
-  padding: 5% 0 9% 0; }
-  .pricing h1 {
-    padding: 0 10% 3% 10%; }
+  padding: 3% 0 9% 0; }
+
+.list {
+  padding: 3% 0 4% 0;
+  display: inline-block; }
+  .list p {
+    padding: 11% 0 0 0;
+    border-top: solid 1px;
+    width: 280px; }
+  .list i {
+    float: right; }
 
 .junior, .expert {
   background-color: white;
-  margin: 0 10% 0 10%;
+  margin: 10% 10% 0 10%;
   box-shadow: 0 0 40px 8px white; }
   .junior p, .expert p {
     font-size: 18px;
     letter-spacing: 0.5px;
     text-align: left;
-    font-weight: 900;
+    font-weight: bold;
     line-height: 19px; }
   .junior h2, .expert h2 {
-    color: #009aea; }
-  .junior h2, .expert h2 {
+    color: #009aea;
     margin-top: 10px; }
   .junior h3, .expert h3 {
     margin: 0;
     line-height: 0.4; }
 
-.list p {
-  padding: 11% 0 0 0;
-  border-top: solid 1px;
-  width: 300px; }
+#cinq {
+  color: #009aea; }
 
 .expert h2 {
+  color: #003551; }
+
+#mille {
   color: #003551; }
 
 .fa-check-circle {
   color: #28c368; }
 
-.fa-times-circle {
-  color: #ca0000; }
-
-.juniorprice, .proprice {
+.juniorprice, .expertprice {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   padding: 1% 0 2% 0;
   color: white;
   letter-spacing: 1px;
-  border-bottom: solid 1px #009aea;
-  border-right: solid 1px #009aea;
-  border-left: solid 1px #009aea;
+  border: solid 1px #009aea;
   background-color: #009aea;
   margin: 0 10% 0 10%; }
-  .juniorprice p, .proprice p {
+  .juniorprice p, .expertprice p {
     font-size: 27px; }
 
-#cinq {
-  color: #009aea; }
-
-.proprice {
-  border-bottom: solid 1px #003551;
-  border-right: solid 1px #003551;
-  border-left: solid 1px #003551;
+.expertprice {
+  border: solid 1px #003551;
   background-color: #003551; }
-
-#mille {
-  color: #003551; }
-
-.valid {
-  display: inline-block; }
 
 .engagement p {
   font-size: 18px;
   font-weight: lighter;
   line-height: 0.1; }
 
-#try3 {
-  color: white;
-  margin-top: 20px;
-  font-size: 25px;
-  background-color: #0077b5;
-  border: none;
-  border-radius: 2px;
-  padding: 10px 40px 10px 40px; }
-  #try3:hover {
-    color: white;
-    box-shadow: white 0 0 15px 3px;
-    transition: 0.2s;
-    border: none; }
-
 .gratis {
   margin-top: 70px; }
 
-.list i {
-  float: right; }
+#try3 {
+  margin-top: 20px;
+  font-size: 25px;
+  padding: 10px 40px 10px 40px; }
+  #try3:hover {
+    transition: 0.2s; }
 
 /*-------------------------------------------CONTACT------------------------------------------------------*/
 .portrait {
@@ -388,18 +272,9 @@ body {
 
 #try4 {
   font-size: 20px;
-  background-color: #0077b5;
-  color: white;
-  border: solid 1px #0077b5;
-  border-radius: 2px;
   margin-bottom: 20px; }
   #try4:hover {
-    color: white;
-    transition: 0.2s;
-    border: solid 1px white; }
-
-.button-test {
-  font-size: 12px; }
+    transition: 0.2s; }
 
 #last p {
   padding-bottom: 50px; }
