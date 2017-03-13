@@ -16,7 +16,7 @@ body{
 }
 
 $leocolor : rgb(40, 62, 74);
-$buttoncolor : rgb(28, 130, 186);
+$buttoncolor : rgb(0, 119, 181);
 $backgroundcolor : #eeeeee;
 $juniorcolor: rgb(0, 154, 234);
 $expertcolor : rgb(0, 53, 81);
@@ -354,6 +354,7 @@ h1{
   border: solid 1px $juniorcolor;
   background-color: $juniorcolor;
   margin: 0 10% 0 10%;
+  width:80%;
 
   p{
     font-size: 27px;
@@ -378,9 +379,8 @@ h1{
 
 #try3{
   @extend #try;
-  margin-top: 20px;
-  font-size: 25px;
-  padding: 10px 40px 10px 40px;
+  margin-top: 40px;
+  font-size: 20px;
 
   &:hover{
     //box-shadow: white 0 0 15px 3px;

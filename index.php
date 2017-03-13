@@ -171,7 +171,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     <div class="missions" align="center">
         <h1>Quelles sont les <p id="mi">missions</p> que Leo peut réaliser pour vous ?</h1>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/loupe.png" height="50" width="50">
                     <p>
@@ -182,7 +182,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <p>Pour vous faire connaître de vos cibles.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/reseau.png" height="50" width="50">
                     <p>
@@ -195,7 +195,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/chat.png" height="50" width="50">
                     <p>
@@ -206,7 +206,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <p>À plusieurs destinaires simultanément.</p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/courrier.png" height="50" width="50">
                     <p>
@@ -222,7 +222,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <div class="comment" align="center">
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12 col-md-12 col-lg-12">
                 <h1>Leo démarche à votre place sur Linkedin jusqu'à <strong>1000 prospects/mois !</strong></h1>
             </div>
         </div>
@@ -265,7 +265,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     </div>
 
     <div class="pricing" align="center">
-        <h1>Un pricing simple et transparent</h1>
+        <h1>Un pricing simple et transparent </h1>
 
         <div class="row">
             <div class="col-sm-6 col-md-6 col-lg-offset-1 col-lg-5">
@@ -284,12 +284,12 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </p>
                     </div>
                 </div>
-                <div class="juniorprice">
+                <button class="juniorprice">
                     <p><strong> 59€ /mois </strong></p>
                     <div class="engagement">
                         <p>Sans engagement</p>
                     </div>
-                </div>
+                </button>
             </div>
 
             <div class="col-sm-6 col-md-6 col-lg-5">
@@ -308,20 +308,23 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </p>
                     </div>
                 </div>
-                <div class="expertprice">
-                    <p> <strong>99€ /mois</strong></p>
-                    <div class="engagement">
-                        <p>Sans engagement</p>
-                    </div>
-                </div>
+                <button class="expertprice">
+                        <p> <strong>99€ /mois</strong></p>
+                        <div class="engagement">
+                            <p>Sans engagement</p>
+                        </div>
+                </button>
             </div>
 
         </div>
 
         <div class="gratis">
-            <h2>Prenez Leo à l'essai gratuitement pendant 30 jours. Décidez ensuite.</h2>
+            <button id="try3" class="btn btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <br><br>
+            <h2>Décidez ensuite.</h2>
         </div>
-        <button id="try3" class="btn btn-lg"><strong>Essayez gratuitement</strong></button>
+
+        <!--<button id="try3" class="btn btn-lg"><strong>Essayez gratuitement</strong></button>-->
 
     </div>
 
@@ -338,10 +341,10 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <div class="footer">
         <div class="row">
-            <div class="col-lg-10">
+            <div class="col-sm-10 col-md-10 col-lg-10">
                 <p>Leo est un assistant virtuel commercial développé par la société Linkeleads</p>
             </div>
-            <div class="col-lg-2">
+            <div class="col-sm-2 col-md-2 col-lg-2">
                 <p>contact :</p>
                 <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
                 <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>

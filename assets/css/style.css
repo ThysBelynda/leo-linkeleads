@@ -50,7 +50,7 @@ h1 {
 
 #try, #try2, #try2:hover, #try3, #try4 {
   font-size: 16px;
-  background-color: #1c82ba;
+  background-color: #0077b5;
   color: white;
   border-radius: 2px; }
   #try:hover, #try2:hover, #try3:hover, #try4:hover {
@@ -88,7 +88,7 @@ h1 {
   padding: 3% 0 4% 0; }
 
 #leo, #linkedin {
-  color: #1c82ba;
+  color: #0077b5;
   display: inline-block; }
 
 .description {
@@ -128,7 +128,7 @@ h1 {
     padding: 5px; }
 
 #mi {
-  color: #1c82ba;
+  color: #0077b5;
   display: inline-block; }
 
 .title {
@@ -176,7 +176,7 @@ h1 {
   background-color: #4e94bb; }
 
 .three {
-  background-color: #1c82ba; }
+  background-color: #0077b5; }
 
 .stapes {
   color: white;
@@ -241,7 +241,8 @@ h1 {
   letter-spacing: 1px;
   border: solid 1px #009aea;
   background-color: #009aea;
-  margin: 0 10% 0 10%; }
+  margin: 0 10% 0 10%;
+  width: 80%; }
   .juniorprice p, .expertprice p {
     font-size: 27px; }
 
@@ -258,9 +259,8 @@ h1 {
   margin-top: 70px; }
 
 #try3 {
-  margin-top: 20px;
-  font-size: 25px;
-  padding: 10px 40px 10px 40px; }
+  margin-top: 40px;
+  font-size: 20px; }
   #try3:hover {
     transition: 0.2s; }
 
