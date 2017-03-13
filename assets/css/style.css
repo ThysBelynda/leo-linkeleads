@@ -50,7 +50,7 @@ h1 {
 
 #try, #try2, #try2:hover, #try3, #try4 {
   font-size: 16px;
-  background-color: #0077b5;
+  background-color: #1c82ba;
   color: white;
   border-radius: 2px; }
   #try:hover, #try2:hover, #try3:hover, #try4:hover {
@@ -88,7 +88,7 @@ h1 {
   padding: 3% 0 4% 0; }
 
 #leo, #linkedin {
-  color: #0077b5;
+  color: #1c82ba;
   display: inline-block; }
 
 .description {
@@ -128,7 +128,7 @@ h1 {
     padding: 5px; }
 
 #mi {
-  color: #0077b5;
+  color: #1c82ba;
   display: inline-block; }
 
 .title {
@@ -176,7 +176,7 @@ h1 {
   background-color: #4e94bb; }
 
 .three {
-  background-color: #0077b5; }
+  background-color: #1c82ba; }
 
 .stapes {
   color: white;

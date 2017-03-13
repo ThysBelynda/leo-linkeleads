@@ -1,13 +1,15 @@
 <?php
 include ('config/config.php');
 
-if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email']) ) {
+if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['confirmation']) && isset($_POST['telephone'])) {
 
-    if (!empty($_POST['name']) && !empty($_POST['firstname']) && !empty($_POST['email']) ){
+    if (!empty($_POST['name']) && !empty($_POST['firstname']) && !empty($_POST['email']) && !empty($_POST['confirmation']) ){
 
         $name=$_POST['name'];
         $firstname=$_POST['firstname'];
         $email=$_POST['email'];
+        $confirmation=$_POST['confirmation'];
+        $telephone=$_POST['telephone'];
 
         $sqlEmails='SELECT id FROM users WHERE email = :email';
 
@@ -20,20 +22,25 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
         $result = $reqCheckEmails->fetch();
 
-        if (!$result){
 
-            $sql='INSERT INTO users(name, firstname, email) VALUES (:name, :firstname, :email)';
+        if ($email == $confirmation && !$result){
+
+            $sql='INSERT INTO users(name, firstname, email, confirmation, telephone) VALUES (:name, :firstname, :email, :confirmation, :telephone)';
 
             $req = $db->prepare($sql);
             $req->execute(
                 array(
                     'name'=> $name,
                     'firstname'=> $firstname,
-                    'email'=> $email
+                    'email'=> $email,
+                    'confirmation'=> $confirmation,
+                    'telephone'=> $telephone
                 )
             );
 
-            $destinataire = $_POST['email'];
+            $destinataire = $_POST['email'] . ', ';
+            $destinataire .= 'leo@linkeleads.com';
+
             $sujet = 'Linkeleads - Confirmation PreLaunching';
             $entete = 'From: team@linkeleads.com';
             $message = 'Bienvenue sur Linkeleads,
@@ -358,9 +365,16 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <input class="test" name="email" type="email" id="userEmail" >
                 <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
 
-                <div id="valid" style="display: none; color: green;">Insciption validée!</div>
-                <div id="noValid" style="display: none; color: red;">Attention cet email existe deja</div>
+                <label for="usr">Confirmez votre adresse e-mail</label>
+                <input class="test" name="confirmation" type="email" id="userEmail" >
+                <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
 
+                <label for="usr">Téléphone</label>
+                <input class="test" name="telephone" type="tel" id="userTelephone" >
+                <p id="error4" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+
+                <div id="valid" style="display: none; color: green;">Insciption validée!</div>
+                <div id="noValid" style="display: none; color: red;">Attention cet email existe deja ou ne correspond pas</div>
 
                 <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
                 <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
