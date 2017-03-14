@@ -74,6 +74,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <link rel="stylesheet" type="text/css" href="assets/sass/style.scss">
         <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
         <script src="assets/bootstrap/js/jquery-3.1.1.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </head>
 
     <body>
@@ -420,8 +422,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <script>
 
             $('#try').on('click', function () {
-                $('#overlay, #overlay-back').fadeIn(1000);
-                $('#form').show();
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
             });
 
             $('#close').on('click', function () {
@@ -470,38 +472,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
              })*/
 
         </script>
-
-        <!--FADE STYLE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-        <!-- Modal -->
-        <!--
-        <form action="index.php" method="post">
-            <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4 class="modal-title">Inscription</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form-group">
-                                <label for="usr">Nom</label>
-                                <input type="text" name="name" class="form-control" id="nameUsr" required>
-                                <div id="error1" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                                <label for="usr">Prénom</label>
-                                <input type="text" name="firstname" class="form-control" id="firstnameUsr" required>
-                                <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                                <label for="usr">Adresse e-mail</label>
-                                <input type="email" name="email" class="form-control" id="emailUsr" required>
-                                <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
-                            </div>
-                        </div>
-                    </div><!-- /.modal-content -->
-        <!--</div><!-- /.modal-dialog -->
-        <!--</div><!-- /.modal -->
-        <!--</form>-->
 
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
