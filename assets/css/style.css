@@ -12,15 +12,37 @@ body {
   margin: 0 3% 0 3%; }
 
 #form {
-  height: 400px;
-  width: 400px;
-  background-color: pink;
+  display: none;
+  background-color: white;
   position: fixed;
-  left: 35%;
-  bottom: 200px;
   z-index: 2000;
+  bottom: 8%;
+  left: 25%;
+  height: 550px;
+  width: 50%;
   padding: 30px;
-  display: none; }
+  color: #595959; }
+  #form h3 {
+    margin: 0 70px 30px 70px;
+    color: #283e4a; }
+  #form label {
+    margin-bottom: 0; }
+
+.form-control {
+  border-radius: 0;
+  background-color: rgba(255, 250, 240, 0.8);
+  border: 1px solid #d6d1c9; }
+
+#submit {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #0077b5;
+  color: white;
+  border: 1px solid #0077b5;
+  border-radius: 2px; }
+  #submit:hover {
+    transition: 0.2s; }
 
 h1 {
   font-size: 35px;
@@ -52,7 +74,8 @@ h1 {
   font-size: 16px;
   background-color: #0077b5;
   color: white;
-  border-radius: 2px; }
+  border-radius: 2px;
+  font-weight: bold; }
   #try:hover, #try2:hover, #try3:hover, #try4:hover {
     transition: 0.2s; }
 

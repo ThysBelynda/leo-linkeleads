@@ -84,7 +84,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
         <p class="navbar-text">Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong></p>
         <div class="navbar-right">
-            <button class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
+            <button data-popup-open="popup-1" class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
         </div>
     </nav>
 
@@ -309,10 +309,10 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     </div>
                 </div>
                 <button class="expertprice">
-                        <p> <strong>99€ /mois</strong></p>
-                        <div class="engagement">
-                            <p>Sans engagement</p>
-                        </div>
+                    <p> <strong>99€ /mois</strong></p>
+                    <div class="engagement">
+                        <p>Sans engagement</p>
+                    </div>
                 </button>
             </div>
 
@@ -352,45 +352,107 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
     </div>
 
-    <div id="form">
-        <button type="button" value="Close" id="close" style="float: right">Close</button>
-        <form action="index.php" method="post">
-            <div class="form-group">
-                <label>Nom</label>
-                <input class="test" name="name" type="text" id="userName" >
-                <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
+        <div id="form" data-popup-open="popup-1">
+            <h3 align="center">Inscrivez vous ici, et bénéficiez d'un essai gratuit pendant 30 jours !</h3>
+            <!--<button type="button" value="Close" id="close" style="float: right">Close</button>-->
+            <form action="index.php" method="post">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label for="usr">Nom</label>
+                            <input class="form-control input-lg" name="name" type="text" id="userName" required>
+                            <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
+                        </div>
+                        <div class="col-xs-6">
+                            <label for="usr">Prénom</label>
+                            <input class="form-control input-lg" name="firstname" type="text" id="userFirstname" required>
+                            <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="usr">Prénom</label>
-                <input class="test" name="firstname" type="text" id="userFirstname" >
-                <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label for="usr">Adresse e-mail</label>
+                            <input class="form-control input-lg" name="email" type="email" id="userEmail" required>
+                            <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="usr">Adresse e-mail</label>
-                <input class="test" name="email" type="email" id="userEmail" >
-                <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label for="usr">Confirmez votre adresse e-mail</label>
+                            <input class="form-control input-lg" name="confirmation" type="email" id="userEmail" required>
+                            <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                        </div>
+                    </div>
+                </div>
 
-                <label for="usr">Confirmez votre adresse e-mail</label>
-                <input class="test" name="confirmation" type="email" id="userEmail" >
-                <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
-
-                <label for="usr">Téléphone</label>
-                <input class="test" name="telephone" type="tel" id="userTelephone" >
-                <p id="error4" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <label for="usr">Téléphone</label>
+                            <input class="form-control input-lg" name="telephone" type="tel" id="userTelephone">
+                            <p id="error4" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                        </div>
+                    </div>
+                </div>
 
                 <div id="valid" style="display: none; color: green;">Insciption validée!</div>
                 <div id="noValid" style="display: none; color: red;">Attention cet email existe deja ou ne correspond pas</div>
 
-                <button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>
-                <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
-
-            </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input class="btn btn-default" type="submit" value="Envoyer !" id="submit">
+                    </div>
+                </div>
+            <!--<button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>-->
+            <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
         </form>
     </div>
+
+    <!--<a class="btn" data-popup-open="popup-1" href="#">Open Popup #1</a>-->
+
+    <div class="popup" data-popup="popup-1">
+        <div class="popup-inner">
+            <h2>Wow! This is Awesome! (Popup #1)</h2>
+            <p>Donec in volutpat nisi. In quam lectus, aliquet rhoncus cursus a, congue et arcu. Vestibulum tincidunt neque id nisi pulvinar aliquam. Nulla luctus luctus ipsum at ultricies. Nullam nec velit dui. Nullam sem eros, pulvinar sed pellentesque ac, feugiat et turpis. Donec gravida ipsum cursus massa malesuada tincidunt. Nullam finibus nunc mauris, quis semper neque ultrices in. Ut ac risus eget eros imperdiet posuere nec eu lectus.</p>
+            <p><a data-popup-close="popup-1" href="#">Close</a></p>
+            <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+        </div>
+    </div>
+
+    <script>
+        $(function() {
+            //----- OPEN
+            $('#try').click(function(e){
+                var targeted_popup_class = jQuery(this).attr('data-popup-open');
+                $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+                e.preventDefault();
+            });
+
+            //----- CLOSE
+            $('#try').click(function(e){
+                var targeted_popup_class = jQuery(this).attr('data-popup-close');
+                $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+                e.preventDefault();
+            });
+        });
+
+    </script>
+
 
     <script>
 
         //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
+
         $('#try').click(function(){
-            $('#form').show();
+            $('#form').show().fadeIn(350);
         });
 
         $('#close').click(function () {

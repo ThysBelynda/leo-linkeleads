@@ -22,15 +22,53 @@ $juniorcolor: rgb(0, 154, 234);
 $expertcolor : rgb(0, 53, 81);
 
 #form{
-  height:400px;
-  width:400px;
-  background-color: pink;
-  position: fixed;
-  left: 35%;
-  bottom:200px;
-  z-index:2000;
-  padding: 30px;
   display: none;
+  background-color: white;
+  position: fixed;
+  z-index:2000;
+  bottom:8%;
+  left:25%;
+  height:550px;
+  width: 50%;
+  padding: 30px;
+  color: #595959;
+  //border: 3px solid $buttoncolor;
+  //box-shadow: 0 0 100px 5px #101010;
+
+  h3{
+    margin: 0 70px 30px 70px;
+    color: $leocolor;
+  }
+
+  label{
+    margin-bottom: 0;
+  }
+}
+
+.form-group{
+  //margin: 0 15px 20px 15px;
+}
+
+.form-control{
+  border-radius: 0;
+  background-color: rgba(255, 250, 240, 0.8);
+  border: 1px solid #d6d1c9;
+}
+
+#submit{
+  margin-top: 15px;
+  font-size:20px;
+  font-weight: bold;
+  background-color: $buttoncolor;
+  color: white;
+  border: 1px solid $buttoncolor;
+  border-radius: 2px;
+
+  &:hover {
+    //box-shadow: white 0 0 10px 3px;
+    transition: 0.2s;
+    //border: solid 1px white;
+  }
 }
 
 h1{
@@ -70,6 +108,7 @@ h1{
   background-color: $buttoncolor;
   color: white;
   border-radius: 2px;
+  font-weight: bold;
 
   &:hover{
     //box-shadow: white 0 0 10px 3px;
