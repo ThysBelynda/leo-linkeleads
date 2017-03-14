@@ -517,6 +517,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         if ($_GET['valid'] == 2){
             ?>
             <script>
+                $('#overlay, #overlay-back').fadeIn(0);
                 $('#form').show();
                 $('#noValid').show();
             </script>
@@ -525,6 +526,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         } else if ($_GET['valid'] == 1){
             ?>
             <script>
+                $('#overlay, #overlay-back').fadeIn(0);
                 $('#form').show();
                 $('#valid').show();
             </script>
