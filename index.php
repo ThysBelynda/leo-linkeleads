@@ -84,7 +84,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
         <p class="navbar-text">Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong></p>
         <div class="navbar-right">
-            <button data-popup-open="popup-1" class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
+            <button class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
         </div>
     </nav>
 
@@ -110,8 +110,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     </div>
     -->
 
-    <div class="header" data-stellar-ratio="10">
-
+    <div class="header">
         <div class="slogan" align="center">
             <h1>Trouvez de nouveaux clients grâce à Leo</h1>
             <p>Découvrez Leo, l'assistant virtuel de prospection commerciale sur Linkedin</p>
@@ -352,9 +351,10 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
     </div>
 
-        <div id="form" data-popup-open="popup-1">
+    <div class="overlay">
+        <div id="form">
             <h3 align="center">Inscrivez vous ici, et bénéficiez d'un essai gratuit pendant 30 jours !</h3>
-            <!--<button type="button" value="Close" id="close" style="float: right">Close</button>-->
+            <button type="button" value="Close" id="close" style="float: right">Close</button>
             <form action="index.php" method="post">
                 <div class="form-group">
                     <div class="row">
@@ -409,121 +409,101 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         <input class="btn btn-default" type="submit" value="Envoyer !" id="submit">
                     </div>
                 </div>
-            <!--<button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>-->
-            <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
-        </form>
-    </div>
-
-    <!--<a class="btn" data-popup-open="popup-1" href="#">Open Popup #1</a>-->
-
-    <div class="popup" data-popup="popup-1">
-        <div class="popup-inner">
-            <h2>Wow! This is Awesome! (Popup #1)</h2>
-            <p>Donec in volutpat nisi. In quam lectus, aliquet rhoncus cursus a, congue et arcu. Vestibulum tincidunt neque id nisi pulvinar aliquam. Nulla luctus luctus ipsum at ultricies. Nullam nec velit dui. Nullam sem eros, pulvinar sed pellentesque ac, feugiat et turpis. Donec gravida ipsum cursus massa malesuada tincidunt. Nullam finibus nunc mauris, quis semper neque ultrices in. Ut ac risus eget eros imperdiet posuere nec eu lectus.</p>
-            <p><a data-popup-close="popup-1" href="#">Close</a></p>
-            <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+                <!--<button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>-->
+                <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
+            </form>
         </div>
-    </div>
 
-    <script>
-        $(function() {
-            //----- OPEN
-            $('#try').click(function(e){
-                var targeted_popup_class = jQuery(this).attr('data-popup-open');
-                $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+        <div id="overlay-back"></div>
+        <div id="overlay"></div>
 
-                e.preventDefault();
+        <script>
+
+            $('#try').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(1000);
+                $('#form').show();
             });
 
-            //----- CLOSE
-            $('#try').click(function(e){
-                var targeted_popup_class = jQuery(this).attr('data-popup-close');
-                $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
-
-                e.preventDefault();
+            $('#close').on('click', function () {
+                $('#overlay, #overlay-back').fadeOut(600);
+                $('#form').hide();
             });
-        });
 
-    </script>
+            //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
+            /*
+             $('#try').click(function(){
+             $('#form').show(200);
+             });
 
+             $('#close').click(function () {
+             $('#form').hide();
+             });
 
-    <script>
+             $('#closegreen').click(function () {
+             $('#pop').hide();
+             });*/
 
-        //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
+            //DESACTIVER LE BOUTTON SI TOUS LES CHAMPS NE SONT PAS REMPLIS
+            /*$(document).ready(function(){
+             $('#submit').attr('disabled',true);
+             });
 
-        $('#try').click(function(){
-            $('#form').show().fadeIn(350);
-        });
+             $('.test').keyup(function(){
+             if( ($("#userName").val() !=0) && ($("#userFirstname").val().length !=0) && ($("#userEmail").val().length !=0) ){
+             $('#submit').attr('disabled', false);
+             }
 
-        $('#close').click(function () {
-            $('#form').hide();
-        });
+             else{
+             $('#submit').attr('disabled',true);
+             }
+             });*/
 
-        $('#closegreen').click(function () {
-            $('#pop').hide();
-        });
+            //TESTS
+            //$( "#submit" ).prop( "disabled", true );
 
-        //DESACTIVER LE BOUTTON SI TOUS LES CHAMPS NE SONT PAS REMPLIS
-        /*$(document).ready(function(){
-         $('#submit').attr('disabled',true);
-         });
+            /*$('#submit').click(function () {
+             if ($('#userName').val() == "") {
+             $('#error1').show();
+             } else {
+             $('#error1').hide();
+             }
+             })*/
 
-         $('.test').keyup(function(){
-         if( ($("#userName").val() !=0) && ($("#userFirstname").val().length !=0) && ($("#userEmail").val().length !=0) ){
-         $('#submit').attr('disabled', false);
-         }
+        </script>
 
-         else{
-         $('#submit').attr('disabled',true);
-         }
-         });*/
-
-        //TESTS
-        //$( "#submit" ).prop( "disabled", true );
-
-        /*$('#submit').click(function () {
-         if ($('#userName').val() == "") {
-         $('#error1').show();
-         } else {
-         $('#error1').hide();
-         }
-         })*/
-
-    </script>
-
-    <!--FADE STYLE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
-    <!-- Modal -->
-    <!--
-    <form action="index.php" method="post">
-        <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Inscription</h4>
-                    </div>
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <label for="usr">Nom</label>
-                            <input type="text" name="name" class="form-control" id="nameUsr" required>
-                            <div id="error1" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                            <label for="usr">Prénom</label>
-                            <input type="text" name="firstname" class="form-control" id="firstnameUsr" required>
-                            <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                            <label for="usr">Adresse e-mail</label>
-                            <input type="email" name="email" class="form-control" id="emailUsr" required>
-                            <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+        <!--FADE STYLE :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
+        <!-- Modal -->
+        <!--
+        <form action="index.php" method="post">
+            <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title">Inscription</h4>
                         </div>
-                        <div class="modal-footer">
-                            <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="usr">Nom</label>
+                                <input type="text" name="name" class="form-control" id="nameUsr" required>
+                                <div id="error1" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                                <label for="usr">Prénom</label>
+                                <input type="text" name="firstname" class="form-control" id="firstnameUsr" required>
+                                <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                                <label for="usr">Adresse e-mail</label>
+                                <input type="email" name="email" class="form-control" id="emailUsr" required>
+                                <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
+                            </div>
                         </div>
-                    </div>
-                </div><!-- /.modal-content -->
-    <!--</div><!-- /.modal-dialog -->
-    <!--</div><!-- /.modal -->
-    <!--</form>-->
+                    </div><!-- /.modal-content -->
+        <!--</div><!-- /.modal-dialog -->
+        <!--</div><!-- /.modal -->
+        <!--</form>-->
 
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
     </body>
     </html>

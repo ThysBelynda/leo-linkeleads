@@ -21,6 +21,32 @@ $backgroundcolor : #eeeeee;
 $juniorcolor: rgb(0, 154, 234);
 $expertcolor : rgb(0, 53, 81);
 
+html, body {
+  width  : 100%;
+  height : 100%;
+}
+
+#overlay-back {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  width      : 100%;
+  height     : 511%;
+  background : #000;
+  opacity    : 0.6;
+  filter     : alpha(opacity=60);
+  display    : none;
+}
+
+#overlay {
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  height   : 511%;
+  display  : none;
+}
+
 #form{
   display: none;
   background-color: white;
