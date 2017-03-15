@@ -3,61 +3,62 @@ include ('config/config.php');
 
 if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email']) && isset($_POST['confirmation']) && isset($_POST['telephone'])) {
 
-    if (!empty($_POST['name']) && !empty($_POST['firstname']) && !empty($_POST['email']) && !empty($_POST['confirmation']) ){
+    if (!empty($_POST['name']) && !empty($_POST['firstname']) && !empty($_POST['email']) && !empty($_POST['confirmation'])) {
 
-        $name=$_POST['name'];
-        $firstname=$_POST['firstname'];
-        $email=$_POST['email'];
-        $confirmation=$_POST['confirmation'];
-        $telephone=$_POST['telephone'];
+        $name = $_POST['name'];
+        $firstname = $_POST['firstname'];
+        $email = $_POST['email'];
+        $confirmation = $_POST['confirmation'];
+        $telephone = $_POST['telephone'];
 
-        $sqlEmails='SELECT id FROM users WHERE email = :email';
+        $sqlEmails = 'SELECT id FROM users WHERE email = :email';
 
         $reqCheckEmails = $db->prepare($sqlEmails);
         $reqCheckEmails->execute(
             array(
-                'email'=> $email
+                'email' => $email
             )
         );
 
         $result = $reqCheckEmails->fetch();
 
 
-        if ($email == $confirmation && !$result){
+        if ($email == $confirmation) {
+            if (!$result) {
 
-            $sql='INSERT INTO users(name, firstname, email, confirmation, telephone) VALUES (:name, :firstname, :email, :confirmation, :telephone)';
+                $sql = 'INSERT INTO users(name, firstname, email, confirmation, telephone) VALUES (:name, :firstname, :email, :confirmation, :telephone)';
 
-            $req = $db->prepare($sql);
-            $req->execute(
-                array(
-                    'name'=> $name,
-                    'firstname'=> $firstname,
-                    'email'=> $email,
-                    'confirmation'=> $confirmation,
-                    'telephone'=> $telephone
-                )
-            );
+                $req = $db->prepare($sql);
+                $req->execute(
+                    array(
+                        'name' => $name,
+                        'firstname' => $firstname,
+                        'email' => $email,
+                        'confirmation' => $confirmation,
+                        'telephone' => $telephone
+                    )
+                );
 
-            $destinataire = $_POST['email'] . ', ';
-            $destinataire .= 'leo@linkeleads.com';
+                $destinataire = $_POST['email'] . ', ';
+                $destinataire .= 'leo@linkeleads.com';
 
-            $sujet = 'Linkeleads - Confirmation PreLaunching';
-            $entete = 'From: team@linkeleads.com';
-            $message = 'Bienvenue sur Linkeleads,
+                $sujet = 'Linkeleads - Confirmation PreLaunching';
+                $entete = 'From: team@linkeleads.com';
+                $message = 'Bienvenue sur Linkeleads,
             Veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur internet.
             ------------
             Ceci est un mail automatique. Merci de ne pas y répondre.';
 
-            mail($destinataire, $sujet, $message, $entete);
+                mail($destinataire, $sujet, $message, $entete);
 
-            header('Location: index.php?valid=1');
+                header('Location: index.php?valid=1');
 
+            } else {
+                header('Location: index.php?valid=2');
+            }
         } else {
-            header('Location: index.php?valid=2');
+            header('Location: index.php?valid=3');
         }
-
-    } else {
-        header('Location: test.php');
     }
 }
 ?>
@@ -88,11 +89,11 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong>
         </p>
 
-        <p class="navbar-text" id="text-mobile">
+        <!--<p class="navbar-text" id="text-mobile">
             <img alt="alex" src="img/Leosmile.png" height="30" width="30">
             <strong>Et si on travaillait ensemble ?</strong>
             <button class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
-        </p>
+        </p>-->
 
         <div class="navbar-right" id="right-machine">
             <button class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
@@ -383,7 +384,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div class="form-group" id="fg-email">
                     <div class="row">
                         <div class="col-xs-12">
                             <label for="usr">Adresse e-mail*</label>
@@ -392,8 +393,17 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </div>
                     </div>
                 </div>
+                <!--<div class="form-group has-error" style="display: none">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label for="usr" style="color: red">Adresse e-mail*</label>
+                            <input class="form-control input-lg" name="email" type="email" id="userEmail" required>
+                            <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                        </div>
+                    </div>
+                </div>-->
 
-                <div class="form-group">
+                <div class="form-group" id="fg-conf">
                     <div class="row">
                         <div class="col-xs-12">
                             <label for="usr">Confirmez votre adresse e-mail*</label>
@@ -402,6 +412,15 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </div>
                     </div>
                 </div>
+                <!--<div class="form-group has-error" style="display: none">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label for="usr" style="color: red">Confirmez votre adresse e-mail*</label>
+                            <input class="form-control input-lg" name="confirmation" type="email" id="userEmail" required>
+                            <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                        </div>
+                    </div>
+                </div>-->
 
                 <div class="form-group">
                     <div class="row">
@@ -414,7 +433,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 </div>
 
                 <div id="valid" style="display: none; color: green;">Insciption validée!</div>
-                <div id="noValid" style="display: none; color: red;">Attention cet email existe deja ou ne correspond pas</div>
+                <div id="existing" style="display: none; color: red;">Attention cet email existe deja</div>
+                <div id="wrong" style="display: none; color: red;">Les deux adresses mails rentrées ne correspondent pas</div>
 
                 <div class="row">
                     <div class="col-xs-12">
@@ -431,16 +451,34 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
         <script>
 
+            $('#close').on('click', function () {
+                $('#overlay, #overlay-back').fadeOut(600);
+                $('#form').hide();
+                $('#close').hide();
+            });
+
             $('#try').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form').show('fade');
                 $('#close').show('fade');
             });
 
-            $('#close').on('click', function () {
-                $('#overlay, #overlay-back').fadeOut(600);
-                $('#form').hide();
-                $('#close').hide();
+            $('#try1').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
+                $('#close').show('fade');
+            });
+
+            $('#try2').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
+                $('#close').show('fade');
+            });
+
+            $('#try3').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
+                $('#close').show('fade');
             });
 
             //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
@@ -494,37 +532,47 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     $_GET['valid'] = (int) $_GET['valid'];
 
-    if ($_GET['valid'] >= 1 AND $_GET['valid'] <= 2){
+        if ($_GET['valid'] >= 1 AND $_GET['valid'] <= 3) {
 
-        if ($_GET['valid'] == 2){
-            ?>
-            <script>
-                $('#overlay, #overlay-back').fadeIn(0);
-                $('#form').show();
-                $('#close').show('fade');
-                $('#noValid').show();
-            </script>
-            <?php
+            if ($_GET['valid'] == 3) {
+                ?>
+                <script>
+                    $('#overlay, #overlay-back').fadeIn(0);
+                    $('#form').show();
+                    $('#close').show('fade');
+                    $('#wrong').show();
+                    /*
+                    $('.has-error').show();
+                    $('#fg-email').hide();
+                    $('#fg-conf').hide();
+                    */
+                </script>
+                <?php
 
-        } else if ($_GET['valid'] == 1){
-            ?>
-            <script>
-                $('#overlay, #overlay-back').fadeIn(0);
-                $('#form').show();
-                $('#close').show('fade');
-                $('#valid').show();
-            </script>
-            <?php
+            } else if ($_GET['valid'] == 2) {
+                ?>
+                <script>
+                    $('#overlay, #overlay-back').fadeIn(0);
+                    $('#form').show();
+                    $('#close').show('fade');
+                    $('#existing').show();
+                </script>
+                <?php
 
-        } else{
-            echo 'attention je ne sais pas pq';
+            } else if ($_GET['valid'] == 1) {
+                ?>
+                <script>
+                    $('#overlay, #overlay-back').fadeIn(0);
+                    $('#form').show();
+                    $('#close').show('fade');
+                    $('#valid').show();
+                </script>
+                <?php
+
+            }
         }
-
-    } else{
-        //echo 'hey';
-        //header('Location: test.php');
-    }
 }
+
 /*
 if ( isset($_GET['valid']) && ($_GET['valid'] == 1)) {
     ?>
