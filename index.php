@@ -353,20 +353,21 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
     </div>
 
+    <button type="button" value="Close" id="close" style="float: right">x</button>
+
     <div class="overlay">
         <div id="form">
-            <h3 align="center">Inscrivez vous ici, et bénéficiez d'un essai gratuit pendant 30 jours !</h3>
-            <button type="button" value="Close" id="close" style="float: right">Close</button>
+            <h3 align="center">Inscrivez-vous ici, et bénéficiez d'un essai gratuit pendant 30 jours</h3>
             <form action="index.php" method="post">
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-6">
-                            <label for="usr">Nom</label>
+                            <label for="usr">Nom*</label>
                             <input class="form-control input-lg" name="name" type="text" id="userName" required>
                             <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
                         </div>
                         <div class="col-xs-6">
-                            <label for="usr">Prénom</label>
+                            <label for="usr">Prénom*</label>
                             <input class="form-control input-lg" name="firstname" type="text" id="userFirstname" required>
                             <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
                         </div>
@@ -376,7 +377,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12">
-                            <label for="usr">Adresse e-mail</label>
+                            <label for="usr">Adresse e-mail*</label>
                             <input class="form-control input-lg" name="email" type="email" id="userEmail" required>
                             <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
                         </div>
@@ -386,7 +387,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12">
-                            <label for="usr">Confirmez votre adresse e-mail</label>
+                            <label for="usr">Confirmez votre adresse e-mail*</label>
                             <input class="form-control input-lg" name="confirmation" type="email" id="userEmail" required>
                             <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
                         </div>
@@ -424,11 +425,13 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             $('#try').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form').show('fade');
+                $('#close').show('fade');
             });
 
             $('#close').on('click', function () {
                 $('#overlay, #overlay-back').fadeOut(600);
                 $('#form').hide();
+                $('#close').hide();
             });
 
             //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
@@ -489,6 +492,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <script>
                 $('#overlay, #overlay-back').fadeIn(0);
                 $('#form').show();
+                $('#close').show('fade');
                 $('#noValid').show();
             </script>
             <?php
@@ -498,6 +502,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <script>
                 $('#overlay, #overlay-back').fadeIn(0);
                 $('#form').show();
+                $('#close').show('fade');
                 $('#valid').show();
             </script>
             <?php
