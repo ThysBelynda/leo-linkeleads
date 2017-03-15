@@ -81,11 +81,20 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     <body>
 
     <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="navbar-header">
+        <div class="navbar-header" id="head-machine">
             <img alt="alex" src="img/Leosmile.png" height="38" width="38">
         </div>
-        <p class="navbar-text">Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong></p>
-        <div class="navbar-right">
+        <p class="navbar-text" id="text-machine">
+            Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong>
+        </p>
+
+        <p class="navbar-text" id="text-mobile">
+            <img alt="alex" src="img/Leosmile.png" height="30" width="30">
+            <strong>Et si on travaillait ensemble ?</strong>
+            <button class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
+        </p>
+
+        <div class="navbar-right" id="right-machine">
             <button class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
         </div>
     </nav>

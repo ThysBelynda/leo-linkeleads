@@ -82,6 +82,33 @@ h1 {
   color: #283e4a; }
 
 /*-------------------------------------------NAVBAR------------------------------------------------------*/
+@media (max-width: 480px) {
+  #text-machine {
+    display: none; }
+
+  #head-machine {
+    display: none; }
+
+  #right-machine {
+    display: none; }
+
+  #text-mobile {
+    color: whitesmoke;
+    margin: 0; }
+    #text-mobile img {
+      background-color: white;
+      border-radius: 20px;
+      padding: 1px; }
+
+  #try, #try3, #try4 {
+    font-size: 16px;
+    background-color: #0077b5;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-left: 49px; }
+    #try:hover, #try3:hover, #try4:hover {
+      transition: 0.2s; } }
 .navbar-fixed-top {
   background-color: #283e4a;
   border: none;
@@ -103,40 +130,95 @@ h1 {
 .navbar-right {
   margin: 0; }
 
-#try, #try2, #try2:hover, #try3, #try4 {
-  font-size: 16px;
-  background-color: #0077b5;
+/*
+#try{
+  font-size:16px;
+  background-color: $buttoncolor;
   color: white;
   border-radius: 2px;
-  font-weight: bold; }
-  #try:hover, #try2:hover, #try3:hover, #try4:hover {
-    transition: 0.2s; }
+  font-weight: bold;
 
+  &:hover{
+    //box-shadow: white 0 0 10px 3px;
+    transition: 0.2s;
+    //border: solid 1px white;
+  }
+}
+*/
 /*-------------------------------------------HEADER------------------------------------------------------*/
-.header {
-  background-image: url("../../img/ourclients.jpg");
+@media (max-width: 480px) {
+  .header {
+    background-image: url("../../img/ourclients.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 100%;
+    height: 437px;
+    color: white; }
+    .header h1 {
+      font-weight: bolder;
+      font-size: 45px;
+      color: white; }
+    .header p {
+      letter-spacing: 0.5px;
+      font-size: 24px; } }
+@media (min-width: 481px) {
+  .header {
+    background-image: url("../../img/ourclients.jpg");
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 100%;
+    height: 437px;
+    color: white; }
+    .header h1 {
+      font-weight: bolder;
+      font-size: 45px;
+      color: white; }
+    .header p {
+      letter-spacing: 0.5px;
+      font-size: 24px; } }
+/*
+.header{
+  background-image: url('../../img/ourclients.jpg');
   background-repeat: no-repeat;
   background-position-y: 50px;
   background-attachment: fixed;
   background-size: 100%;
+  width: 100%;
   height: 437px;
-  color: white; }
-  .header h1 {
+  color:white;
+
+  h1 {
     font-weight: bolder;
     font-size: 45px;
-    color: white; }
-  .header p {
+    color: white;
+  }
+
+  p{
     letter-spacing: 0.5px;
-    font-size: 24px; }
+    font-size: 24px;
+  }
+}
 
-.slogan {
-  padding-top: 10%; }
+.slogan{
+  padding-top: 10%;
+}
 
-#try2 {
+#try2{
+
+  @extend #try;
   margin-top: 40px;
-  font-size: 20px; }
-  #try2:hover {
-    font-size: 20px; }
+  font-size: 20px;
+
+  &:hover{
+    @extend #try;
+    //box-shadow: white 0 0 15px 3px;
+    font-size: 20px;
+  }
+}
 
 /*-------------------------------------------LEO------------------------------------------------------*/
 .leo {
