@@ -15,478 +15,567 @@ body{
   margin : 0 3% 0 3%;
 }
 
-$leocolor : rgb(24, 24, 24);
-$leocoloreye : rgb(40, 62, 74);
+$leocolor : rgb(40, 62, 74);
+$buttoncolor : rgb(0, 119, 181);
 $backgroundcolor : #eeeeee;
-$juniorcolor: rgba(63, 90, 129, 0.86);
-$expertcolor : #1e2b3e;
-$linkedin: rgb(52, 97, 156);
-$stapeone: rgba(31, 57, 92, 0.75);
-$stapetwo: rgba(55, 106, 168, 0.84);
-$stapethree: rgba(70, 134, 213, 0.88);
+$juniorcolor: rgb(0, 154, 234);
+$expertcolor : rgb(0, 53, 81);
+
+#overlay-back {
+  position   : absolute;
+  top        : 0;
+  left       : 0;
+  width      : 100%;
+  height     : 608%;
+  background : #000;
+  opacity    : 0.6;
+  filter     : alpha(opacity=60);
+  display    : none;
+  z-index: 950;
+}
+
+#overlay {
+  position : absolute;
+  top      : 0;
+  left     : 0;
+  width    : 100%;
+  height   : 608%;
+  display  : none;
+}
+
+#close{
+  display: none;
+  border: none;
+  font-size: 20px;
+  background-color: black;
+  position: fixed;
+  z-index:1200;
+  bottom:80%;
+  left:70%;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+}
 
 #form{
-  height:400px;
-  width:400px;
-  background-color: pink;
+  display: none;
+  background-color: white;
   position: fixed;
-  left: 35%;
-  bottom:200px;
-  z-index:2000;
+  z-index:1000;
+  bottom:9%;
+  left:25%;
+  height:550px;
+  width: 50%;
   padding: 30px;
+  color: #595959;
+  //border: 3px solid $buttoncolor;
+  //box-shadow: 0 0 100px 5px #101010;
+
+  h3{
+    margin: 0 70px 30px 70px;
+    color: $leocolor;
+  }
+
+  label{
+    margin-bottom: 0;
+  }
+}
+
+.form-group{
+  //margin: 0 15px 20px 15px;
+}
+
+.form-control{
+  border-radius: 0;
+  background-color: rgba(255, 250, 240, 0.8);
+  border: 1px solid #d6d1c9;
+}
+
+#submit{
+  margin-top: 15px;
+  font-size:20px;
+  font-weight: bold;
+  background-color: $buttoncolor;
+  color: white;
+  border: 1px solid $buttoncolor;
+  border-radius: 2px;
+
+  &:hover {
+    //box-shadow: white 0 0 10px 3px;
+    transition: 0.2s;
+    //border: solid 1px white;
+  }
+}
+
+h1{
+  font-size: 35px;
+  color: $leocolor;
 }
 
 /*-------------------------------------------NAVBAR------------------------------------------------------*/
+/*@media (max-width:480px) {
+  #text-machine{
+    display: none;
+  }
 
-.navbar{
-  border:0;
-  border-radius: 0;
-  background-color: $leocoloreye;
-  margin-bottom: 0;
-  position: fixed;
-  z-index: 1000;
-}
+  #head-machine{
+    display: none;
+  }
 
-.navbar-header{
-  width:4%;
+  #right-machine{
+    display:none;
+  }
+
+  #text-mobile{
+    color: whitesmoke;
+    margin: 0;
+
+    img{
+      background-color:white;
+      border-radius: 20px;
+      padding: 1px;
+    }
+  }
+
+  #try{
+    font-size:16px;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-left: 49px;
+
+    &:hover{
+      //box-shadow: white 0 0 10px 3px;
+      transition: 0.2s;
+      //border: solid 1px white;
+    }
+  }
+}*/
+
+.navbar-fixed-top{
+  background-color: $leocolor;
+  border: none;
+  padding: 0 15px 0 15px;
 }
 
 .navbar-header img{
   background-color: white;
   border-radius: 50px;
-  margin-top: 4px;
+  margin-top: 6px;
+  padding: 1px;
 }
 
 .navbar-text{
   font-size: 16px;
-  margin: 1% 0 0 1%;
+  color: whitesmoke;
 }
 
 .navbar-default .navbar-text{
-  color: white;
+  color: $backgroundcolor;
 }
 
 .navbar-right{
-  width: 15%;
-  margin-right:1%;
-}
-
-.container-fluid{
-  padding-top:3px;
+  margin: 0;
 }
 
 #try{
   font-size:16px;
-  background-color: rgb(0, 132, 191);
+  background-color: $buttoncolor;
   color: white;
-  border: solid 1px rgb(0, 132, 191);
-  border-radius: 20px;
+  border-radius: 2px;
+  font-weight: bold;
 
   &:hover{
-    color: white;
     //box-shadow: white 0 0 10px 3px;
     transition: 0.2s;
-    border: solid 1px white;
+    //border: solid 1px white;
   }
 }
 
 @media (max-width: 1024px) {
-  .navbar-right{
-    width: 15%;
-  }
-
   #try{
-    font-size:14px;
+    //font-size:14px;
   }
 
   .navbar-text{
-    font-size: 14px;
+    //font-size: 14px;
   }
-}
-
-.navbar-btn{
-  margin-top: 5px;
 }
 
 /*-------------------------------------------HEADER------------------------------------------------------*/
 
-.header{
-  background-image: url('../../img/ourclients.jpg');
-  background-repeat: no-repeat;
+.header {
+  width:    100%;
+  height:   65vh;
+  background: url('../../img/ourclients.jpg') no-repeat center center;
+  background-size: cover;
   background-position-y: 50px;
-  background-attachment: fixed;
-  background-size: 100%;
-  height: 437px;
-  color:white;
-  position: relative;
-
-  h1 {
-    font-weight: bolder;
-    font-size: 45px ;
-  }
-
-  p{
-    letter-spacing: 0.5px;
-    font-size: 24px;
-  }
+  position: fixed;
+  z-index: 100;
 }
 
-.slogan{
-  padding-top: 10%;
-  left:250px;
+.message {
+  max-width: 90%;
+  margin: auto;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
 }
 
+.message h1 {
+  font-size: 45px;
+  color: #FFF;
+}
+
+.message p {
+  color: #fff;
+  font-size: 24px;
+}
 
 #try2{
+
+  @extend #try;
   margin-top: 40px;
+  margin-bottom:7%;
   font-size: 20px;
-  background-color: rgb(0, 132, 191);
-  border: none;
-  border-radius: 40px;
+  font-weight: lighter;
 
   &:hover{
-    color: white;
-    box-shadow: white 0 0 15px 3px;
-    transition: 0.2s;
-    border: none;
+    @extend #try;
+    //box-shadow: white 0 0 15px 3px;
+    font-size: 20px;
   }
 }
-
-
 /*-------------------------------------------LEO------------------------------------------------------*/
-.prospection{
-  padding:4% 0 3% 0;
 
-  h1{
-    color: $leocoloreye;
-    font-size: 35px ;
-  }
+.leo{
+  background-color: $backgroundcolor;
+  padding:3% 0 4% 0;
+  position: relative;
+  z-index: 900;
+  top:65vh;
+}
+
+#leo{
+  color: $buttoncolor;
+  display: inline-block;
 }
 
 .description{
-  padding: 1% 3% 3% 3%;
+  padding: 1% 0 0 0;
 
   p{
     font-size:19px;
-    text-align:justify;
+    text-align:center;
   }
-}
-
-.leo{
-  background: #eeeeee;
 }
 
 /*-------------------------------------------LINKEDIN------------------------------------------------------*/
 
-.users, .time, .messenger{
-  margin-top: 10%;
-  width: 80%;
-  padding: 6% 0 4% 0;
+.linkedin{
+  background-color: white;
+  padding:3% 0 4% 0;
+  position: relative;
+  z-index: 900;
+  top:65vh;
+}
+
+#linkedin{
+  @extend #leo;
+}
+
+.users, .time, .messages{
+  margin-top: 8%;
+  width: 90%;
   // border-top: solid 2px $linkedin;
   //background-color: rgba(52, 97, 156, 0.04);
 
   p{
-    padding: 13% 2% 0 2%;
+    padding: 10% 0 0 0;
     font-size: 18px;
-    text-align: justify;
-  }
-}
-
-.linkedin{
-  background-color: #eeeeee;
-  padding-bottom: 8%;
-}
-
-.levier{
-  h1{
-    color: $leocoloreye;
-    font-size: 35px ;
+    text-align: center;
   }
 }
 
 .mail, .hourglass, .profils{
   background-color: whitesmoke;
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   border-radius: 150px;
-  border: 1px solid whitesmoke;
+  border: 1px solid $backgroundcolor;
   padding-top: 20px;
 }
 
+
 /*-------------------------------------------MISSIONS------------------------------------------------------*/
 
-.missions{
+.missions {
+  background-color: $backgroundcolor;
+  padding: 3% 0 6% 0;
+  position: relative;
+  z-index: 900;
+  top:65vh;
+
+  img {
+    float: left;
+    margin: 10px;
+    padding: 5px;
+  }
+}
+
+#mi{
+  color: $buttoncolor;
+  display: inline-block;
+}
+
+.title{
   background-color: white;
-  padding: 5% 0 8% 0;
+  display: inline-block;
+  width: 460px;
+  margin-top:60px;
+  box-shadow: 0 0 50px 8px rgb(255, 255, 255);
 
-  h1{
-    padding:0 10% 8% 10%;
-    color: $leocoloreye;
+  p {
+    padding-top: 20px;
+    font-size: 22px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    color: $leocolor;
   }
 }
 
-.cards{
+.text{
+  padding:10px 20px 0 0;
+  width: 460px;
+
   p{
-    text-align: center;
-    font-size:18px;
-    padding: 5% 10% 10% 10%;
+    padding: 10px 0 10px 0;
+    color: $leocolor;
+    font-weight: bolder;
+    font-size: 18px;
   }
-
-  img{
-    border-bottom: 2px solid rgb(0, 132, 191);
-    padding: 16px;
-  }
-}
-
-.missions h3{
-  border-top: 2px solid rgb(0, 132, 191);
-  padding-top: 5%;
-  font-size: 19px;
-  font-weight: bold;
-  color: rgb(0, 132, 191);
-  margin: 0;
-  text-transform: uppercase;
 }
 
 /*-------------------------------------------COMMENT------------------------------------------------------*/
 
 .comment{
-  padding: 5% 0 8% 0;
-  background-color: $leocoloreye;
+  padding: 3% 0 3% 0;
+  background-color: $leocolor;
+  position: relative;
+  z-index: 900;
+  top:65vh;
 
   h1{
-    padding:0 10% 6% 10%;
-    color: white;
+    color: $backgroundcolor;
+    padding: 0 0 5% 0;
   }
 }
-
-.analyse{
-  padding-top:5%;
-  font-size: 27px;
-  font-weight:900;
-  color: white;
-}
-
-/*
-.screen1{
-  border-radius: 3px;
-  border-top: 2px solid $stapeone;
-  border-bottom: 2px solid $stapeone;
-}
-.screen2{
-  border-radius: 3px;
-  border-top: 2px solid $stapetwo ;
-  border-bottom: 2px solid $stapetwo;
-}
-.screen3 {
-  border-radius: 3px;
-  border-top: 2px solid $stapethree;
-  border-bottom: 2px solid $stapethree;
-}
-*/
 
 .one{
   display: inline-block;
   border-radius: 200px;
-  background-color: rgba(0, 132, 191, 0.40);
+  background-color: rgb(101, 144, 166);
   font-size: 40px;
   width : 70px;
   height: 70px;
   color: $backgroundcolor;
 
   p{
-    padding-top: 8px;
+    padding-top: 7px;
   }
-}
-
-#one{
-  color:white;
-  margin:10% 15% 10% 15%;
-  text-align: center;
-  font-size: 20px;
 }
 
 .two{
   @extend .one;
-  background-color: rgba(0, 132, 191, 0.70);
-}
-
-#two{
-  color: white;
-  margin:10% 15% 10% 15%;
-  text-align: center;
-  font-size: 20px;
+  background-color: rgb(78, 148, 187);
 }
 
 .three{
   @extend .one;
-  background-color: rgb(0, 132, 191);
-}
-
-
-#three{
-  color:white;
-  margin:10% 15% 10% 15%;
-  text-align: center;
-  font-size: 20px;
+  background-color: $buttoncolor;
 }
 
 .stapes{
+  color:white;
+  margin:10% 10% 10% 10%;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .border{
   display : inline-block;
-  width: 25%;
+  width: 28%;
   border-top : 3px solid $backgroundcolor;
 }
 
 
 /*-------------------------------------------PRICING------------------------------------------------------*/
 
-.list{
-  padding:3% 20px 5% 20px;
-  display: inline-block;
-}
-
 .pricing{
   background-color: $backgroundcolor;
-  padding: 5% 0 9% 0;
+  padding: 3% 0 9% 0;
+  position: relative;
+  z-index: 900;
+  top:65vh;
+}
 
-  h1{
-    padding:0 10% 3% 10%;
+.list{
+  padding:3% 0 4% 0;
+  display: inline-block;
+
+  p{
+    padding: 11% 0 0 0;
+    border-top: solid 1px;
+    width: 280px;
+  }
+
+  i{
+    float: right;
   }
 }
 
 .junior{
   background-color: white;
-  margin: 0 6% 0 6%;
+  margin: 10% 10% 0 10%;
   box-shadow: 0 0 40px 8px rgba(255, 255, 255, 1);
 
   p{
     font-size:18px;
     letter-spacing: 0.5px;
     text-align: left;
-    font-weight: 900;
+    font-weight: bold;
     line-height: 19px;
   }
 
   h2{
     color:$juniorcolor;
-  }
-
-  h2{
     margin-top:10px;
   }
 
   h3{
     margin:0;
+    line-height: 0.4;
   }
 }
 
-.list p{
-  padding:11% 0 0 0;
-  border-top:solid 1px;
-  width: 300px;
+#cinq{
+  color: $juniorcolor;
 }
 
 .expert{
   @extend .junior;
 
-  h2, h5{
-    color: $expertcolor;
+  h2{
+    color: rgb(0, 53, 81);
   }
+}
+
+#mille{
+  color: $expertcolor;
 }
 
 .fa-check-circle{
   color: #28c368;
 }
 
-.fa-times-circle{
-  color: #ca0000;
-}
-
 .juniorprice{
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius : 40px;
-  padding:2% 0 0% 0;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius : 2px;
+  padding:1% 0 2% 0;
   color:white;
   letter-spacing: 1px;
-  border-bottom: solid 1px $juniorcolor;
-  border-right: solid 1px $juniorcolor;
-  border-left: solid 1px $juniorcolor;
+  border: solid 1px $juniorcolor;
   background-color: $juniorcolor;
-  margin: 0 6% 0 6%;
+  margin: 0 10% 0 10%;
+  width:80%;
 
   p{
     font-size: 27px;
   }
 }
 
-.proprice{
+.expertprice{
   @extend .juniorprice;
-  border-bottom: solid 1px $expertcolor;
-  border-right: solid 1px $expertcolor;
-  border-left: solid 1px $expertcolor;
+  border: solid 1px $expertcolor;
   background-color: $expertcolor;
-}
-
-.valid{
-  display: inline-block;
 }
 
 .engagement p{
   font-size: 18px;
   font-weight: lighter;
+  line-height: 0.1;
 }
 
-.btn-success{
-  margin-top: 3%;
-  width: 94%;
-  font-size: 27px;
-  border-radius: 60px;
-  padding: 15px 0 15px;
+.gratis{
+  margin-top: 70px;
+}
+
+#try3{
+  @extend #try;
+  margin-top: 40px;
+  font-size: 20px;
+
+  &:hover{
+    //box-shadow: white 0 0 15px 3px;
+    transition: 0.2s;
+  }
 }
 
 /*-------------------------------------------CONTACT------------------------------------------------------*/
+#last{
+  background-color: white;
+  position: relative;
+  z-index: 900;
+  top:65vh;
+}
 
 .portrait{
-  padding:0 0 5%;
+  padding:5% 0 5%;
+
+  h1{
+    margin-top: 50px;
+  }
 }
 
-.btn-info{
-  background-color: rgb(0, 132, 191);
-  margin-bottom: 1%;
-  font-size: 20px;
-  border-radius: 40px;
-  border: 1px solid rgba(0, 132, 191, 0.50);
+#try4{
+  @extend #try;
+  font-size:20px;
+  margin-bottom: 20px;
+
+  &:hover{
+    //box-shadow: white 0 0 10px 3px;
+    transition: 0.2s;
+  }
 }
 
-.contact{
-  padding:0 0 2% 0;
-  display:inline-flex;
+#last p{
+  padding-bottom: 50px;
 }
 
-.asap{
-  margin-top: 5%;
-  font-size: 14px;
-}
 
-.lin{
-  padding-right:8%;
-}
-
-.gmail{
-  padding-left:8%;
-}
-
-.button-test{
-  font-size:12px;
-}
+/*-------------------------------------------FOOTER------------------------------------------------------*/
 
 .footer{
-  padding: 2% 10% 1%;
-  background-color: $leocoloreye;
-  color: white;
+  position: relative;
+  z-index: 900;
+  top:65vh;
+  background-color: $leocolor;
+  color: $backgroundcolor;
+  font-size: 15px;
+}
+
+.footer p{
+  padding: 15px;
+  margin: 0;
+  display: inline-block;
+}
+
+.footer img{
+  float: right;
+  margin: 10px 6px 6px 6px;
 }
