@@ -122,13 +122,13 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     </div>
     -->
 
-    <div class="header">
-        <div class="slogan" align="center">
+    <header class="header">
+        <div class="message" align="center">
             <h1>Trouvez de nouveaux clients grâce à Leo</h1>
             <p>Découvrez Leo, l'assistant virtuel de prospection commerciale sur Linkedin</p>
             <button id="try2" class="btn btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
         </div>
-    </div>
+    </header>
 
     <div class="leo">
         <div class="row">

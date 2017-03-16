@@ -155,13 +155,9 @@ h1 {
 /*
 @media (max-width:480px){
   .header{
-    background-image: url('../../img/ourclients.jpg');
-    background-repeat: no-repeat;
-    background-position-y: 50px;
-    background-attachment: fixed;
     background-size: 100%;
     width: 100%;
-    height: 437px;
+    height: 70vh;
     color:white;
 
     h1 {
@@ -185,7 +181,7 @@ h1 {
     background-attachment: fixed;
     background-size: 100%;
     width: 100%;
-    height: 437px;
+    height: 70vh;
     color:white;
 
     h1 {
@@ -201,45 +197,117 @@ h1 {
   }
 }
 */
-@media (max-width: 960px) {
-  .header {
-    background-image: url("../../img/ourclients.jpg");
-    background-repeat: no-repeat;
+/*
+@media (max-width:1200px){
+  .header{
+    background-image: url('../../img/ourclients.jpg');
+    background-repeat: repeat;
     background-position-y: 50px;
     background-attachment: fixed;
     background-size: 100%;
     width: 100%;
-    height: 340px;
-    color: white; }
-    .header h1 {
-      font-weight: bolder;
-      font-size: 45px;
-      color: white; }
-    .header p {
-      letter-spacing: 0.5px;
-      font-size: 24px; } }
-@media (min-width: 961px) {
-  .header {
-    background-image: url("../../img/ourclients.jpg");
-    background-repeat: no-repeat;
-    background-position-y: 50px;
-    background-attachment: fixed;
-    background-size: 100%;
-    width: 100%;
-    height: 437px;
-    color: white; }
-    .header h1 {
-      font-weight: bolder;
-      font-size: 45px;
-      color: white; }
-    .header p {
-      letter-spacing: 0.5px;
-      font-size: 24px; } }
-.slogan {
-  padding-top: 10%; }
+    height: 100%;
+    color:white;
 
+    h1 {
+      font-weight: bolder;
+      font-size: 45px;
+      color: white;
+    }
+
+    p{
+      letter-spacing: 0.5px;
+      font-size: 24px;
+    }
+  }
+}
+
+@media (min-width:1201px) {
+  .header {
+    background-image: url('../../img/ourclients.jpg');
+    background-repeat: no-repeat;
+    background-position-y: 50px;
+    background-attachment: fixed;
+    background-size: 100%;
+    width: 100%;
+    height: auto;
+    color: white;
+
+    h1 {
+      font-weight: bolder;
+      font-size: 45px;
+      color: white;
+    }
+
+    p {
+      letter-spacing: 0.5px;
+      font-size: 24px;
+    }
+  }
+}
+
+.message{
+  padding-top: 10%;
+}
+
+#try2{
+
+  @extend #try;
+  margin-top: 40px;
+  margin-bottom:7%;
+  font-size: 20px;
+
+  &:hover{
+    @extend #try;
+    //box-shadow: white 0 0 15px 3px;
+    font-size: 20px;
+  }
+}
+*/
+.header {
+  width: 100%;
+  height: 70vh;
+  background: url("../../img/ourclients.jpg") no-repeat center center;
+  background-size: cover;
+  background-position-y: 50px;
+  position: fixed;
+  z-index: 100; }
+
+.message {
+  max-width: 90%;
+  margin: auto;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center; }
+
+.message h1 {
+  font-size: 45px;
+  color: #FFF; }
+
+.message p {
+  color: #fff;
+  font-size: 24px; }
+
+/*
+@media screen and (max-width: 1500px) {
+  .header {
+    height: auto;
+  }
+  .message {
+    position: relative;
+    top: initial;
+    left: initial;
+    right: initial;
+    padding: 150px 0;
+    transform: none;
+  }
+}*/
 #try2 {
   margin-top: 40px;
+  margin-bottom: 7%;
   font-size: 20px; }
   #try2:hover {
     font-size: 20px; }
@@ -247,7 +315,10 @@ h1 {
 /*-------------------------------------------LEO------------------------------------------------------*/
 .leo {
   background: #eeeeee;
-  padding: 3% 0 4% 0; }
+  padding: 3% 0 4% 0;
+  position: relative;
+  z-index: 900;
+  top: 70vh; }
 
 #leo, #linkedin {
   color: #0077b5;
@@ -262,7 +333,10 @@ h1 {
 /*-------------------------------------------LINKEDIN------------------------------------------------------*/
 .linkedin {
   background-color: white;
-  padding: 3% 0 4% 0; }
+  padding: 3% 0 4% 0;
+  position: relative;
+  z-index: 900;
+  top: 70vh; }
 
 .users, .time, .messages {
   margin-top: 8%;
@@ -283,7 +357,10 @@ h1 {
 /*-------------------------------------------MISSIONS------------------------------------------------------*/
 .missions {
   background-color: #eeeeee;
-  padding: 3% 0 6% 0; }
+  padding: 3% 0 6% 0;
+  position: relative;
+  z-index: 900;
+  top: 70vh; }
   .missions img {
     float: left;
     margin: 10px;
@@ -318,7 +395,10 @@ h1 {
 /*-------------------------------------------COMMENT------------------------------------------------------*/
 .comment {
   padding: 3% 0 1% 0;
-  background-color: #283e4a; }
+  background-color: #283e4a;
+  position: relative;
+  z-index: 900;
+  top: 70vh; }
   .comment h1 {
     color: #eeeeee;
     padding: 0 0 5% 0; }
@@ -354,7 +434,10 @@ h1 {
 /*-------------------------------------------PRICING------------------------------------------------------*/
 .pricing {
   background-color: #eeeeee;
-  padding: 3% 0 9% 0; }
+  padding: 3% 0 9% 0;
+  position: relative;
+  z-index: 900;
+  top: 70vh; }
 
 .list {
   padding: 3% 0 4% 0;
@@ -427,6 +510,12 @@ h1 {
     transition: 0.2s; }
 
 /*-------------------------------------------CONTACT------------------------------------------------------*/
+#last {
+  background-color: white;
+  position: relative;
+  z-index: 900;
+  top: 70vh; }
+
 .portrait {
   padding: 5% 0 5%; }
   .portrait h1 {
@@ -443,6 +532,9 @@ h1 {
 
 /*-------------------------------------------FOOTER------------------------------------------------------*/
 .footer {
+  position: relative;
+  z-index: 900;
+  top: 70vh;
   background-color: #283e4a;
   color: #eeeeee;
   font-size: 15px; }
