@@ -297,7 +297,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </p>
                     </div>
                 </div>
-                <button class="juniorprice">
+                <button id="j-price" class="juniorprice">
                     <p><strong> 59€ /mois </strong></p>
                     <div class="engagement">
                         <p>Sans engagement</p>
@@ -321,7 +321,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </p>
                     </div>
                 </div>
-                <button class="expertprice">
+                <button id="e-price" class="expertprice">
                     <p> <strong>99€ /mois</strong></p>
                     <div class="engagement">
                         <p>Sans engagement</p>
@@ -460,6 +460,18 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             });
 
             $('#try3').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
+                $('#close').show('fade');
+            });
+
+            $('#e-price').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
+                $('#close').show('fade');
+            });
+
+            $('#j-price').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form').show('fade');
                 $('#close').show('fade');
