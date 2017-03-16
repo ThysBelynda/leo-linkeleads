@@ -4,12 +4,14 @@
   font-weight: 200;
   src: local("Catamaran ExtraLight"), local("Catamaran-ExtraLight"), url(https://fonts.gstatic.com/s/catamaran/v1/hFc-HKSsGk6M-psujei1MBampu5_7CjHW5spxoeN3Vs.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000; }
-body {
-  font-family: Catamaran;
-  letter-spacing: 0.5px; }
-
 .row {
   margin: 0 3% 0 3%; }
+
+body {
+  font-family: Catamaran;
+  letter-spacing: 0.5px;
+  background-color: #283e4a;
+  z-index: 200; }
 
 #overlay-back {
   position: absolute;
@@ -157,7 +159,7 @@ h1 {
   .header{
     background-size: 100%;
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     color:white;
 
     h1 {
@@ -181,7 +183,7 @@ h1 {
     background-attachment: fixed;
     background-size: 100%;
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     color:white;
 
     h1 {
@@ -266,7 +268,7 @@ h1 {
 */
 .header {
   width: 100%;
-  height: 70vh;
+  height: 65vh;
   background: url("../../img/ourclients.jpg") no-repeat center center;
   background-size: cover;
   background-position-y: 50px;
@@ -314,11 +316,11 @@ h1 {
 
 /*-------------------------------------------LEO------------------------------------------------------*/
 .leo {
-  background: #eeeeee;
+  background-color: #eeeeee;
   padding: 3% 0 4% 0;
   position: relative;
   z-index: 900;
-  top: 70vh; }
+  top: 65vh; }
 
 #leo, #linkedin {
   color: #0077b5;
@@ -336,7 +338,7 @@ h1 {
   padding: 3% 0 4% 0;
   position: relative;
   z-index: 900;
-  top: 70vh; }
+  top: 65vh; }
 
 .users, .time, .messages {
   margin-top: 8%;
@@ -360,7 +362,7 @@ h1 {
   padding: 3% 0 6% 0;
   position: relative;
   z-index: 900;
-  top: 70vh; }
+  top: 65vh; }
   .missions img {
     float: left;
     margin: 10px;
@@ -398,7 +400,7 @@ h1 {
   background-color: #283e4a;
   position: relative;
   z-index: 900;
-  top: 70vh; }
+  top: 65vh; }
   .comment h1 {
     color: #eeeeee;
     padding: 0 0 5% 0; }
@@ -437,7 +439,7 @@ h1 {
   padding: 3% 0 9% 0;
   position: relative;
   z-index: 900;
-  top: 70vh; }
+  top: 65vh; }
 
 .list {
   padding: 3% 0 4% 0;
@@ -514,7 +516,7 @@ h1 {
   background-color: white;
   position: relative;
   z-index: 900;
-  top: 70vh; }
+  top: 65vh; }
 
 .portrait {
   padding: 5% 0 5%; }
@@ -534,7 +536,7 @@ h1 {
 .footer {
   position: relative;
   z-index: 900;
-  top: 70vh;
+  top: 65vh;
   background-color: #283e4a;
   color: #eeeeee;
   font-size: 15px; }

@@ -6,11 +6,6 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
-body{
-  font-family: Catamaran;
-  letter-spacing: 0.5px;
-}
-
 .row{
   margin : 0 3% 0 3%;
 }
@@ -20,6 +15,13 @@ $buttoncolor : rgb(0, 119, 181);
 $backgroundcolor : #eeeeee;
 $juniorcolor: rgb(0, 154, 234);
 $expertcolor : rgb(0, 53, 81);
+
+body{
+  font-family: Catamaran;
+  letter-spacing: 0.5px;
+  background-color: $leocolor;
+  z-index: 200;
+}
 
 #overlay-back {
   position   : absolute;
@@ -209,7 +211,7 @@ h1{
   .header{
     background-size: 100%;
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     color:white;
 
     h1 {
@@ -233,7 +235,7 @@ h1{
     background-attachment: fixed;
     background-size: 100%;
     width: 100%;
-    height: 70vh;
+    height: 65vh;
     color:white;
 
     h1 {
@@ -319,7 +321,7 @@ h1{
 
 .header {
   width:    100%;
-  height:   70vh;
+  height:   65vh;
   background: url('../../img/ourclients.jpg') no-repeat center center;
   background-size: cover;
   background-position-y: 50px;
@@ -379,11 +381,11 @@ h1{
 /*-------------------------------------------LEO------------------------------------------------------*/
 
 .leo{
-  background: $backgroundcolor;
+  background-color: $backgroundcolor;
   padding:3% 0 4% 0;
   position: relative;
   z-index: 900;
-  top:70vh;
+  top:65vh;
 }
 
 #leo{
@@ -407,7 +409,7 @@ h1{
   padding:3% 0 4% 0;
   position: relative;
   z-index: 900;
-  top:70vh;
+  top:65vh;
 }
 
 #linkedin{
@@ -444,7 +446,7 @@ h1{
   padding: 3% 0 6% 0;
   position: relative;
   z-index: 900;
-  top:70vh;
+  top:65vh;
 
   img {
     float: left;
@@ -493,7 +495,7 @@ h1{
   background-color: $leocolor;
   position: relative;
   z-index: 900;
-  top:70vh;
+  top:65vh;
 
   h1{
     color: $backgroundcolor;
@@ -546,7 +548,7 @@ h1{
   padding: 3% 0 9% 0;
   position: relative;
   z-index: 900;
-  top:70vh;
+  top:65vh;
 }
 
 .list{
@@ -656,7 +658,7 @@ h1{
   background-color: white;
   position: relative;
   z-index: 900;
-  top:70vh;
+  top:65vh;
 }
 
 .portrait{
@@ -688,7 +690,7 @@ h1{
 .footer{
   position: relative;
   z-index: 900;
-  top:70vh;
+  top:65vh;
   background-color: $leocolor;
   color: $backgroundcolor;
   font-size: 15px;

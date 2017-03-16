@@ -273,6 +273,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 </div>
             </div>
         </div>
+
+        <img src="img/screenshot.png" width="80%" height="80%">
     </div>
 
     <div class="pricing" align="center">
