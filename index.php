@@ -234,7 +234,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     <div class="comment" align="center">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <h1>Leo démarche à votre place sur Linkedin jusqu'à <strong>1000 prospects/mois !</strong></h1>
+                <h1>Leo démarche à votre place jusqu'à <strong>1000 prospects/mois</strong> sur Linkedin !</h1>
             </div>
         </div>
 
@@ -386,7 +386,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     </div>
                 </div>
 
-                <div class="form-group" id="fg-email">
+                <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12">
                             <label for="usr">Adresse e-mail*</label>
@@ -395,17 +395,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </div>
                     </div>
                 </div>
-                <!--<div class="form-group has-error" style="display: none">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <label for="usr" style="color: red">Adresse e-mail*</label>
-                            <input class="form-control input-lg" name="email" type="email" id="userEmail" required>
-                            <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
-                        </div>
-                    </div>
-                </div>-->
 
-                <div class="form-group" id="fg-conf">
+                <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12">
                             <label for="usr">Confirmez votre adresse e-mail*</label>
@@ -414,15 +405,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </div>
                     </div>
                 </div>
-                <!--<div class="form-group has-error" style="display: none">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <label for="usr" style="color: red">Confirmez votre adresse e-mail*</label>
-                            <input class="form-control input-lg" name="confirmation" type="email" id="userEmail" required>
-                            <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
-                        </div>
-                    </div>
-                </div>-->
 
                 <div class="form-group">
                     <div class="row">
@@ -534,45 +516,45 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     $_GET['valid'] = (int) $_GET['valid'];
 
-        if ($_GET['valid'] >= 1 AND $_GET['valid'] <= 3) {
+    if ($_GET['valid'] >= 1 AND $_GET['valid'] <= 3) {
 
-            if ($_GET['valid'] == 3) {
-                ?>
-                <script>
-                    $('#overlay, #overlay-back').fadeIn(0);
-                    $('#form').show();
-                    $('#close').show('fade');
-                    $('#wrong').show();
-                    /*
-                    $('.has-error').show();
-                    $('#fg-email').hide();
-                    $('#fg-conf').hide();
-                    */
-                </script>
-                <?php
+        if ($_GET['valid'] == 3) {
+            ?>
+            <script>
+                $('#overlay, #overlay-back').fadeIn(100);
+                $('#form').show();
+                $('#close').show('fade');
+                $('#wrong').show();
+                /*
+                 $('.has-error').show();
+                 $('#fg-email').hide();
+                 $('#fg-conf').hide();
+                 */
+            </script>
+            <?php
 
-            } else if ($_GET['valid'] == 2) {
-                ?>
-                <script>
-                    $('#overlay, #overlay-back').fadeIn(0);
-                    $('#form').show();
-                    $('#close').show('fade');
-                    $('#existing').show();
-                </script>
-                <?php
+        } else if ($_GET['valid'] == 2) {
+            ?>
+            <script>
+                $('#overlay, #overlay-back').fadeIn(100);
+                $('#form').show();
+                $('#close').show('fade');
+                $('#existing').show();
+            </script>
+            <?php
 
-            } else if ($_GET['valid'] == 1) {
-                ?>
-                <script>
-                    $('#overlay, #overlay-back').fadeIn(0);
-                    $('#form').show();
-                    $('#close').show('fade');
-                    $('#valid').show();
-                </script>
-                <?php
+        } else if ($_GET['valid'] == 1) {
+            ?>
+            <script>
+                $('#overlay, #overlay-back').fadeIn(100);
+                $('#form').show();
+                $('#close').show('fade');
+                $('#valid').show();
+            </script>
+            <?php
 
-            }
         }
+    }
 }
 
 /*
