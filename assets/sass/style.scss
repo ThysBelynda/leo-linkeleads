@@ -114,6 +114,17 @@ $expertcolor : rgb(0, 53, 81);
   float: right;
   background-color: rgba(0, 128, 0, 0.08);
   padding: 10px;
+  border-radius: 3px;
+}
+
+#existing{
+  @extend #valid;
+  color: #ff0000;
+  background-color: rgba(255, 0, 0, 0.06);
+}
+
+#wrong{
+  @extend #existing;
 }
 
 #submit{

@@ -391,7 +391,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12">
-                            <label for="usr">Adresse e-mail*</label>
+                            <label for="usr">Adresse mail*</label>
                             <input class="form-control input-lg" name="email" type="email" id="userEmail" required>
                             <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
                         </div>
@@ -401,7 +401,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12">
-                            <label for="usr">Confirmez votre adresse e-mail*</label>
+                            <label for="usr">Confirmez votre adresse mail*</label>
                             <input class="form-control input-lg" name="confirmation" type="email" id="userEmail" required>
                             <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
                         </div>
@@ -419,14 +419,14 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 </div>
 
                 <!--<div id="existing" style="margin-left:30px; display: none; color: red;">L'e-mail que vous avez rentré existe déjà.</div>-->
-                <div id="wrong" style="margin-left:30px; display: none; color: red;">Les deux adresses mails rentrées ne correspondent pas</div>
+                <!--<div id="wrong" style="margin-left:30px; display: none; color: red;">Les deux adresses mails rentrées ne correspondent pas</div>-->
 
                 <div class="row">
                     <div class="col-xs-12">
                         <input class="btn btn-default" type="submit" value="Envoyer" id="submit">
                         <div id="valid">Votre inscription est validée. Merci, à bientôt !</div>
-                        <div id="existing">L'e-mail que vous avez rentré existe déjà.</div>
-
+                        <div id="existing">L'adresse mail renseignée existe déjà</div>
+                        <div id="wrong">Reconfirmez votre adresse mail</div>
                     </div>
                 </div>
                 <!--<button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>-->
