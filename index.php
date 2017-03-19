@@ -271,7 +271,9 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             </div>
         </div>
 
-        <img src="img/screenshot.png" width="80%" height="80%">
+        <div class="screenshot">
+            <img src="img/screenshot.png" width="80%" height="80%">
+        </div>
     </div>
 
     <div class="pricing" align="center">
@@ -349,16 +351,18 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" align="center">
         <div class="row">
-            <div class="col-sm-10 col-md-10 col-lg-10">
+            <div class="col-sm-12 col-md-12 col-lg-12">
                 <p>Leo est un assistant virtuel commercial développé par la société Linkeleads</p>
-            </div>
-            <div class="col-sm-2 col-md-2 col-lg-2">
-                <p>contact :</p>
                 <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
                 <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>
             </div>
+            <!--<div class="col-sm-2 col-md-2 col-lg-2">
+                <p>contact :</p>
+                <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
+                <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>
+            </div>-->
         </div>
     </div>
 

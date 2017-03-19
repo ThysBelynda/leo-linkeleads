@@ -470,12 +470,15 @@ h1{
   border-top : 3px solid $backgroundcolor;
 }
 
+.screenshot{
+  margin: 3% 0 3% 0;
+}
 
 /*-------------------------------------------PRICING------------------------------------------------------*/
 
 .pricing{
   background-color: $backgroundcolor;
-  padding: 3% 0 9% 0;
+  padding: 3% 0 5% 0;
   position: relative;
   z-index: 900;
   top:65vh;
@@ -577,7 +580,7 @@ h1{
 }
 
 .gratis{
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 #try3{
@@ -619,7 +622,7 @@ h1{
 }
 
 #last p{
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 
 
@@ -635,12 +638,12 @@ h1{
 }
 
 .footer p{
-  padding: 15px;
+  padding: 15px 10px 15px 0;
   margin: 0;
   display: inline-block;
 }
 
 .footer img{
-  float: right;
-  margin: 10px 6px 6px 6px;
+  //float: right;
+  margin: 0 6px 0 6px;
 }
