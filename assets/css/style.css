@@ -81,6 +81,15 @@ body {
   background-color: rgba(255, 250, 240, 0.8);
   border: 1px solid #d6d1c9; }
 
+#valid {
+  font-size: 18px;
+  margin: 15px 0 0 3px;
+  display: none;
+  color: #002f00;
+  float: right;
+  background-color: rgba(0, 128, 0, 0.08);
+  padding: 10px; }
+
 #submit {
   margin-top: 15px;
   font-size: 20px;

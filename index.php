@@ -418,13 +418,15 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     </div>
                 </div>
 
-                <div id="valid" style="display: none; color: green;">Insciption validée!</div>
-                <div id="existing" style="display: none; color: red;">Attention cet email existe deja</div>
-                <div id="wrong" style="display: none; color: red;">Les deux adresses mails rentrées ne correspondent pas</div>
+                <!--<div id="existing" style="margin-left:30px; display: none; color: red;">L'e-mail que vous avez rentré existe déjà.</div>-->
+                <div id="wrong" style="margin-left:30px; display: none; color: red;">Les deux adresses mails rentrées ne correspondent pas</div>
 
                 <div class="row">
                     <div class="col-xs-12">
-                        <input class="btn btn-default" type="submit" value="Envoyer !" id="submit">
+                        <input class="btn btn-default" type="submit" value="Envoyer" id="submit">
+                        <div id="valid">Votre inscription est validée. Merci, à bientôt !</div>
+                        <div id="existing">L'e-mail que vous avez rentré existe déjà.</div>
+
                     </div>
                 </div>
                 <!--<button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>-->
