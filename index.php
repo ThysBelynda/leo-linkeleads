@@ -142,7 +142,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <div class="leo">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
+            <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
                 <div class="prospection" align="center">
                     <h1>Pourquoi confier vos actions de prospection à <p id="leo">Leo</p> ?</h1>
                     <div class="description">
@@ -156,7 +156,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <div class="linkedin" align="center">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
+            <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
                 <div class="levier" align="center">
                     <h1>Pourquoi faire de <p id="linkedin">Linkedin</p> un levier commercial ?</h1>
                 </div>
@@ -290,7 +290,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         <h1>Un pricing simple et transparent </h1>
 
         <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-offset-1 col-lg-5">
+            <div class="col-sm-offset-1 col-sm-5 col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-5">
                 <div class="junior">
                     <div class="list">
                         <h2>Leo Junior</h2>
@@ -314,7 +314,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 </button>
             </div>
 
-            <div class="col-sm-6 col-md-6 col-lg-5">
+            <div class="col-sm-5 col-md-5 col-lg-5">
                 <div class="expert">
                     <div class="list">
                         <h2>Leo Expert</h2>
@@ -363,10 +363,10 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <div class="footer" align="center">
         <div class="row" style="margin: 0">
-            <div class="col-sm-12 col-md-12 col-lg-5">
+            <div class="col-sm-7 col-md-7 col-lg-5">
                 <p>Leo est un assistant virtuel commercial développé par la société Linkeleads.</p>
             </div>
-            <div class="col-sm-2 col-md-2 col-lg-2">
+            <div class="col-sm-5 col-md-5 col-lg-2">
                 <a href="#"><img src="img/gmail.png" height="22" width="22"></a>
                 <a href="#"><img src="img/linkedin.png" height="22" width="22"></a>
             </div>

@@ -59,23 +59,42 @@ body {
   border-radius: 100px;
   border: none; }
 
-#form {
-  display: none;
-  background-color: white;
-  position: fixed;
-  z-index: 1000;
-  bottom: 9%;
-  left: 28%;
-  height: 550px;
-  width: 45%;
-  padding: 30px 20px 30px 20px;
-  color: #595959; }
-  #form h3 {
-    margin: 0 70px 30px 70px;
-    color: #283e4a; }
-  #form label {
-    margin-bottom: 0; }
-
+@media screen and (max-width: 1024px) {
+  #form {
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+    bottom: 9%;
+    top: 7%;
+    left: 10%;
+    height: 550px;
+    width: 80%;
+    padding: 30px 20px 30px 20px;
+    color: #595959; }
+    #form h3 {
+      margin: 0 70px 30px 70px;
+      color: #283e4a; }
+    #form label {
+      margin-bottom: 0; } }
+@media screen and (min-width: 1025px) {
+  #form {
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+    bottom: 9%;
+    top: 7%;
+    left: 28%;
+    height: 550px;
+    width: 45%;
+    padding: 30px 20px 30px 20px;
+    color: #595959; }
+    #form h3 {
+      margin: 0 70px 30px 70px;
+      color: #283e4a; }
+    #form label {
+      margin-bottom: 0; } }
 .form-control {
   border-radius: 0;
   background-color: rgba(255, 250, 240, 0.8);
