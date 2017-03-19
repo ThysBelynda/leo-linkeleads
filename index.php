@@ -366,10 +366,11 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
     </div>
 
-    <button type="button" value="Close" id="close" style="float: right">x</button>
+    <!--<button type="button" value="Close" id="close" style="float: right">x</button>-->
 
     <div class="overlay">
         <div id="form">
+            <button type="button" value="Close" id="close">x</button>
             <h3 align="center">Inscrivez-vous ici, et bénéficiez d'un essai gratuit pendant 30 jours</h3>
             <form action="index.php" method="post">
                 <div class="form-group">
