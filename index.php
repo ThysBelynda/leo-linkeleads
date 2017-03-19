@@ -83,11 +83,11 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header" id="head-machine">
-            <img alt="alex" src="img/Leosmile.png" height="38" width="38">
+            <a href="#"><img alt="alex" src="img/Leosmile.png" height="38" width="38"></a>
         </div>
-        <p class="navbar-text" id="text-machine">
-            Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong>
-        </p>
+        <div class="navbar-text" id="text-machine">
+            Bonjour, je suis <p id="nav-leo">Leo</p> votre nouvel assistant commercial, <p id="nav-question">et si on travaillait ensemble ?</p>
+        </div>
 
         <!--<p class="navbar-text" id="text-mobile">
             <img alt="alex" src="img/Leosmile.png" height="30" width="30">
@@ -136,7 +136,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <div class="prospection" align="center">
                     <h1>Pourquoi confier vos actions de prospection à <p id="leo">Leo</p> ?</h1>
                     <div class="description">
-                        <p>Autonome, Leo décuple vos opportunités commerciales en démarchant pour vous les prospects que vous ciblez sur Linkedin. <strong>En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</strong></p>
+                        Autonome, Leo décuple vos opportunités commerciales en démarchant pour vous les prospects que vous ciblez sur Linkedin.
+                        <p id="bold-prospect">En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</p>
                     </div>
                 </div>
             </div>
@@ -157,7 +158,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <div class="profils">
                         <img src="img/user-7.png" width="40" height="40">
                     </div>
-                    <p>Parce que vos prospects font partie des <strong>450 millions</strong> d'utilisateurs.</p>
+                    <p>Parce que vos prospects font partie des <strong>450 millions</strong>d'utilisateurs.</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -165,7 +166,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <div class="hourglass">
                         <img src="img/wait.png" width="40" height="40">
                     </div>
-                    <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong>/semaine.</p>
+                    <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong> /semaine.</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -185,8 +186,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/loupe.png" height="50" width="50">
-                    <p>
-                        <strong>Consulter des profils</strong>
+                    <p class="bold-consult">
+                        Consulter des profils
                     </p>
                 </div>
                 <div class="text" align="right">
@@ -196,9 +197,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/reseau.png" height="50" width="50">
-                    <p>
-                        <strong>Entrer en relation</strong>
-                    </p>
+                    <p class="bold-consult">Entrer en relation</p>
                 </div>
                 <div class="text" align="right">
                     <p>Pour élargir votre réseau professionnel.</p>
@@ -209,9 +208,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/chat.png" height="50" width="50">
-                    <p>
-                        <strong>Envoyer des messages</strong>
-                    </p>
+                    <p class="bold-consult">Envoyer des messages</p>
                 </div>
                 <div class="text" align="right">
                     <p>À plusieurs destinaires simultanément.</p>
@@ -220,8 +217,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/courrier.png" height="50" width="50">
-                    <p>
-                        <strong>Extraire des coordonnées</strong>
+                    <p class="bold-consult">
+                        Extraire des coordonnées
                     </p>
                 </div>
                 <div class="text" align="right">
@@ -234,22 +231,22 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     <div class="comment" align="center">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <h1>Leo démarche à votre place jusqu'à <strong>1000 prospects/mois</strong> sur Linkedin !</h1>
+                <h1>Leo démarche à votre place jusqu'à <p id="perf">1000 prospects/mois</p> sur Linkedin !</h1>
             </div>
         </div>
 
         <div class="row">
 
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="one"> <p><strong>1</strong></p> </div>
+                <div class="one"> <p>1</p> </div>
 
                 <div class="border"></div>
 
-                <div class="two"> <p><strong>2</strong></p> </div>
+                <div class="two"> <p>2</p> </div>
 
                 <div class="border"></div>
 
-                <div class="three"> <p><strong>3</strong></p> </div>
+                <div class="three"> <p>3</p> </div>
 
             </div>
         </div>
@@ -284,9 +281,9 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-offset-1 col-lg-5">
                 <div class="junior">
                     <div class="list">
-                        <h2><strong>Leo Junior</strong></h2>
-                        <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
-                        <h3 id="cinq"><strong>500 clients</strong></h3>
+                        <h2>Leo Junior</h2>
+                        <h5>Il démarche pour vous jusqu'à</h5>
+                        <h3 id="cinq">500 clients</h3>
                         <br>
                         <p>
                             Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
@@ -298,7 +295,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     </div>
                 </div>
                 <button id="j-price" class="juniorprice">
-                    <p><strong> 59€ /mois </strong></p>
+                    <p> 59€ /mois</p>
                     <div class="engagement">
                         <p>Sans engagement</p>
                     </div>
@@ -308,9 +305,9 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-5">
                 <div class="expert">
                     <div class="list">
-                        <h2><strong>Leo Expert</strong></h2>
-                        <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
-                        <h3 id="mille"><strong>1000 clients</strong></h3>
+                        <h2>Leo Expert</h2>
+                        <h5>Il démarche pour vous jusqu'à</h5>
+                        <h3 id="mille">1000 clients</h3>
                         <br>
                         <p>
                             Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
@@ -322,7 +319,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     </div>
                 </div>
                 <button id="e-price" class="expertprice">
-                    <p> <strong>99€ /mois</strong></p>
+                    <p>99€ /mois</p>
                     <div class="engagement">
                         <p>Sans engagement</p>
                     </div>

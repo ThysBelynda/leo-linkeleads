@@ -167,9 +167,17 @@ h1{
   padding: 1px;
 }
 
-.navbar-text{
+.navbar-text {
   font-size: 16px;
   color: whitesmoke;
+  margin-bottom: 0;
+}
+
+#nav-leo, #nav-question{
+  font-size: 16px;
+  color: whitesmoke;
+  display: inline-block;
+  font-weight: bold;
 }
 
 .navbar-default .navbar-text{
@@ -268,11 +276,13 @@ h1{
 
 .description{
   padding: 1% 0 0 0;
+  font-size:19px;
+  text-align:center;
+}
 
-  p{
-    font-size:19px;
-    text-align:center;
-  }
+#bold-prospect{
+  display: inline-block;
+  font-weight: bold;
 }
 
 /*-------------------------------------------LINKEDIN------------------------------------------------------*/
@@ -301,6 +311,44 @@ h1{
     text-align: center;
   }
 }
+
+.mail, .hourglass, .profils{
+  background-color: whitesmoke;
+  width: 75px;
+  height: 75px;
+  border-radius: 150px;
+  border: 1px solid $backgroundcolor;
+  padding-top: 20px;
+}
+
+/*
+.users, .time, .messages{
+  margin-top: 8%;
+  width: 90%;
+  // border-top: solid 2px $linkedin;
+  //background-color: rgba(52, 97, 156, 0.04);
+
+  p{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    display: inline-flex;
+  }
+}
+
+
+#bold-users, #bold-hours, #bold-messages{
+  font-weight: bold;
+  display: inline-flex;
+  padding: 0;
+}
+
+#users, #hours, #messages{
+  display: inline-flex;
+  padding: 0;
+}
+*/
 
 .mail, .hourglass, .profils{
   background-color: whitesmoke;
@@ -361,7 +409,15 @@ h1{
   }
 }
 
+.bold-consult{
+  font-weight: bold;
+}
 /*-------------------------------------------COMMENT------------------------------------------------------*/
+
+#perf{
+  font-weight: bold;
+  display: inline-block;
+}
 
 .comment{
   padding: 3% 0 3% 0;
@@ -387,6 +443,7 @@ h1{
 
   p{
     padding-top: 7px;
+    font-weight: bold;
   }
 }
 
@@ -455,16 +512,22 @@ h1{
   h2{
     color:$juniorcolor;
     margin-top:10px;
+    font-weight: bold;
   }
 
   h3{
     margin:0;
     line-height: 0.4;
   }
+
+  h5{
+    font-weight: bold;
+  }
 }
 
 #cinq{
   color: $juniorcolor;
+  font-weight: bold;
 }
 
 .expert{
@@ -477,6 +540,7 @@ h1{
 
 #mille{
   color: $expertcolor;
+  @extend #cinq;
 }
 
 .fa-check-circle{
@@ -496,6 +560,7 @@ h1{
 
   p{
     font-size: 27px;
+    font-weight: bold;
   }
 }
 
