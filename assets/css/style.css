@@ -185,7 +185,8 @@ h1 {
   border-radius: 2px;
   font-weight: bold; }
   #try:hover, #try2:hover, #try3:hover, #try4:hover {
-    transition: 0.2s; }
+    transition: 0.5s;
+    border: solid 1px white; }
 
 /*-------------------------------------------HEADER------------------------------------------------------*/
 .header {
@@ -221,7 +222,8 @@ h1 {
   font-size: 20px;
   font-weight: lighter; }
   #try2:hover {
-    font-size: 20px; }
+    font-size: 20px;
+    font-weight: lighter; }
 
 /*-------------------------------------------LEO------------------------------------------------------*/
 .leo {
@@ -471,9 +473,15 @@ h1 {
 
 #try3 {
   margin-top: 40px;
-  font-size: 20px; }
+  font-size: 20px;
+  font-weight: lighter;
+  transition: all .3s ease-in-out; }
   #try3:hover {
-    transition: 0.2s; }
+    margin-top: 40px;
+    font-size: 27px;
+    border: solid 1px #0077b5;
+    font-weight: bold;
+    transform: scale(1); }
 
 /*-------------------------------------------CONTACT------------------------------------------------------*/
 #last {
@@ -491,7 +499,9 @@ h1 {
   font-size: 20px;
   margin-bottom: 20px; }
   #try4:hover {
-    transition: 0.2s; }
+    transition: 0.2s;
+    background-color: #008bd4;
+    border: solid 1px #0077b5; }
 
 #last p {
   padding-bottom: 90px; }
