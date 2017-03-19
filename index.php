@@ -362,17 +362,14 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     </div>
 
     <div class="footer" align="center">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-12">
-                <p>Leo est un assistant virtuel commercial développé par la société Linkeleads</p>
-                <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
-                <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>
+        <div class="row" style="margin: 0">
+            <div class="col-sm-12 col-md-12 col-lg-5">
+                <p>Leo est un assistant virtuel commercial développé par la société Linkeleads.</p>
             </div>
-            <!--<div class="col-sm-2 col-md-2 col-lg-2">
-                <p>contact :</p>
-                <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
-                <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>
-            </div>-->
+            <div class="col-sm-2 col-md-2 col-lg-2">
+                <a href="#"><img src="img/gmail.png" height="22" width="22"></a>
+                <a href="#"><img src="img/linkedin.png" height="22" width="22"></a>
+            </div>
         </div>
     </div>
 

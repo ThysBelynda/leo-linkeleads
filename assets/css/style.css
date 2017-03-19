@@ -506,11 +506,12 @@ h1 {
   font-size: 15px; }
 
 .footer p {
-  padding: 15px 10px 15px 0;
+  padding: 15px 40px 15px 0;
   margin: 0;
-  display: inline-block; }
+  display: inline-block;
+  font-size: 14px; }
 
 .footer img {
-  margin: 0 6px 0 6px; }
+  margin: 15px 7px 0 7px; }
 
 /*# sourceMappingURL=style.css.map */
