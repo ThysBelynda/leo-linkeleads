@@ -44,10 +44,20 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
                 $sujet = 'Linkeleads - Confirmation PreLaunching';
                 $entete = 'From: team@linkeleads.com';
-                $message = 'Bienvenue sur Linkeleads,
-            Veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur internet.
-            ------------
-            Ceci est un mail automatique. Merci de ne pas y répondre.';
+                $message = 'Bonjour,
+                
+                Nous terminons actuellement le développement de Leo, votre futur assistant commercial intelligent sur Linkedin. La date de sortie officielle est prévu pour le 22 mai 2017. 
+
+                Vous serez automatiquement averti par email et vous recevrez un code promo qui vous permettra d\'utiliser en exclusivité Leo gratuitement pendant un mois.
+
+                Si vous avez des questions, vous pouvez contacter directement Leo par email : leo@linkeleads.com
+                Il vous répondra ASAP ;)
+
+                Nous vous remercions pour votre inscription,
+                A très bientôt,
+                
+                ------------
+                Ceci est un mail automatique. Merci de ne pas y répondre.';
 
                 mail($destinataire, $sujet, $message, $entete);
 
@@ -371,7 +381,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     <div class="overlay">
         <div id="form">
             <button type="button" value="Close" id="close">x</button>
-            <h3 align="center">Inscrivez-vous ici, et bénéficiez d'un essai gratuit pendant 30 jours</h3>
+            <h3 align="center">Inscrivez-vous pour bénéficier d'un essai gratuit pendant 30 jours</h3>
             <form action="index.php" method="post">
                 <div class="form-group">
                     <div class="row">
@@ -451,12 +461,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 $('#close').show('fade');
             });
 
-            $('#try1').on('click', function () {
-                $('#overlay, #overlay-back').fadeIn(600);
-                $('#form').show('fade');
-                $('#close').show('fade');
-            });
-
             $('#try2').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form').show('fade');
@@ -464,6 +468,12 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             });
 
             $('#try3').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
+                $('#close').show('fade');
+            });
+
+            $('#try4').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form').show('fade');
                 $('#close').show('fade');

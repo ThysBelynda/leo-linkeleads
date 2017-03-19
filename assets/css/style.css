@@ -12,11 +12,11 @@ body {
   margin: 0 3% 0 3%; }
 
 #overlay-back {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 616%;
+  height: 100%;
   background: #000;
   opacity: 0.6;
   filter: alpha(opacity=60);
@@ -24,11 +24,11 @@ body {
   z-index: 950; }
 
 #overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 616%;
+  height: 100%;
   display: none; }
 
 /*
