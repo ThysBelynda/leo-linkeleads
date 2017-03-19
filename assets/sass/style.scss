@@ -22,65 +22,115 @@ $juniorcolor: rgb(0, 154, 234);
 $expertcolor : rgb(0, 53, 81);
 
 #overlay-back {
-  position   : absolute;
+  position   : fixed;
   top        : 0;
   left       : 0;
   width      : 100%;
-  height     : 608%;
+  height     : 100%;
   background : #000;
   opacity    : 0.6;
   filter     : alpha(opacity=60);
   display    : none;
-  z-index: 950;
+  z-index    : 950;
 }
 
 #overlay {
-  position : absolute;
+  position : fixed;
   top      : 0;
   left     : 0;
   width    : 100%;
-  height   : 608%;
+  height   : 100%;
   display  : none;
 }
-
+/*
 #close{
   display: none;
   border: none;
-  font-size: 20px;
-  background-color: black;
+  font-size: 12px;
+  background-color: $leocolor;
   position: fixed;
   z-index:1200;
-  bottom:80%;
+  bottom:85%;
   left:70%;
   color: white;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   border-radius: 100px;
+
+}*/
+
+#close{
+  font-size: 14px;
+  float: right;
+  position: relative;
+  bottom:3%;
+  background-color: $leocolor;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  border: none;
 }
 
-#form{
-  display: none;
-  background-color: white;
-  position: fixed;
-  z-index:1000;
-  bottom:9%;
-  left:25%;
-  height:550px;
-  width: 50%;
-  padding: 30px;
-  color: #595959;
-  //border: 3px solid $buttoncolor;
-  //box-shadow: 0 0 100px 5px #101010;
+@media screen and (max-width: 414px) {
 
-  h3{
-    margin: 0 70px 30px 70px;
-    color: $leocolor;
-  }
 
-  label{
-    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1024px){
+  #form{
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index:1000;
+    bottom:9%;
+    top:7%;
+    left:10%;
+    height:550px;
+    width: 80%;
+    padding: 30px 20px 30px 20px;
+    color: #595959;
+    //border: 3px solid $buttoncolor;
+    //box-shadow: 0 0 100px 5px #101010;
+
+    h3{
+      margin: 0 70px 30px 70px;
+      color: $leocolor;
+    }
+
+    label{
+      margin-bottom: 0;
+    }
   }
 }
+
+@media screen and (min-width: 1025px) {
+  #form{
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index:1000;
+    bottom:9%;
+    top:7%;
+    left:28%;
+    height:550px;
+    width: 45%;
+    padding: 30px 20px 30px 20px;
+    color: #595959;
+    //border: 3px solid $buttoncolor;
+    //box-shadow: 0 0 100px 5px #101010;
+
+    h3{
+      margin: 0 70px 30px 70px;
+      color: $leocolor;
+    }
+
+    label{
+      margin-bottom: 0;
+    }
+  }
+}
+
 
 .form-group{
   //margin: 0 15px 20px 15px;
@@ -90,6 +140,27 @@ $expertcolor : rgb(0, 53, 81);
   border-radius: 0;
   background-color: rgba(255, 250, 240, 0.8);
   border: 1px solid #d6d1c9;
+}
+
+#valid{
+  font-size:18px;
+  margin: 15px 0 0 3px;
+  display: none;
+  color: #002f00;
+  float: right;
+  background-color: rgba(0, 128, 0, 0.08);
+  padding: 10px;
+  border-radius: 3px;
+}
+
+#existing{
+  @extend #valid;
+  color: #ff0000;
+  background-color: rgba(255, 0, 0, 0.06);
+}
+
+#wrong{
+  @extend #existing;
 }
 
 #submit{
@@ -167,9 +238,17 @@ h1{
   padding: 1px;
 }
 
-.navbar-text{
+.navbar-text {
   font-size: 16px;
   color: whitesmoke;
+  margin-bottom: 0;
+}
+
+#nav-leo, #nav-question{
+  font-size: 16px;
+  color: whitesmoke;
+  display: inline-block;
+  font-weight: bold;
 }
 
 .navbar-default .navbar-text{
@@ -188,9 +267,8 @@ h1{
   font-weight: bold;
 
   &:hover{
-    //box-shadow: white 0 0 10px 3px;
-    transition: 0.2s;
-    //border: solid 1px white;
+    transition: 0.5s;
+    border: solid 1px white;
   }
 }
 
@@ -247,8 +325,10 @@ h1{
 
   &:hover{
     @extend #try;
-    //box-shadow: white 0 0 15px 3px;
+    //box-shadow: white 0 0 20px 1px;
     font-size: 20px;
+    font-weight: lighter;
+    //border: none;
   }
 }
 /*-------------------------------------------LEO------------------------------------------------------*/
@@ -268,11 +348,13 @@ h1{
 
 .description{
   padding: 1% 0 0 0;
+  font-size:19px;
+  text-align:center;
+}
 
-  p{
-    font-size:19px;
-    text-align:center;
-  }
+#bold-prospect{
+  display: inline-block;
+  font-weight: bold;
 }
 
 /*-------------------------------------------LINKEDIN------------------------------------------------------*/
@@ -301,6 +383,44 @@ h1{
     text-align: center;
   }
 }
+
+.mail, .hourglass, .profils{
+  background-color: whitesmoke;
+  width: 75px;
+  height: 75px;
+  border-radius: 150px;
+  border: 1px solid $backgroundcolor;
+  padding-top: 20px;
+}
+
+/*
+.users, .time, .messages{
+  margin-top: 8%;
+  width: 90%;
+  // border-top: solid 2px $linkedin;
+  //background-color: rgba(52, 97, 156, 0.04);
+
+  p{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    display: inline-flex;
+  }
+}
+
+
+#bold-users, #bold-hours, #bold-messages{
+  font-weight: bold;
+  display: inline-flex;
+  padding: 0;
+}
+
+#users, #hours, #messages{
+  display: inline-flex;
+  padding: 0;
+}
+*/
 
 .mail, .hourglass, .profils{
   background-color: whitesmoke;
@@ -361,7 +481,15 @@ h1{
   }
 }
 
+.bold-consult{
+  font-weight: bold;
+}
 /*-------------------------------------------COMMENT------------------------------------------------------*/
+
+#perf{
+  font-weight: bold;
+  display: inline-block;
+}
 
 .comment{
   padding: 3% 0 3% 0;
@@ -387,6 +515,7 @@ h1{
 
   p{
     padding-top: 7px;
+    font-weight: bold;
   }
 }
 
@@ -413,12 +542,15 @@ h1{
   border-top : 3px solid $backgroundcolor;
 }
 
+.screenshot{
+  margin: 3% 0 3% 0;
+}
 
 /*-------------------------------------------PRICING------------------------------------------------------*/
 
 .pricing{
   background-color: $backgroundcolor;
-  padding: 3% 0 9% 0;
+  padding: 3% 0 5% 0;
   position: relative;
   z-index: 900;
   top:65vh;
@@ -455,16 +587,22 @@ h1{
   h2{
     color:$juniorcolor;
     margin-top:10px;
+    font-weight: bold;
   }
 
   h3{
     margin:0;
     line-height: 0.4;
   }
+
+  h5{
+    font-weight: bold;
+  }
 }
 
 #cinq{
   color: $juniorcolor;
+  font-weight: bold;
 }
 
 .expert{
@@ -477,6 +615,7 @@ h1{
 
 #mille{
   color: $expertcolor;
+  @extend #cinq;
 }
 
 .fa-check-circle{
@@ -496,6 +635,7 @@ h1{
 
   p{
     font-size: 27px;
+    font-weight: bold;
   }
 }
 
@@ -512,17 +652,23 @@ h1{
 }
 
 .gratis{
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 #try3{
   @extend #try;
   margin-top: 40px;
   font-size: 20px;
+  font-weight: lighter;
+  transition: all .3s ease-in-out;
 
   &:hover{
     //box-shadow: white 0 0 15px 3px;
-    transition: 0.2s;
+    margin-top: 40px;
+    font-size: 27px;
+    border: solid 1px $buttoncolor;
+    font-weight: bold;
+    transform: scale(1);
   }
 }
 
@@ -550,11 +696,13 @@ h1{
   &:hover{
     //box-shadow: white 0 0 10px 3px;
     transition: 0.2s;
+    background-color: #008bd4;
+    border: solid 1px $buttoncolor;
   }
 }
 
 #last p{
-  padding-bottom: 50px;
+  padding-bottom: 90px;
 }
 
 
@@ -570,12 +718,12 @@ h1{
 }
 
 .footer p{
-  padding: 15px;
+  padding: 15px 40px 15px 0;
   margin: 0;
   display: inline-block;
+  font-size: 14px;
 }
 
 .footer img{
-  float: right;
-  margin: 10px 6px 6px 6px;
+  margin:15px 7px 0 7px;
 }

@@ -44,10 +44,20 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
                 $sujet = 'Linkeleads - Confirmation PreLaunching';
                 $entete = 'From: team@linkeleads.com';
-                $message = 'Bienvenue sur Linkeleads,
-            Veuillez cliquer sur le lien ci dessous ou copier/coller dans votre navigateur internet.
-            ------------
-            Ceci est un mail automatique. Merci de ne pas y répondre.';
+                $message = 'Bonjour,
+                
+                Nous terminons actuellement le développement de Leo, votre futur assistant commercial intelligent sur Linkedin. La date de sortie officielle est prévu pour le 22 mai 2017. 
+
+                Vous serez automatiquement averti par email et vous recevrez un code promo qui vous permettra d\'utiliser en exclusivité Leo gratuitement pendant un mois.
+
+                Si vous avez des questions, vous pouvez contacter directement Leo par email : leo@linkeleads.com
+                Il vous répondra ASAP ;)
+
+                Nous vous remercions pour votre inscription,
+                A très bientôt,
+                
+                ------------
+                Ceci est un mail automatique. Merci de ne pas y répondre.';
 
                 mail($destinataire, $sujet, $message, $entete);
 
@@ -83,11 +93,11 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header" id="head-machine">
-            <img alt="alex" src="img/Leosmile.png" height="38" width="38">
+            <a href="#"><img alt="alex" src="img/Leosmile.png" height="38" width="38"></a>
         </div>
-        <p class="navbar-text" id="text-machine">
-            Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial, <strong>et si on travaillait ensemble ?</strong>
-        </p>
+        <div class="navbar-text" id="text-machine">
+            Bonjour, je suis <p id="nav-leo">Leo</p> votre nouvel assistant commercial, <p id="nav-question">et si on travaillait ensemble ?</p>
+        </div>
 
         <!--<p class="navbar-text" id="text-mobile">
             <img alt="alex" src="img/Leosmile.png" height="30" width="30">
@@ -132,11 +142,12 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <div class="leo">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
+            <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
                 <div class="prospection" align="center">
                     <h1>Pourquoi confier vos actions de prospection à <p id="leo">Leo</p> ?</h1>
                     <div class="description">
-                        <p>Autonome, Leo décuple vos opportunités commerciales en démarchant pour vous les prospects que vous ciblez sur Linkedin. <strong>En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</strong></p>
+                        Autonome, Leo décuple vos opportunités commerciales en démarchant pour vous les prospects que vous ciblez sur Linkedin.
+                        <p id="bold-prospect">En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</p>
                     </div>
                 </div>
             </div>
@@ -145,7 +156,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <div class="linkedin" align="center">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
+            <div class="col-sm-offset-1 col-sm-10 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
                 <div class="levier" align="center">
                     <h1>Pourquoi faire de <p id="linkedin">Linkedin</p> un levier commercial ?</h1>
                 </div>
@@ -157,7 +168,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <div class="profils">
                         <img src="img/user-7.png" width="40" height="40">
                     </div>
-                    <p>Parce que vos prospects font partie des <strong>450 millions</strong> d'utilisateurs.</p>
+                    <p>Parce que vos prospects font partie des <strong>450 millions</strong>d'utilisateurs.</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -165,7 +176,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <div class="hourglass">
                         <img src="img/wait.png" width="40" height="40">
                     </div>
-                    <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong>/semaine.</p>
+                    <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong> /semaine.</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -185,8 +196,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/loupe.png" height="50" width="50">
-                    <p>
-                        <strong>Consulter des profils</strong>
+                    <p class="bold-consult">
+                        Consulter des profils
                     </p>
                 </div>
                 <div class="text" align="right">
@@ -196,9 +207,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/reseau.png" height="50" width="50">
-                    <p>
-                        <strong>Entrer en relation</strong>
-                    </p>
+                    <p class="bold-consult">Entrer en relation</p>
                 </div>
                 <div class="text" align="right">
                     <p>Pour élargir votre réseau professionnel.</p>
@@ -209,9 +218,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/chat.png" height="50" width="50">
-                    <p>
-                        <strong>Envoyer des messages</strong>
-                    </p>
+                    <p class="bold-consult">Envoyer des messages</p>
                 </div>
                 <div class="text" align="right">
                     <p>À plusieurs destinaires simultanément.</p>
@@ -220,8 +227,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="title" align="right">
                     <img src="img/courrier.png" height="50" width="50">
-                    <p>
-                        <strong>Extraire des coordonnées</strong>
+                    <p class="bold-consult">
+                        Extraire des coordonnées
                     </p>
                 </div>
                 <div class="text" align="right">
@@ -234,22 +241,22 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     <div class="comment" align="center">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <h1>Leo démarche à votre place jusqu'à <strong>1000 prospects/mois</strong> sur Linkedin !</h1>
+                <h1>Leo démarche à votre place jusqu'à <p id="perf">1000 prospects/mois</p> sur Linkedin !</h1>
             </div>
         </div>
 
         <div class="row">
 
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <div class="one"> <p><strong>1</strong></p> </div>
+                <div class="one"> <p>1</p> </div>
 
                 <div class="border"></div>
 
-                <div class="two"> <p><strong>2</strong></p> </div>
+                <div class="two"> <p>2</p> </div>
 
                 <div class="border"></div>
 
-                <div class="three"> <p><strong>3</strong></p> </div>
+                <div class="three"> <p>3</p> </div>
 
             </div>
         </div>
@@ -274,19 +281,21 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             </div>
         </div>
 
-        <img src="img/screenshot.png" width="80%" height="80%">
+        <div class="screenshot">
+            <img src="img/screenshot.png" width="80%" height="80%">
+        </div>
     </div>
 
     <div class="pricing" align="center">
         <h1>Un pricing simple et transparent </h1>
 
         <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-offset-1 col-lg-5">
+            <div class="col-sm-offset-1 col-sm-5 col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-5">
                 <div class="junior">
                     <div class="list">
-                        <h2><strong>Leo Junior</strong></h2>
-                        <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
-                        <h3 id="cinq"><strong>500 clients</strong></h3>
+                        <h2>Leo Junior</h2>
+                        <h5>Il démarche pour vous jusqu'à</h5>
+                        <h3 id="cinq">500 clients</h3>
                         <br>
                         <p>
                             Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
@@ -297,20 +306,20 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </p>
                     </div>
                 </div>
-                <button class="juniorprice">
-                    <p><strong> 59€ /mois </strong></p>
+                <button id="j-price" class="juniorprice">
+                    <p> 59€ /mois</p>
                     <div class="engagement">
                         <p>Sans engagement</p>
                     </div>
                 </button>
             </div>
 
-            <div class="col-sm-6 col-md-6 col-lg-5">
+            <div class="col-sm-5 col-md-5 col-lg-5">
                 <div class="expert">
                     <div class="list">
-                        <h2><strong>Leo Expert</strong></h2>
-                        <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
-                        <h3 id="mille"><strong>1000 clients</strong></h3>
+                        <h2>Leo Expert</h2>
+                        <h5>Il démarche pour vous jusqu'à</h5>
+                        <h3 id="mille">1000 clients</h3>
                         <br>
                         <p>
                             Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
@@ -321,8 +330,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         </p>
                     </div>
                 </div>
-                <button class="expertprice">
-                    <p> <strong>99€ /mois</strong></p>
+                <button id="e-price" class="expertprice">
+                    <p>99€ /mois</p>
                     <div class="engagement">
                         <p>Sans engagement</p>
                     </div>
@@ -352,24 +361,24 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         </div>
     </div>
 
-    <div class="footer">
-        <div class="row">
-            <div class="col-sm-10 col-md-10 col-lg-10">
-                <p>Leo est un assistant virtuel commercial développé par la société Linkeleads</p>
+    <div class="footer" align="center">
+        <div class="row" style="margin: 0">
+            <div class="col-sm-7 col-md-7 col-lg-5">
+                <p>Leo est un assistant virtuel commercial développé par la société Linkeleads.</p>
             </div>
-            <div class="col-sm-2 col-md-2 col-lg-2">
-                <p>contact :</p>
-                <a href="#"><img src="img/gmail.png" height="30" width="30"></a>
-                <a href="#"><img src="img/linkedin.png" height="30" width="30"></a>
+            <div class="col-sm-5 col-md-5 col-lg-2">
+                <a href="#"><img src="img/gmail.png" height="22" width="22"></a>
+                <a href="#"><img src="img/linkedin.png" height="22" width="22"></a>
             </div>
         </div>
     </div>
 
-    <button type="button" value="Close" id="close" style="float: right">x</button>
+    <!--<button type="button" value="Close" id="close" style="float: right">x</button>-->
 
     <div class="overlay">
         <div id="form">
-            <h3 align="center">Inscrivez-vous ici, et bénéficiez d'un essai gratuit pendant 30 jours</h3>
+            <button type="button" value="Close" id="close">x</button>
+            <h3 align="center">Inscrivez-vous pour bénéficier d'un essai gratuit pendant 30 jours</h3>
             <form action="index.php" method="post">
                 <div class="form-group">
                     <div class="row">
@@ -389,7 +398,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12">
-                            <label for="usr">Adresse e-mail*</label>
+                            <label for="usr">Adresse mail*</label>
                             <input class="form-control input-lg" name="email" type="email" id="userEmail" required>
                             <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
                         </div>
@@ -399,7 +408,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-12">
-                            <label for="usr">Confirmez votre adresse e-mail*</label>
+                            <label for="usr">Confirmez votre adresse mail*</label>
                             <input class="form-control input-lg" name="confirmation" type="email" id="userEmail" required>
                             <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
                         </div>
@@ -416,13 +425,15 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     </div>
                 </div>
 
-                <div id="valid" style="display: none; color: green;">Insciption validée!</div>
-                <div id="existing" style="display: none; color: red;">Attention cet email existe deja</div>
-                <div id="wrong" style="display: none; color: red;">Les deux adresses mails rentrées ne correspondent pas</div>
+                <!--<div id="existing" style="margin-left:30px; display: none; color: red;">L'e-mail que vous avez rentré existe déjà.</div>-->
+                <!--<div id="wrong" style="margin-left:30px; display: none; color: red;">Les deux adresses mails rentrées ne correspondent pas</div>-->
 
                 <div class="row">
                     <div class="col-xs-12">
-                        <input class="btn btn-default" type="submit" value="Envoyer !" id="submit">
+                        <input class="btn btn-default" type="submit" value="Envoyer" id="submit">
+                        <div id="valid">Votre inscription est validée. Merci, à bientôt !</div>
+                        <div id="existing">L'adresse mail renseignée existe déjà</div>
+                        <div id="wrong">Reconfirmez votre adresse mail</div>
                     </div>
                 </div>
                 <!--<button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>-->
@@ -447,12 +458,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 $('#close').show('fade');
             });
 
-            $('#try1').on('click', function () {
-                $('#overlay, #overlay-back').fadeIn(600);
-                $('#form').show('fade');
-                $('#close').show('fade');
-            });
-
             $('#try2').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form').show('fade');
@@ -460,6 +465,24 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
             });
 
             $('#try3').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
+                $('#close').show('fade');
+            });
+
+            $('#try4').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
+                $('#close').show('fade');
+            });
+
+            $('#e-price').on('click', function () {
+                $('#overlay, #overlay-back').fadeIn(600);
+                $('#form').show('fade');
+                $('#close').show('fade');
+            });
+
+            $('#j-price').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form').show('fade');
                 $('#close').show('fade');
