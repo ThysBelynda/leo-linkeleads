@@ -77,6 +77,11 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Découvrez Leo, votre nouvel assistant virtuel de Prospection sur Linkedin</title>
+        <meta name="description" content="Leo vous trouve de nouveaux clients en automatisant votre travail de prospection sur Linkedin. 30 jours d'essai gratuit !">
+        <meta name="author" content="Belynda Thys">
+
         <title>Leo</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
@@ -367,8 +372,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 <p>Leo est un assistant virtuel commercial développé par la société Linkeleads.</p>
             </div>
             <div class="col-sm-5 col-md-5 col-lg-2">
-                <a href="#"><img src="img/gmail.png" height="22" width="22"></a>
-                <a href="#"><img src="img/linkedin.png" height="22" width="22"></a>
+                <a href="mailto:leo@linkeleads.com"><img src="img/gmail.png" height="22" width="22"></a>
+                <a href="https://www.linkedin.com/in/leo-linkeleads/"><img src="img/linkedin.png" height="22" width="22"></a>
             </div>
         </div>
     </div>
