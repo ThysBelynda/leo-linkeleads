@@ -440,7 +440,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
                 <div class="row">
                     <div class="col-xs-12">
-                        <input class="btn btn-default" type="submit" value="Envoyer" id="submit">
+                        <input class="btn btn-default" type="submit" value="Valider" id="submit">
                         <div id="valid">Votre inscription est validée. Merci, à bientôt !</div>
                         <div id="existing">L'adresse mail renseignée existe déjà</div>
                         <div id="wrong">Reconfirmez votre adresse mail</div>
