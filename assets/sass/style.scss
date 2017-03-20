@@ -72,11 +72,6 @@ $expertcolor : rgb(0, 53, 81);
   border: none;
 }
 
-@media screen and (max-width: 414px) {
-
-
-}
-
 @media screen and (max-width: 1024px){
   #form{
     display: none;
@@ -225,51 +220,133 @@ h1{
   }
 }*/
 
-.navbar-fixed-top{
-  background-color: $leocolor;
-  border: none;
-  padding: 0 15px 0 15px;
-}
+@media screen and (max-width: 320px) {
 
-.navbar-header img{
-  background-color: white;
-  border-radius: 50px;
-  margin-top: 6px;
-  padding: 1px;
-}
-
-.navbar-text {
-  font-size: 16px;
-  color: whitesmoke;
-  margin-bottom: 0;
-}
-
-#nav-leo, #nav-question{
-  font-size: 16px;
-  color: whitesmoke;
-  display: inline-block;
-  font-weight: bold;
-}
-
-.navbar-default .navbar-text{
-  color: $backgroundcolor;
-}
-
-.navbar-right{
-  margin: 0;
-}
-
-#try{
-  font-size:16px;
-  background-color: $buttoncolor;
-  color: white;
-  border-radius: 2px;
-  font-weight: bold;
-
-  &:hover{
-    transition: 0.5s;
-    border: solid 1px white;
+  .navbar-fixed-top{
+    background-color: $leocolor;
+    border: none;
+    padding: 0 10px 0 10px;
   }
+
+  .navbar-header {
+    padding-top: 5px;
+
+    img{
+      background-color: white;
+      border-radius: 60px;
+      margin-top: 5px;
+      padding: 1px;
+      vertical-align: center;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+    }
+
+    p{
+      font-size: 14px;
+      color: whitesmoke;
+      display: inline-block;
+      font-weight: bold;
+      padding-left: 10px;
+    }
+  }
+
+  .navbar-text {
+    font-size: 16px;
+    color: whitesmoke;
+    margin-bottom: 0;
+    display: none;
+  }
+
+  #nav-leo, #nav-question{
+    font-size: 16px;
+    color: whitesmoke;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  #nav-question-mobile {
+
+  }
+
+  .navbar-default .navbar-text{
+    color: $backgroundcolor;
+  }
+
+  .navbar-right{
+    margin: 0;
+  }
+
+  #try{
+    display: none;
+    font-size:16px;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+
+    &:hover{
+      transition: 0.5s;
+      border: solid 1px white;
+    }
+  }
+
+}
+
+@media screen and (min-width: 321px){
+  .navbar-fixed-top{
+    background-color: $leocolor;
+    border: none;
+    padding: 0 15px 0 15px;
+  }
+
+  .navbar-header {
+    img{
+      background-color: white;
+      border-radius: 50px;
+      margin-top: 6px;
+      padding: 1px;
+    }
+
+    p{
+      display: none;
+    }
+  }
+
+  .navbar-text {
+    font-size: 16px;
+    color: whitesmoke;
+    margin-bottom: 0;
+  }
+
+  #nav-leo, #nav-question{
+    font-size: 16px;
+    color: whitesmoke;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .navbar-default .navbar-text{
+    color: $backgroundcolor;
+  }
+
+  .navbar-right{
+    margin: 0;
+  }
+
+  #try{
+    font-size:16px;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+
+    &:hover{
+      transition: 0.5s;
+      border: solid 1px white;
+    }
+  }
+
 }
 
 @media (max-width: 1024px) {
@@ -283,6 +360,20 @@ h1{
 }
 
 /*-------------------------------------------HEADER------------------------------------------------------*/
+
+@media screen and (max-width: 320px) {
+  .header {
+    height: auto;
+  }
+  .message {
+    position: relative;
+    top: initial;
+    left: initial;
+    right: initial;
+    padding: 150px 0;
+    transform: none;
+  }
+}
 
 .header {
   width:    100%;
@@ -304,6 +395,8 @@ h1{
   transform: translateY(-50%);
   text-align: center;
 }
+
+
 
 .message h1 {
   font-size: 45px;
@@ -331,6 +424,7 @@ h1{
     //border: none;
   }
 }
+
 /*-------------------------------------------LEO------------------------------------------------------*/
 
 .leo{

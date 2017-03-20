@@ -77,6 +77,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Découvrez Leo, votre nouvel assistant virtuel de Prospection sur Linkedin</title>
         <meta name="description" content="Leo vous trouve de nouveaux clients en automatisant votre travail de prospection sur Linkedin. 30 jours d'essai gratuit !">
@@ -99,6 +100,9 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header" id="head-machine">
             <a href="#"><img alt="alex" src="img/Leosmile.png" height="38" width="38"></a>
+            <p id="nav-question-mobile">
+                 Je suis Leo, et si on travaillait ensemble ?
+            </p>
         </div>
         <div class="navbar-text" id="text-machine">
             Bonjour, je suis <p id="nav-leo">Leo</p> votre nouvel assistant commercial, <p id="nav-question">et si on travaillait ensemble ?</p>
