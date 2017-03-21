@@ -41,7 +41,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 $destinataire = $_POST['email'] . ', ';
                 $destinataire .= 'leo@linkeleads.com';
 
-                $sujet = 'Linkeleads - Confirmation PreLaunching';
+                $sujet = 'Confirmation de votre inscription';
                 $entete = 'From: team@linkeleads.com';
                 $message = 'Bonjour,
                 
