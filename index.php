@@ -11,7 +11,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         $confirmation = $_POST['confirmation'];
         $telephone = $_POST['telephone'];
 
-        $sqlEmails = 'SELECT id FROM users WHERE email = :email';
+        $sqlEmails = 'SELECT id FROM prelaunching WHERE email = :email';
 
         $reqCheckEmails = $db->prepare($sqlEmails);
         $reqCheckEmails->execute(
@@ -26,7 +26,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         if ($email == $confirmation) {
             if (!$result) {
 
-                $sql = 'INSERT INTO users(name, firstname, email, confirmation, telephone) VALUES (:name, :firstname, :email, :confirmation, :telephone)';
+                $sql = 'INSERT INTO prelaunching(name, firstname, email, telephone) VALUES (:name, :firstname, :email, :telephone)';
 
                 $req = $db->prepare($sql);
                 $req->execute(
@@ -34,7 +34,6 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         'name' => $name,
                         'firstname' => $firstname,
                         'email' => $email,
-                        'confirmation' => $confirmation,
                         'telephone' => $telephone
                     )
                 );
@@ -46,18 +45,18 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 $entete = 'From: team@linkeleads.com';
                 $message = 'Bonjour,
                 
-                Nous terminons actuellement le développement de Leo, votre futur assistant commercial intelligent sur Linkedin. La date de sortie officielle est prévu pour le 22 mai 2017. 
+Nous terminons actuellement le développement de Leo, votre futur assistant commercial intelligent sur Linkedin. La date de sortie officielle est prévu pour le 22 mai 2017. 
+    
+Vous serez automatiquement averti par email et vous recevrez un code promo qui vous permettra d\'utiliser en exclusivité Leo gratuitement pendant un mois.
 
-                Vous serez automatiquement averti par email et vous recevrez un code promo qui vous permettra d\'utiliser en exclusivité Leo gratuitement pendant un mois.
+Si vous avez des questions, vous pouvez contacter directement Leo par email : leo@linkeleads.com
+Il vous répondra ASAP ;)
 
-                Si vous avez des questions, vous pouvez contacter directement Leo par email : leo@linkeleads.com
-                Il vous répondra ASAP ;)
-
-                Nous vous remercions pour votre inscription,
-                A très bientôt,
+Nous vous remercions pour votre inscription,
+A très bientôt,
                 
-                ------------
-                Ceci est un mail automatique. Merci de ne pas y répondre.';
+------------
+Ceci est un mail automatique. Merci de ne pas y répondre.';
 
                 mail($destinataire, $sujet, $message, $entete);
 
@@ -73,11 +72,11 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
 }
 ?>
     <!DOCTYPE html>
-    <html>
+    <html lang="fr">
 
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">-->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Découvrez Leo, votre nouvel assistant virtuel de Prospection sur Linkedin</title>
         <meta name="description" content="Leo vous trouve de nouveaux clients en automatisant votre travail de prospection sur Linkedin. 30 jours d'essai gratuit !">
@@ -178,7 +177,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                     <div class="profils">
                         <img src="img/user-7.png" width="40" height="40">
                     </div>
-                    <p>Parce que vos prospects font partie des <strong>450 millions</strong>d'utilisateurs.</p>
+                    <p>Parce que vos prospects font partie des <strong>450 millions</strong> d'utilisateurs.</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -443,7 +442,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                         <input class="btn btn-default" type="submit" value="Valider" id="submit">
                         <div id="valid">Votre inscription est validée. Merci, à bientôt !</div>
                         <div id="existing">L'adresse mail renseignée existe déjà</div>
-                        <div id="wrong">Reconfirmez votre adresse mail</div>
+                        <div id="wrong">Veuillez reconfirmer votre adresse mail</div>
                     </div>
                 </div>
                 <!--<button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>-->
