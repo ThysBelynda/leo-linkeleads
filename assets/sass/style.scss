@@ -42,25 +42,9 @@ $expertcolor : rgb(0, 53, 81);
   height   : 100%;
   display  : none;
 }
-/*
-#close{
-  display: none;
-  border: none;
-  font-size: 12px;
-  background-color: $leocolor;
-  position: fixed;
-  z-index:1200;
-  bottom:85%;
-  left:70%;
-  color: white;
-  width: 20px;
-  height: 20px;
-  border-radius: 100px;
-
-}*/
 
 #close{
-  font-size: 14px;
+  font-size: 13px;
   float: right;
   position: relative;
   bottom:3%;
@@ -72,8 +56,134 @@ $expertcolor : rgb(0, 53, 81);
   border: none;
 }
 
-@media screen and (max-width: 1024px){
+#close-m{
+  font-size: 13px;
+  float: right;
+  position: relative;
+  bottom:7%;
+  left: 2%;
+  background-color: $leocolor;
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  border: none;
+}
+
+#submit{
+  margin-top: 15px;
+  font-size:20px;
+  font-weight: bold;
+  background-color: $buttoncolor;
+  color: white;
+  border: 1px solid $buttoncolor;
+  border-radius: 2px;
+
+  &:hover {
+    //box-shadow: white 0 0 10px 3px;
+    transition: 0.2s;
+    //border: solid 1px white;
+  }
+}
+
+#submit-m{
+  margin-top: 15px;
+  font-size:20px;
+  font-weight: bold;
+  background-color: $buttoncolor;
+  color: white;
+  border: 1px solid $buttoncolor;
+  border-radius: 2px;
+
+  &:hover {
+    //box-shadow: white 0 0 10px 3px;
+    transition: 0.2s;
+    //border: solid 1px white;
+  }
+}
+@media screen and (max-width: 375px) {
+  #form-m{
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index:1000;
+    top:10%;
+    left:3%;
+    height:88%;
+    width: 94%;
+    padding: 30px 0 30px 0;
+    color: #595959;
+    //border: 3px solid $buttoncolor;
+    //box-shadow: 0 0 100px 5px #101010;
+
+    h3{
+      margin: 0 0 30px 0;
+      color: $leocolor;
+      text-align: center;
+      font-size: 20px;
+      position: relative;
+      left: 2%;
+    }
+
+    label{
+      margin-bottom: 0;
+    }
+  }
+
   #form{
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index:1000;
+    bottom:9%;
+    top:7%;
+    left:10%;
+    height:550px;
+    width: 80%;
+    padding: 30px 20px 30px 20px;
+    color: #595959;
+    //border: 3px solid $buttoncolor;
+    //box-shadow: 0 0 100px 5px #101010;
+
+    h3{
+      margin: 0 70px 30px 70px;
+      color: $leocolor;
+    }
+
+    label{
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+@media screen and (min-width: 376px) and (max-width: 1024px){
+  #form{
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index:1000;
+    bottom:9%;
+    top:7%;
+    left:10%;
+    height:550px;
+    width: 80%;
+    padding: 30px 20px 30px 20px;
+    color: #595959;
+    //border: 3px solid $buttoncolor;
+    //box-shadow: 0 0 100px 5px #101010;
+
+    h3{
+      margin: 0 70px 30px 70px;
+      color: $leocolor;
+    }
+
+    label{
+      margin-bottom: 0;
+    }
+  }
+
+  #form-m{
     display: none;
     background-color: white;
     position: fixed;
@@ -124,6 +234,31 @@ $expertcolor : rgb(0, 53, 81);
       margin-bottom: 0;
     }
   }
+
+  #form-m{
+    display: none;
+    background-color: white;
+    position: fixed;
+    z-index:1000;
+    bottom:9%;
+    top:7%;
+    left:10%;
+    height:550px;
+    width: 80%;
+    padding: 30px 20px 30px 20px;
+    color: #595959;
+    //border: 3px solid $buttoncolor;
+    //box-shadow: 0 0 100px 5px #101010;
+
+    h3{
+      margin: 0 70px 30px 70px;
+      color: $leocolor;
+    }
+
+    label{
+      margin-bottom: 0;
+    }
+  }
 }
 
 
@@ -156,22 +291,6 @@ $expertcolor : rgb(0, 53, 81);
 
 #wrong{
   @extend #existing;
-}
-
-#submit{
-  margin-top: 15px;
-  font-size:20px;
-  font-weight: bold;
-  background-color: $buttoncolor;
-  color: white;
-  border: 1px solid $buttoncolor;
-  border-radius: 2px;
-
-  &:hover {
-    //box-shadow: white 0 0 10px 3px;
-    transition: 0.2s;
-    //border: solid 1px white;
-  }
 }
 
 h1{
@@ -397,6 +516,17 @@ h1{
   }
 
   #try2{
+    display: none;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    margin-top: 10%;
+    margin-bottom:2%;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+
+  #try2-m{
     display: block;
     background-color: $buttoncolor;
     color: white;
@@ -453,6 +583,17 @@ h1{
     background-color: $buttoncolor;
     color: white;
     border-radius: 2px;
+  }
+
+  #try2-m{
+    display: none;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    margin-top: 10%;
+    margin-bottom:2%;
+    font-size: 15px;
+    font-weight: lighter;
   }
 }
 /*
@@ -849,7 +990,25 @@ h1{
     }
   }
 
+  .juniorprice-m{
+    display: block;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius : 2px;
+    padding:1% 0 2% 0;
+    color:white;
+    letter-spacing: 1px;
+    border: solid 1px $juniorcolor;
+    background-color: $juniorcolor;
+    width:100%;
+
+    p{
+      font-size: 27px;
+      font-weight: bold;
+    }
+  }
+
   .juniorprice{
+    display: none;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius : 2px;
     padding:1% 0 2% 0;
@@ -912,6 +1071,25 @@ h1{
   }
 
   .juniorprice{
+    display: block;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius : 2px;
+    padding:1% 0 2% 0;
+    color:white;
+    letter-spacing: 1px;
+    border: solid 1px $juniorcolor;
+    background-color: $juniorcolor;
+    margin: 0 10% 0 10%;
+    width:80%;
+
+    p{
+      font-size: 27px;
+      font-weight: bold;
+    }
+  }
+
+  .juniorprice-m{
+    display: none;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius : 2px;
     padding:1% 0 2% 0;
@@ -957,6 +1135,12 @@ h1{
   background-color: $expertcolor;
 }
 
+.expertprice-m{
+  @extend .juniorprice-m;
+  border: solid 1px $expertcolor;
+  background-color: $expertcolor;
+}
+
 .engagement p{
   font-size: 18px;
   font-weight: lighter;
@@ -969,6 +1153,21 @@ h1{
 
 @media screen and (max-width: 375px) {
   #try3 {
+    display: none;
+    font-size: 16px;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+
+    &:hover {
+      transition: 0.5s;
+      border: solid 1px white;
+    }
+  }
+
+  #try3-m {
+    display: block;
     font-size: 16px;
     background-color: $buttoncolor;
     color: white;
@@ -984,10 +1183,10 @@ h1{
 
 @media screen and (min-width: 376px) {
   #try3{
+    display: block;
     background-color: $buttoncolor;
     color: white;
     border-radius: 2px;
-    display: block;
     margin-top: 40px;
     font-size: 20px;
     font-weight: lighter;
@@ -1000,6 +1199,20 @@ h1{
       border: solid 1px $buttoncolor;
       font-weight: bold;
       transform: scale(1);
+    }
+  }
+
+  #try3-m {
+    display: none;
+    font-size: 16px;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+
+    &:hover {
+      transition: 0.5s;
+      border: solid 1px white;
     }
   }
 }
@@ -1036,12 +1249,29 @@ h1{
   }
 
   #try4 {
+    display: none;
     font-size: 16px;
     background-color: $buttoncolor;
     color: white;
     border-radius: 2px;
     font-weight: bold;
+    margin-top: 20%;
+    margin-bottom: 10px;
+
+    &:hover {
+      transition: 0.2s;
+      background-color: #008bd4;
+      border: solid 1px $buttoncolor;
+    }
+  }
+
+  #try4-m {
     display: block;
+    font-size: 16px;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
     margin-top: 20%;
     margin-bottom: 10px;
 
@@ -1070,6 +1300,23 @@ h1{
 
     &:hover{
       //box-shadow: white 0 0 10px 3px;
+      transition: 0.2s;
+      background-color: #008bd4;
+      border: solid 1px $buttoncolor;
+    }
+  }
+
+  #try4-m {
+    display: none;
+    font-size: 16px;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+    margin-top: 20%;
+    margin-bottom: 10px;
+
+    &:hover {
       transition: 0.2s;
       background-color: #008bd4;
       border: solid 1px $buttoncolor;

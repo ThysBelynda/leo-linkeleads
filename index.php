@@ -115,7 +115,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         <div class="navbar-header" id="head-machine">
             <a href="#"><img alt="alex" src="img/Leosmile.png" height="38" width="38"></a>
             <p id="nav-question-mobile">
-                Je suis Leo, et si on travaillait ensemble ?
+                Bonjour je suis Leo, et si on travaillait ensemble ?
             </p>
         </div>
         <div class="navbar-text" id="text-machine">
@@ -129,7 +129,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         </p>-->
 
         <div class="navbar-right" id="right-machine">
-            <button class="btn navbar-btn" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
+            <button class="btn navbar-btn try" id="try" type="button"><strong>Essayez gratuitement</strong></i></button>
         </div>
     </nav>
 
@@ -159,7 +159,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         <div class="message" align="center">
             <h1>Trouvez de nouveaux clients grâce à Leo</h1>
             <p id="desc">Découvrez Leo, l'assistant virtuel de prospection commerciale sur Linkedin</p>
-            <button id="try2" class="btn btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <button id="try2" class="btn btn-lg try">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <button id="try2-m" class="btn btn-lg try-m">Bénéficiez d'un essai gratuit de 30 jours</button>
             <p id="desc-m">Avec l'assistant virtuel de prospection commerciale sur Linkedin</p>
         </div>
     </header>
@@ -337,7 +338,13 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                         </p>
                     </div>
                 </div>
-                <button id="j-price" class="juniorprice">
+                <button id="j-price" class="juniorprice try">
+                    <p> 59€ /mois</p>
+                    <div class="engagement">
+                        <p>Sans engagement</p>
+                    </div>
+                </button>
+                <button id="j-price" class="juniorprice-m try-m">
                     <p> 59€ /mois</p>
                     <div class="engagement">
                         <p>Sans engagement</p>
@@ -361,7 +368,13 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                         </p>
                     </div>
                 </div>
-                <button id="e-price" class="expertprice">
+                <button id="e-price" class="expertprice try">
+                    <p>99€ /mois</p>
+                    <div class="engagement">
+                        <p>Sans engagement</p>
+                    </div>
+                </button>
+                <button id="e-price" class="expertprice-m try-m">
                     <p>99€ /mois</p>
                     <div class="engagement">
                         <p>Sans engagement</p>
@@ -372,7 +385,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         </div>
 
         <div class="gratis">
-            <button id="try3" class="btn btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <button id="try3" class="btn btn-lg try">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <button id="try3-m" class="btn btn-lg try-m">Bénéficiez d'un essai gratuit de 30 jours</button>
             <br><br>
             <h2>Décidez ensuite.</h2>
         </div>
@@ -386,7 +400,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
             <h1>Engagez-moi, c’est sans engagement.</h1>
         </div>
         <div class="button-test">
-            <button id="try4" type="button" class="btn btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <button id="try4" type="button" class="btn btn-lg try">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <button id="try4-m" type="button" class="btn btn-lg try-m">Bénéficiez d'un essai gratuit de 30 jours</button>
             <p>À l'issue de cette période d'essai, vous déciderez de le garder ou non</p>
         </div>
     </div>
@@ -483,6 +498,74 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
             </form>
         </div>
 
+        <div class="overlay">
+            <div id="form-m">
+                <button type="button" value="Close" id="close-m">x</button>
+                <h3>Inscrivez-vous et bénéficiez d'un essai gratuit pendant 30 jours</h3>
+                <form action="index.php" method="post">
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label for="usr">Nom*</label>
+                                <input class="form-control input-lg" name="name" type="text" id="userName" required>
+                                <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label for="usr">Prénom*</label>
+                                <input class="form-control input-lg" name="firstname" type="text" id="userFirstname" required>
+                                <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label for="usr">Adresse mail*</label>
+                                <input class="form-control input-lg" name="email" type="email" id="userEmail" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label for="usr">Confirmez votre adresse mail*</label>
+                                <input class="form-control input-lg" name="confirmation" type="email" id="userEmail" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <label for="usr">Téléphone</label>
+                                <input class="form-control input-lg" name="telephone" type="tel" id="userTelephone">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div id="existing" style="margin-left:30px; display: none; color: red;">L'e-mail que vous avez rentré existe déjà.</div>-->
+                    <!--<div id="wrong" style="margin-left:30px; display: none; color: red;">Les deux adresses mails rentrées ne correspondent pas</div>-->
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input class="btn btn-default" type="submit" value="Valider" id="submit-m">
+                            <div id="valid">Votre inscription est validée. Merci, à bientôt !</div>
+                            <div id="existing">L'adresse mail renseignée existe déjà</div>
+                            <div id="wrong">Veuillez reconfirmer votre adresse mail</div>
+                        </div>
+                    </div>
+                    <!--<button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>-->
+                    <!--<button name="submitForm" type="button" value="Envoyer" id="button" style="display: none">Envoyer</button>-->
+                </form>
+            </div>
+
         <div id="overlay-back"></div>
         <div id="overlay"></div>
 
@@ -494,39 +577,21 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 $('#close').hide();
             });
 
-            $('#try').on('click', function () {
+            $('#close-m').on('click', function () {
+                $('#overlay, #overlay-back').fadeOut(600);
+                $('#form-m').hide();
+                $('#close').hide();
+            });
+
+            $('.try').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form').show('fade');
                 $('#close').show('fade');
             });
 
-            $('#try2').on('click', function () {
+            $('.try-m').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
-                $('#form').show('fade');
-                $('#close').show('fade');
-            });
-
-            $('#try3').on('click', function () {
-                $('#overlay, #overlay-back').fadeIn(600);
-                $('#form').show('fade');
-                $('#close').show('fade');
-            });
-
-            $('#try4').on('click', function () {
-                $('#overlay, #overlay-back').fadeIn(600);
-                $('#form').show('fade');
-                $('#close').show('fade');
-            });
-
-            $('#e-price').on('click', function () {
-                $('#overlay, #overlay-back').fadeIn(600);
-                $('#form').show('fade');
-                $('#close').show('fade');
-            });
-
-            $('#j-price').on('click', function () {
-                $('#overlay, #overlay-back').fadeIn(600);
-                $('#form').show('fade');
+                $('#form-m').show('fade');
                 $('#close').show('fade');
             });
 
@@ -590,11 +655,6 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 $('#form').show();
                 $('#close').show('fade');
                 $('#wrong').show();
-                /*
-                 $('.has-error').show();
-                 $('#fg-email').hide();
-                 $('#fg-conf').hide();
-                 */
             </script>
             <?php
 
