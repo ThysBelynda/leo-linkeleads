@@ -87,7 +87,7 @@ $expertcolor : rgb(0, 53, 81);
 }
 
 #submit-m{
-  margin-top: 15px;
+  margin-top: 3%;
   font-size:20px;
   font-weight: bold;
   background-color: $buttoncolor;
@@ -111,15 +111,15 @@ $expertcolor : rgb(0, 53, 81);
     left:3%;
     height:88%;
     width: 94%;
-    padding: 30px 0 30px 0;
+    padding: 5% 0 5% 0;
     color: #595959;
     //border: 3px solid $buttoncolor;
     //box-shadow: 0 0 100px 5px #101010;
 
     h3{
-      margin: 0 0 30px 0;
+      margin: 0 0 20px 15px;
       color: $leocolor;
-      text-align: center;
+      text-align: left;
       font-size: 20px;
       position: relative;
       left: 2%;
@@ -283,14 +283,38 @@ $expertcolor : rgb(0, 53, 81);
   border-radius: 3px;
 }
 
+#valid-m{
+  @extend #valid;
+  font-size:14px;
+  margin: 0 0 0 3px;
+  padding: 5px;
+  float: left;
+}
+
 #existing{
   @extend #valid;
   color: #ff0000;
   background-color: rgba(255, 0, 0, 0.06);
 }
 
+#existing-m{
+  @extend #existing;
+  font-size:14px;
+  margin: 0 0 0 3px;
+  padding: 5px;
+  float: left;
+}
+
 #wrong{
   @extend #existing;
+}
+
+#wrong-m{
+  @extend #wrong;
+  font-size:14px;
+  margin: 0 0 0 3px;
+  padding: 5px;
+  float: left;
 }
 
 h1{
@@ -339,7 +363,80 @@ h1{
   }
 }*/
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 320px) {
+
+  .navbar-fixed-top{
+    background-color: $leocolor;
+    border: none;
+    padding: 0 8px 0 8px;
+  }
+
+  .navbar-header {
+    padding-top: 5px;
+
+    img{
+      background-color: white;
+      border-radius: 60px;
+      margin-top: 5px;
+      padding: 1px;
+      vertical-align: center;
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+    }
+
+    p{
+      font-size: 12px;
+      color: whitesmoke;
+      display: inline-block;
+      font-weight: bold;
+      padding-left: 3px;
+    }
+  }
+
+  .navbar-text {
+    font-size: 16px;
+    color: whitesmoke;
+    margin-bottom: 0;
+    display: none;
+  }
+
+  #nav-leo, #nav-question{
+    font-size: 16px;
+    color: whitesmoke;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  #nav-question-mobile {
+
+  }
+
+  .navbar-default .navbar-text{
+    color: $backgroundcolor;
+  }
+
+  .navbar-right{
+    margin: 0;
+  }
+
+  #try{
+    display: none;
+    font-size:16px;
+    background-color: $buttoncolor;
+    color: white;
+    border-radius: 2px;
+    font-weight: bold;
+
+    &:hover{
+      transition: 0.5s;
+      border: solid 1px white;
+    }
+  }
+
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
 
   .navbar-fixed-top{
     background-color: $leocolor;
@@ -583,6 +680,11 @@ h1{
     background-color: $buttoncolor;
     color: white;
     border-radius: 2px;
+
+    &:hover{
+      transition: 0.5s;
+      border: solid 1px white;
+    }
   }
 
   #try2-m{
@@ -953,7 +1055,7 @@ h1{
     p{
       padding: 11% 0 0 0;
       border-top: solid 1px;
-      width: 100%;
+      width: 260px;
     }
 
     i{
@@ -1033,7 +1135,7 @@ h1{
     p{
       padding: 11% 0 0 0;
       border-top: solid 1px;
-      width: 100%;
+      width: 280px;
     }
 
     i{

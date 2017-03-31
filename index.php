@@ -435,7 +435,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
     <div class="overlay">
         <div id="form">
             <button type="button" value="Close" id="close">x</button>
-            <h3 align="center">Inscrivez-vous pour bénéficier d'un essai gratuit pendant 30 jours</h3>
+            <h3 align="center">Inscription</h3>
             <form action="index.php" method="post">
                 <div class="form-group">
                     <div class="row">
@@ -501,7 +501,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         <div class="overlay">
             <div id="form-m">
                 <button type="button" value="Close" id="close-m">x</button>
-                <h3>Inscrivez-vous et bénéficiez d'un essai gratuit pendant 30 jours</h3>
+                <h3>Inscription</h3>
                 <form action="index.php" method="post">
                     <div class="form-group">
                         <div class="row">
@@ -555,10 +555,14 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
 
                     <div class="row">
                         <div class="col-xs-12">
+                            <div id="valid-m">Votre inscription est validée. Merci, à bientôt !</div>
+                            <div id="existing-m">L'adresse mail renseignée existe déjà</div>
+                            <div id="wrong-m">Veuillez reconfirmer votre adresse mail</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
                             <input class="btn btn-default" type="submit" value="Valider" id="submit-m">
-                            <div id="valid">Votre inscription est validée. Merci, à bientôt !</div>
-                            <div id="existing">L'adresse mail renseignée existe déjà</div>
-                            <div id="wrong">Veuillez reconfirmer votre adresse mail</div>
                         </div>
                     </div>
                     <!--<button name="submitForm" type="submit" value="Envoyer" id="submit">Envoyer</button>-->
@@ -566,7 +570,14 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 </form>
             </div>
 
-        <div id="overlay-back"></div>
+            <script>
+                if ($( document ).width() <= 320) {
+                    $('input').removeClass('.form-control input-lg').addClass('.form-control input-md');
+                }
+            </script>
+
+
+            <div id="overlay-back"></div>
         <div id="overlay"></div>
 
         <script>
@@ -575,24 +586,28 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 $('#overlay, #overlay-back').fadeOut(600);
                 $('#form').hide();
                 $('#close').hide();
+                $('#submit').show();
             });
 
             $('#close-m').on('click', function () {
                 $('#overlay, #overlay-back').fadeOut(600);
                 $('#form-m').hide();
                 $('#close').hide();
+                $('#submit-m').show();
             });
 
             $('.try').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form').show('fade');
                 $('#close').show('fade');
+                $('#valid').remove();
             });
 
             $('.try-m').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
                 $('#form-m').show('fade');
                 $('#close').show('fade');
+                $('#valid-m').remove();
             });
 
             //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
@@ -651,30 +666,54 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         if ($_GET['valid'] == 3) {
             ?>
             <script>
-                $('#overlay, #overlay-back').fadeIn(100);
-                $('#form').show();
-                $('#close').show('fade');
-                $('#wrong').show();
+                if ($( document ).width() > 412){
+                    $('#overlay, #overlay-back').fadeIn(100);
+                    $('#form').show();
+                    $('#close').show('fade');
+                    $('#wrong').show();
+                } else {
+                    $('#overlay, #overlay-back').fadeIn(100);
+                    $('#form-m').show();
+                    $('#close').show('fade');
+                    $('#wrong-m').show();
+                }
             </script>
             <?php
 
         } else if ($_GET['valid'] == 2) {
             ?>
             <script>
-                $('#overlay, #overlay-back').fadeIn(100);
-                $('#form').show();
-                $('#close').show('fade');
-                $('#existing').show();
+                if ($( document ).width() > 412){
+                    $('#overlay, #overlay-back').fadeIn(100);
+                    $('#form').show();
+                    $('#close').show('fade');
+                    $('#existing').show();
+                } else {
+                    $('#overlay, #overlay-back').fadeIn(100);
+                    $('#form-m').show();
+                    $('#close').show('fade');
+                    $('#existing-m').show();
+                }
+
             </script>
             <?php
 
         } else if ($_GET['valid'] == 1) {
             ?>
             <script>
-                $('#overlay, #overlay-back').fadeIn(100);
-                $('#form').show();
-                $('#close').show('fade');
-                $('#valid').show();
+                if ($( document ).width() > 412){
+                    $('#overlay, #overlay-back').fadeIn(100);
+                    $('#form').show();
+                    $('#close').show('fade');
+                    $('#valid').show();
+                    $('#submit').hide();
+                } else {
+                    $('#overlay, #overlay-back').fadeIn(100);
+                    $('#form-m').show();
+                    $('#close').show('fade');
+                    $('#valid-m').show();
+                    $('#submit-m').hide();
+                }
             </script>
             <?php
 
