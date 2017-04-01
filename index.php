@@ -83,6 +83,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         } else {
             header('Location: index.php?valid=3');
         }
+    } else {
+        header('Location: index.php?valid=0');
     }
 }
 ?>
@@ -161,7 +163,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
             <p id="desc">Découvrez Leo, l'assistant virtuel de prospection commerciale sur Linkedin</p>
             <button id="try2" class="btn btn-lg try">Bénéficiez d'un essai gratuit de 30 jours</button>
             <button id="try2-m" class="btn btn-lg try-m">Bénéficiez d'un essai gratuit de 30 jours</button>
-            <p id="desc-m">Avec l'assistant virtuel de prospection commerciale sur Linkedin</p>
+            <!--<p id="desc-m">Avec l'assistant virtuel de prospection commerciale sur Linkedin</p>-->
         </div>
     </header>
 
@@ -506,8 +508,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     <div class="form-group">
                         <div class="row">
                             <div class="col-xs-12">
-                                <label for="usr">Nom*</label>
-                                <input class="form-control input-lg" name="name" type="text" id="userName" required>
+                                <input class="form-control input-lg" placeholder="Nom" name="name" type="text" id="userName">
                                 <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
                             </div>
                         </div>
@@ -516,8 +517,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     <div class="form-group">
                         <div class="row">
                             <div class="col-xs-12">
-                                <label for="usr">Prénom*</label>
-                                <input class="form-control input-lg" name="firstname" type="text" id="userFirstname" required>
+                                <input class="form-control input-lg" placeholder="Prénom" name="firstname" type="text" id="userFirstname">
                                 <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
                             </div>
                         </div>
@@ -526,8 +526,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     <div class="form-group">
                         <div class="row">
                             <div class="col-xs-12">
-                                <label for="usr">Adresse mail*</label>
-                                <input class="form-control input-lg" name="email" type="email" id="userEmail" required>
+                                <input class="form-control input-lg" placeholder="Adresse mail" name="email" type="email" id="userEmail">
                             </div>
                         </div>
                     </div>
@@ -535,8 +534,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     <div class="form-group">
                         <div class="row">
                             <div class="col-xs-12">
-                                <label for="usr">Confirmez votre adresse mail*</label>
-                                <input class="form-control input-lg" name="confirmation" type="email" id="userEmail" required>
+                                <input class="form-control input-lg" placeholder="Confirmez votre adresse mail" name="confirmation" type="email" id="userConf">
                             </div>
                         </div>
                     </div>
@@ -544,8 +542,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     <div class="form-group">
                         <div class="row">
                             <div class="col-xs-12">
-                                <label for="usr">Téléphone</label>
-                                <input class="form-control input-lg" name="telephone" type="tel" id="userTelephone">
+                                <input class="form-control input-lg" placeholder="Téléphone" name="telephone" type="tel" id="userTelephone">
                             </div>
                         </div>
                     </div>
@@ -558,6 +555,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                             <div id="valid-m">Votre inscription est validée. Merci, à bientôt !</div>
                             <div id="existing-m">L'adresse mail renseignée existe déjà</div>
                             <div id="wrong-m">Veuillez reconfirmer votre adresse mail</div>
+                            <div id="empty-m">Un ou plusieurs champs sont vides</div>
                         </div>
                     </div>
                     <div class="row">
@@ -571,9 +569,9 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
             </div>
 
             <script>
-                if ($( document ).width() <= 320) {
-                    $('input').removeClass('.form-control input-lg').addClass('.form-control input-md');
-                }
+               // if ($( document ).width() <= 320) {
+                 //   $('input').removeClass('.form-control input-lg').addClass('.form-control input-sm');
+               // }
             </script>
 
 
@@ -602,6 +600,10 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 $('#close').show('fade');
                 $('#valid').remove();
             });
+
+            if ($('#userEmail') == ''){
+                $('#submit-m').show();
+            }
 
             $('.try-m').on('click', function () {
                 $('#overlay, #overlay-back').fadeIn(600);
@@ -657,16 +659,16 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
     </body>
     </html>
 
-<?php if ( isset($_GET['valid']) ){
+<?php if ( isset($_GET['valid']) ) {
 
-    $_GET['valid'] = (int) $_GET['valid'];
+    $_GET['valid'] = (int)$_GET['valid'];
 
-    if ($_GET['valid'] >= 1 AND $_GET['valid'] <= 3) {
+    if ($_GET['valid'] >= 0 AND $_GET['valid'] <= 3) {
 
         if ($_GET['valid'] == 3) {
             ?>
             <script>
-                if ($( document ).width() > 412){
+                if ($(window).width() > 412) {
                     $('#overlay, #overlay-back').fadeIn(100);
                     $('#form').show();
                     $('#close').show('fade');
@@ -683,7 +685,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         } else if ($_GET['valid'] == 2) {
             ?>
             <script>
-                if ($( document ).width() > 412){
+                if ($(window).width() > 412) {
                     $('#overlay, #overlay-back').fadeIn(100);
                     $('#form').show();
                     $('#close').show('fade');
@@ -701,7 +703,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         } else if ($_GET['valid'] == 1) {
             ?>
             <script>
-                if ($( document ).width() > 412){
+                if ($(window).width() > 412) {
                     $('#overlay, #overlay-back').fadeIn(100);
                     $('#form').show();
                     $('#close').show('fade');
@@ -717,6 +719,22 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
             </script>
             <?php
 
+        } else if ($_GET['valid'] == 0) {
+            ?>
+            <script>
+                if ($(window).width() > 412) {
+                    $('#overlay, #overlay-back').fadeIn(100);
+                    $('#form').show();
+                    $('#close').show('fade');
+                    //$('#empty-m').hide();
+                } else {
+                    $('#overlay, #overlay-back').fadeIn(100);
+                    $('#form-m').show();
+                    $('#close').show('fade');
+                    $('#empty-m').show();
+                }
+            </script>
+            <?php
         }
     }
 }
