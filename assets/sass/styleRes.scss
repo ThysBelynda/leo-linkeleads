@@ -7,9 +7,8 @@
 }
 
 body{
-  font-family: "Catamaran", "Lucida Sans", sans-serif;
+  font-family: 'Catamaran', sans-serif;
   letter-spacing: 0.5px;
-  font-weight: lighter;
 }
 
 .row{
@@ -17,13 +16,9 @@ body{
 }
 
 $leocolor : rgb(40, 62, 74);
-$leolinkcolor: rgb(72, 100, 156);
-$buttoncolor : rgb(36, 187, 111);
-$oldbuttoncolor : rgb(56, 106, 176);
-//$oldbuttoncolor : rgb(0, 119, 181);
+$buttoncolor : rgb(0, 119, 181);
 $backgroundcolor : #eeeeee;
-$juniorcolor: rgb(0, 162, 248);
-$confirmecolor: rgb(0, 104, 160);
+$juniorcolor: rgb(0, 154, 234);
 $expertcolor : rgb(0, 53, 81);
 
 #overlay-back {
@@ -243,7 +238,7 @@ form{
     position: fixed;
     z-index:1000;
     bottom:9%;
-    top:10%;
+    top:7%;
     left:28%;
     height:550px;
     width: 45%;
@@ -674,25 +669,23 @@ h1{
 @media screen and (min-width: 569px) {
 
   .header {
-    margin-top:4%;
-    //width: 100%;
-    height: 58vh;
+    width: 100%;
+    height: 65vh;
     background: url('../../img/ourclients.jpg') no-repeat center center;
     background-size: cover;
-    //background-position-y: 50px;
-    //position: fixed;
-    //z-index: 100;
+    background-position-y: 50px;
+    position: fixed;
+    z-index: 100;
   }
 
   .message {
     max-width: 90%;
     margin: auto;
     position: absolute;
-    top: 40%;
+    top: 65%;
     left: 0;
     right: 0;
     transform: translateY(-50%);
-    text-align: center;
 
     h1 {
       font-size: 45px;
@@ -711,18 +704,17 @@ h1{
 
   #try2{
     display: block;
-    margin: 5% 0 7% 35%;
+    margin-top: 40px;
+    margin-bottom:7%;
     font-size: 20px;
   //  font-weight: lighter;
     background-color: $buttoncolor;
     color: white;
     border-radius: 2px;
-    //border: solid 1px #2b74ed;
 
     &:hover{
       transition: 0.5s;
       border: solid 1px white;
-      //background-color: #2b74ed;
     }
   }
 
@@ -762,11 +754,11 @@ h1{
     padding:3% 0 4% 0;
     position: relative;
     z-index: 900;
-    //top:65vh;
+    top:65vh;
   }
 
   #leo{
-    color: $leolinkcolor;
+    color: $buttoncolor;
     display: inline-block;
   }
 
@@ -789,11 +781,11 @@ h1{
     padding: 3% 0 4% 0;
     position: relative;
     z-index: 900;
-    //top: 65vh;
+    top: 65vh;
   }
 
   #leo {
-    color: $leolinkcolor;
+    color: $buttoncolor;
     display: inline-block;
   }
 
@@ -815,7 +807,7 @@ h1{
   padding:3% 0 4% 0;
   position: relative;
   z-index: 900;
-  //top:65vh;
+  top:65vh;
 }
 
 #linkedin{
@@ -890,7 +882,7 @@ h1{
   padding: 3% 0 6% 0;
   position: relative;
   z-index: 900;
-  //top:65vh;
+  top:65vh;
 
   img {
     float: left;
@@ -900,7 +892,7 @@ h1{
 }
 
 #mi{
-  color: $leolinkcolor;
+  color: $buttoncolor;
   display: inline-block;
 }
 
@@ -972,7 +964,7 @@ h1{
 
   .three-m {
     border-radius: 200px;
-    background-color: $oldbuttoncolor;
+    background-color: $buttoncolor;
     font-size: 40px;
     width: 70px;
     height: 70px;
@@ -1004,7 +996,7 @@ h1{
   background-color: $leocolor;
   position: relative;
   z-index: 900;
-  //top:65vh;
+  top:65vh;
 
   h1{
     color: $backgroundcolor;
@@ -1016,8 +1008,7 @@ h1{
   .one {
     display: inline-block;
     border-radius: 200px;
-    //background-color: rgb(101, 144, 166);
-    background-color: #87a5cf;
+    background-color: rgb(101, 144, 166);
     font-size: 40px;
     width: 70px;
     height: 70px;
@@ -1032,7 +1023,7 @@ h1{
   .two {
     display: inline-block;
     border-radius: 200px;
-    background-color: #687f9f;
+    background-color: rgb(78, 148, 187);
     font-size: 40px;
     width: 70px;
     height: 70px;
@@ -1047,7 +1038,7 @@ h1{
   .three {
     display: inline-block;
     border-radius: 200px;
-    background-color: #455469;
+    background-color: $buttoncolor;
     font-size: 40px;
     width: 70px;
     height: 70px;
@@ -1068,18 +1059,6 @@ h1{
   .screenshot{
     margin: 3% 0 3% 0;
   }
-
-  .one-m{
-    display: none;
-  }
-
-  .two-m{
-    display:none;
-  }
-
-  .three-m{
-    display:none;
-  }
 }
 
 .stapes{
@@ -1096,7 +1075,7 @@ h1{
   padding: 3% 0 5% 0;
   position: relative;
   z-index: 900;
- // top:65vh;
+  top:65vh;
 }
 
 @media screen and (max-width: 568px) {
@@ -1117,7 +1096,7 @@ h1{
 
   .junior{
     background-color: white;
-    margin: 10% 0 8% 0;
+    margin: 10% 0 0 0;
     box-shadow: 0 0 40px 8px rgba(255, 255, 255, 1);
 
     p{
@@ -1195,14 +1174,9 @@ h1{
     }
   }
 
-  .test{
-    //border-bottom: solid 1px red;
-    //padding-bottom: 10px;
-  }
-
   .junior{
     background-color: white;
-    margin: 10% 5% 0 5%;
+    margin: 10% 10% 0 10%;
     box-shadow: 0 0 40px 8px rgba(255, 255, 255, 1);
 
     p{
@@ -1234,12 +1208,12 @@ h1{
     border-bottom-left-radius: 2px;
     border-bottom-right-radius : 2px;
     padding:1% 0 2% 0;
-    color:$juniorcolor;
+    color:white;
     letter-spacing: 1px;
     border: solid 1px $juniorcolor;
-    background-color: white;
-    //margin: 0 10% 0 10%;
-    width:90%;
+    background-color: $juniorcolor;
+    margin: 0 10% 0 10%;
+    width:80%;
 
     p{
       font-size: 27px;
@@ -1256,8 +1230,8 @@ h1{
     letter-spacing: 1px;
     border: solid 1px $juniorcolor;
     background-color: $juniorcolor;
-    //margin: 0 10% 0 10%;
-    width:100%;
+    margin: 0 10% 0 10%;
+    width:80%;
 
     p{
       font-size: 27px;
@@ -1266,22 +1240,9 @@ h1{
   }
 }
 
-#cent{
+#cinq{
   color: $juniorcolor;
 //  font-weight: bold;
-}
-
-#cinq{
-  color: $confirmecolor;
-  //  font-weight: bold;
-}
-
-.confirme{
-  @extend .junior;
-
-  h2{
-    color: $confirmecolor;
-  }
 }
 
 .expert{
@@ -1301,22 +1262,10 @@ h1{
   color: #28c368;
 }
 
-.confirmeprice{
-  @extend .juniorprice;
-  border: solid 1px $confirmecolor;
-  color: $confirmecolor;
-}
-
-.confirmeprice-m{
-  @extend .juniorprice-m;
-  border: solid 1px $expertcolor;
-  color: $expertcolor;
-}
-
 .expertprice{
   @extend .juniorprice;
   border: solid 1px $expertcolor;
-  color: $expertcolor;
+  background-color: $expertcolor;
 }
 
 .expertprice-m{
@@ -1372,7 +1321,7 @@ h1{
     color: white;
     border-radius: 2px;
     margin-top: 40px;
-    font-size: 26px;
+    font-size: 20px;
    // font-weight: lighter;
     transition: all .3s ease-in-out;
 
@@ -1407,7 +1356,7 @@ h1{
   background-color: white;
   position: relative;
   z-index: 900;
-  //top:65vh;
+  top:65vh;
 }
 
 @media screen and (max-width: 568px) {
@@ -1444,8 +1393,7 @@ h1{
 
     &:hover {
       transition: 0.2s;
-      //background-color: #008bd4;
-      background-color: #65bb8e;
+      background-color: #008bd4;
       border: solid 1px $buttoncolor;
     }
   }
@@ -1486,8 +1434,7 @@ h1{
     &:hover{
       //box-shadow: white 0 0 10px 3px;
       transition: 0.2s;
-      //background-color: #008bd4;
-      background-color: #71d19f;
+      background-color: #008bd4;
       border: solid 1px $buttoncolor;
     }
   }
@@ -1525,7 +1472,7 @@ h1{
     display: block;
     position: relative;
     z-index: 900;
-    //top: 65vh;
+    top: 65vh;
     background-color: $leocolor;
     color: $backgroundcolor;
     font-size: 15px;
@@ -1549,7 +1496,7 @@ h1{
   .footer {
     position: relative;
     z-index: 900;
-    //top: 65vh;
+    top: 65vh;
     background-color: $leocolor;
     color: $backgroundcolor;
     font-size: 15px;
@@ -1568,9 +1515,5 @@ h1{
 
   .footer-m{
     display: none;
-  }
-
-  .contact{
-    text-align: right;
   }
 }

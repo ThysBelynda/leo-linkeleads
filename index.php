@@ -159,9 +159,9 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
 
     <header class="header">
         <div class="message" align="center">
-            <h1>Trouvez de nouveaux clients grâce à Leo</h1>
+            <h1>Trouvez de nouveaux clients avec Leo</h1>
             <p id="desc">Découvrez Leo, l'assistant virtuel de prospection commerciale sur Linkedin</p>
-            <button id="try2" class="btn btn-lg try">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <button id="try2" class="btn btn-pulse btn-lg try">Bénéficiez d'un essai gratuit de 30 jours</button>
             <button id="try2-m" class="btn btn-lg try-m">Bénéficiez d'un essai gratuit de 30 jours</button>
             <!--<p id="desc-m">Avec l'assistant virtuel de prospection commerciale sur Linkedin</p>-->
         </div>
@@ -173,7 +173,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 <div class="prospection" align="center">
                     <h1>Pourquoi confier vos actions de prospection à <p id="leo">Leo</p> ?</h1>
                     <div class="description">
-                        Autonome, Leo décuple vos opportunités commerciales en démarchant pour vous les prospects que vous ciblez sur Linkedin.
+                        Autonome, Leo décuple vos opportunités commerciales en démarchant à votre place vos cibles sur Linkedin.
                         <p id="bold-prospect">En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</p>
                     </div>
                 </div>
@@ -195,7 +195,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     <div class="profils">
                         <img src="img/user-7.png" width="40" height="40">
                     </div>
-                    <p>Parce que vos prospects font partie des <strong>450 millions</strong> d'utilisateurs.</p>
+                    <p>Parce que vos cibles font partie des <strong>450 millions</strong> d'utilisateurs.</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -203,7 +203,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     <div class="hourglass">
                         <img src="img/wait.png" width="40" height="40">
                     </div>
-                    <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong> /semaine.</p>
+                    <p>Parce que vos cibles y passent en moyenne plus de <strong>3 heures</strong> /semaine.</p>
                 </div>
             </div>
             <div class="col-sm-4 col-md-4 col-lg-4">
@@ -211,7 +211,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     <div class="mail">
                         <img src="img/mail.png" width="40" height="40">
                     </div>
-                    <p>Parce que <strong>93%</strong> des messages que vous enverrez à vos prospects seront lus.</p>
+                    <p>Parce que vos cibles lisent <strong>93%</strong> des messages privés qu'ils recoivent.</p>
                 </div>
             </div>
         </div>
@@ -252,7 +252,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     <p class="bold-consult">Envoyer des messages</p>
                 </div>
                 <div class="text" align="right">
-                    <p>À plusieurs destinaires simultanément.</p>
+                    <p>Pour présenter votre offre à votre cible.</p>
                 </div>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-6">
@@ -272,7 +272,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
     <div class="comment" align="center">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-12">
-                <h1>Leo démarche à votre place jusqu'à <p id="perf">1000 prospects/mois</p> sur Linkedin !</h1>
+                <h1>Leo démarche jusqu'à <p id="perf">1000 prospects/mois</p> sur Linkedin !</h1>
             </div>
         </div>
 
@@ -324,12 +324,14 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         <h1>Un pricing simple et transparent </h1>
 
         <div class="row">
-            <div class="col-sm-offset-1 col-sm-5 col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-5">
+            <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="junior">
                     <div class="list">
-                        <h2>Leo Junior</h2>
-                        <h5>Il démarche pour vous jusqu'à</h5>
-                        <h3 id="cinq">500 clients</h3>
+                        <div class="test">
+                            <h2>Leo Junior</h2>
+                            <h5>Il démarche pour vous jusqu'à</h5>
+                            <h3 id="cent">100 clients /mois</h3>
+                        </div>
                         <br>
                         <p>
                             Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
@@ -341,12 +343,44 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     </div>
                 </div>
                 <button id="j-price" class="juniorprice try">
-                    <p> 59€ /mois</p>
+                    <p> 19€ /mois</p>
                     <div class="engagement">
                         <p>Sans engagement</p>
                     </div>
                 </button>
                 <button id="j-price" class="juniorprice-m try-m">
+                    <p> 19€ /mois</p>
+                    <div class="engagement">
+                        <p>Sans engagement</p>
+                    </div>
+                </button>
+            </div>
+
+            <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="confirme">
+                    <div class="list">
+                        <div class="test">
+                            <h2>Leo Confirmé</h2>
+                            <h5>Il démarche pour vous jusqu'à</h5>
+                            <h3 id="cinq">500 clients /mois</h3>
+                        </div>
+                        <br>
+                        <p>
+                            Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                            Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+                <button id="c-price" class="confirmeprice try">
+                    <p> 59€ /mois</p>
+                    <div class="engagement">
+                        <p>Sans engagement</p>
+                    </div>
+                </button>
+                <button id="c-price" class="confirmeprice-m try-m">
                     <p> 59€ /mois</p>
                     <div class="engagement">
                         <p>Sans engagement</p>
@@ -354,12 +388,12 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 </button>
             </div>
 
-            <div class="col-sm-5 col-md-5 col-lg-5">
+            <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="expert">
                     <div class="list">
                         <h2>Leo Expert</h2>
                         <h5>Il démarche pour vous jusqu'à</h5>
-                        <h3 id="mille">1000 clients</h3>
+                        <h3 id="mille">1000 clients /mois</h3>
                         <br>
                         <p>
                             Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
@@ -387,10 +421,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         </div>
 
         <div class="gratis">
-            <button id="try3" class="btn btn-lg try">Bénéficiez d'un essai gratuit de 30 jours</button>
+            <button id="try3" class="btn btn-lg try">Essayer gratuitement pendant 30 jours et décider ensuite</button>
             <button id="try3-m" class="btn btn-lg try-m">Bénéficiez d'un essai gratuit de 30 jours</button>
-            <br><br>
-            <h2>Décidez ensuite.</h2>
         </div>
 
 
@@ -413,7 +445,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
             <div class="col-sm-7 col-md-7 col-lg-5">
                 <p>Leo est un assistant virtuel commercial développé par la société Linkeleads.</p>
             </div>
-            <div class="col-sm-5 col-md-5 col-lg-2">
+            <div class="col-sm-5 col-md-5 col-lg-7 contact">
                 <a href="mailto:leo@linkeleads.com"><img src="img/gmail.png" height="22" width="22"></a>
                 <a href="https://www.linkedin.com/in/leo-linkeleads/"><img src="img/linkedin.png" height="22" width="22"></a>
             </div>
@@ -476,7 +508,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
 
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-xs-6">
+                        <div class="col-xs-12">
                             <label for="usr">Téléphone</label>
                             <input class="form-control input-lg" name="telephone" type="tel" id="userTelephone">
                             <p id="error4" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
