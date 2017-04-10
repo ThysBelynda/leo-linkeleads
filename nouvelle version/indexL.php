@@ -470,7 +470,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
         <div id="form">
             <button type="button" value="Close" id="close">x</button>
             <h3 align="left">Inscription</h3>
-            <form action="index.php" method="post">
+            <form action="indexL.php" method="post">
                 <div class="form-group">
                     <div class="row">
                         <div class="col-xs-6">
@@ -552,7 +552,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
             <div id="form-m">
                 <button type="button" value="Close" id="close-m">x</button>
                 <h3>Inscription</h3>
-                <form action="index.php" method="post">
+                <form action="indexL.php" method="post">
                     <div class="form-group">
                         <div class="row">
                             <div class="col-xs-12">
