@@ -47,6 +47,8 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
                 $entete .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
                 $entete .= 'From: team@linkeleads.com' . "\r\n";
                 $entete .= 'Bcc: leo@linkeleads.com' . "\r\n";
+                //$entete .= 'Bcc: bely.thys@gmail.com' . "\r\n";
+
 
                 $message = '
                 
@@ -328,8 +330,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 <div class="junior">
                     <div class="list">
                         <div class="test">
-                            <h2>Leo Junior</h2>
-                            <h5>Il démarche pour vous jusqu'à</h5>
+                            <h2>Start</h2>
+                            <h5>Leo démarche pour vous jusqu'à</h5>
                             <h3 id="cent">100 clients /mois</h3>
                         </div>
                         <br>
@@ -360,8 +362,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 <div class="confirme">
                     <div class="list">
                         <div class="test">
-                            <h2>Leo Confirmé</h2>
-                            <h5>Il démarche pour vous jusqu'à</h5>
+                            <h2>Pro</h2>
+                            <h5>Leo démarche pour vous jusqu'à</h5>
                             <h3 id="cinq">500 clients /mois</h3>
                         </div>
                         <br>
@@ -391,8 +393,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
             <div class="col-sm-4 col-md-4 col-lg-4">
                 <div class="expert">
                     <div class="list">
-                        <h2>Leo Expert</h2>
-                        <h5>Il démarche pour vous jusqu'à</h5>
+                        <h2>Business</h2>
+                        <h5>Leo démarche pour vous jusqu'à</h5>
                         <h3 id="mille">1000 clients /mois</h3>
                         <br>
                         <p>
@@ -785,6 +787,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                 }
             </script>
             <?php
+        } else {
+
         }
     }
 }

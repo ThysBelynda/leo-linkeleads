@@ -72,7 +72,7 @@ body {
   #submit-m:hover {
     transition: 0.2s; }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 568px) {
   form {
     height: auto; }
 
@@ -120,7 +120,7 @@ body {
     background-color: rgba(255, 250, 240, 0.8);
     border: 1px solid #d6d1c9;
     box-shadow: inset 0 0 0; } }
-@media screen and (min-width: 415px) and (max-width: 1024px) {
+@media screen and (min-width: 569px) and (max-width: 1024px) {
   #form {
     display: none;
     background-color: white;
@@ -333,7 +333,7 @@ h1 {
     #try:hover {
       transition: 0.5s;
       border: solid 1px white; } }
-@media screen and (min-width: 321px) and (max-width: 414px) {
+@media screen and (min-width: 321px) and (max-width: 568px) {
   .navbar-fixed-top {
     background-color: #283e4a;
     border: none;
@@ -382,7 +382,7 @@ h1 {
     #try:hover {
       transition: 0.5s;
       border: solid 1px white; } }
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 569px) {
   .navbar-fixed-top {
     background-color: #283e4a;
     border: none;
@@ -421,7 +421,7 @@ h1 {
       transition: 0.5s;
       border: solid 1px white; } }
 /*-------------------------------------------HEADER------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 568px) {
   .header {
     width: 100%;
     height: 65vh;
@@ -466,7 +466,7 @@ h1 {
     margin-top: 10%;
     margin-bottom: 2%;
     font-size: 15px; } }
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 569px) {
   .header {
     width: 100%;
     height: 65vh;
@@ -532,7 +532,7 @@ h1 {
 }
 */
 /*-------------------------------------------LEO------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 568px) {
   .leo {
     background-color: #eeeeee;
     padding: 3% 0 4% 0;
@@ -551,7 +551,7 @@ h1 {
 
   #bold-prospect {
     display: inline-block; } }
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 569px) {
   .leo {
     background-color: #eeeeee;
     padding: 3% 0 4% 0;
@@ -668,7 +668,7 @@ h1 {
     font-size: 18px; }
 
 /*-------------------------------------------COMMENT------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 568px) {
   .one, .two, .three {
     display: none; }
 
@@ -720,7 +720,7 @@ h1 {
     color: #eeeeee;
     padding: 0 0 5% 0; }
 
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 569px) {
   .one {
     display: inline-block;
     border-radius: 200px;
@@ -775,7 +775,7 @@ h1 {
   z-index: 900;
   top: 65vh; }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 568px) {
   .list {
     padding: 3% 0 4% 0;
     display: inline-block; }
@@ -827,7 +827,7 @@ h1 {
     width: 100%; }
     .juniorprice p, .expertprice p {
       font-size: 27px; } }
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 569px) {
   .list {
     padding: 3% 0 4% 0;
     display: inline-block; }
@@ -908,7 +908,7 @@ h1 {
 .gratis {
   margin-top: 50px; }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 568px) {
   #try3 {
     display: none;
     font-size: 16px;
@@ -928,7 +928,7 @@ h1 {
     #try3-m:hover {
       transition: 0.5s;
       border: solid 1px white; } }
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 569px) {
   #try3 {
     display: block;
     background-color: #0077b5;
@@ -959,7 +959,7 @@ h1 {
   z-index: 900;
   top: 65vh; }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 568px) {
   .portrait {
     padding: 7% 0 0; }
     .portrait h1 {
@@ -997,7 +997,7 @@ h1 {
       transition: 0.2s;
       background-color: #008bd4;
       border: solid 1px #0077b5; } }
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 569px) {
   #last p {
     padding: 0 20px 90px 20px; }
 
@@ -1031,7 +1031,7 @@ h1 {
     .portrait h1 {
       margin-top: 50px; } }
 /*-------------------------------------------FOOTER------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 568px) {
   .footer-m {
     display: block;
     position: relative;
@@ -1050,7 +1050,7 @@ h1 {
 
   .footer {
     display: none; } }
-@media screen and (min-width: 415px) {
+@media screen and (min-width: 569px) {
   .footer {
     position: relative;
     z-index: 900;
