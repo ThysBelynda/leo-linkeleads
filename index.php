@@ -449,7 +449,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
             </div>
             <div class="col-sm-5 col-md-5 col-lg-7 contact">
                 <a href="mailto:leo@linkeleads.com"><img src="img/gmail.png" height="22" width="22"></a>
-                <a href="https://www.linkedin.com/in/leo-linkeleads/"><img src="img/linkedin.png" height="22" width="22"></a>
+                <a href="https://www.linkedin.com/in/leo-linkeleads/"  target="_blank"><img src="img/linkedin.png" height="22" width="22"></a>
             </div>
         </div>
     </div>

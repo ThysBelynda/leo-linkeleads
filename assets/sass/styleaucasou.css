@@ -494,7 +494,7 @@ h1 {
     font-size: 15px; } }
 @media screen and (min-width: 569px) {
   .header {
-    margin-top: 50px;
+    margin-top: 4%;
     height: 58vh;
     background: url("../../img/ourclients.jpg") no-repeat center center;
     background-size: cover; }
@@ -506,7 +506,8 @@ h1 {
     top: 40%;
     left: 0;
     right: 0;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    text-align: center; }
     .message h1 {
       font-size: 45px;
       color: #FFF; }
@@ -519,7 +520,7 @@ h1 {
 
   #try2 {
     display: block;
-    margin: 5% 0 7% 0%;
+    margin: 5% 0 7% 35%;
     font-size: 20px;
     background-color: #24bb6f;
     color: white;
@@ -1184,4 +1185,4 @@ h1 {
   .contact {
     text-align: right; } }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styleaucasou.css.map */

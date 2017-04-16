@@ -702,7 +702,7 @@ h1{
 @media screen and (min-width: 569px) {
 
   .header {
-    margin-top:50px;
+    margin-top:4%;
     //width: 100%;
     height: 58vh;
     background: url('../../img/ourclients.jpg') no-repeat center center;
@@ -720,7 +720,7 @@ h1{
     left: 0;
     right: 0;
     transform: translateY(-50%);
-    //text-align: center;
+    text-align: center;
 
     h1 {
       font-size: 45px;
@@ -739,7 +739,7 @@ h1{
 
   #try2{
     display: block;
-    margin: 5% 0 7% 0%;
+    margin: 5% 0 7% 35%;
     font-size: 20px;
   //  font-weight: lighter;
     background-color: $buttoncolor;
