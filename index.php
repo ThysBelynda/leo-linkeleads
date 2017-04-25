@@ -26,7 +26,7 @@ if ( isset($_POST['name']) && isset($_POST['firstname']) && isset($_POST['email'
         if ($email == $confirmation) {
             if (!$result) {
 
-                $sql = 'INSERT INTO prelaunching(name, firstname, email, telephone) VALUES (:name, :firstname, :email, :telephone)';
+                $sql = 'INSERT INTO prelaunching(name, firstname, email, telephone, date_inscription) VALUES (:name, :firstname, :email, :telephone, NOW())';
 
                 $req = $db->prepare($sql);
                 $req->execute(
@@ -638,6 +638,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     $('#close').show('fade');
                     $('#valid').remove();
                     $('#leopouce').remove();
+                    $('.input-lg').css("opacity", "1");
                 });
 
                 if ($('#userEmail') == ''){
@@ -649,6 +650,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     $('#form-m').show('fade');
                     $('#close').show('fade');
                     $('#valid-m').remove();
+                    $('.input-lg').css("opacity", "1");
                 });
 
                 //OUVRIR LA MODAL EN CLIQUANT SUR LE BOUTTON
@@ -746,6 +748,8 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     $('#overlay, #overlay-back').fadeIn(100);
                     $('#form').show();
                     $('#close').show('fade');
+                    $('.input-lg').css("opacity", "0.3");
+                    $('#form label').css("opacity", "0.3");
                     $('#valid').show();
                     $('#leopouce').show();
                     $('#submit').hide();
@@ -753,6 +757,7 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
                     $('#overlay, #overlay-back').fadeIn(100);
                     $('#form-m').show();
                     $('#close').show('fade');
+                    $('.input-lg').css("opacity", "0.3");
                     $('#valid-m').show();
                     $('#submit-m').hide();
                 }

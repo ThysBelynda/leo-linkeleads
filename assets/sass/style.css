@@ -91,38 +91,21 @@ body {
   #form label {
     margin-bottom: 0; }
 
-#form-m {
+#existing, #existing-m, #wrong, #wrong-m, #empty-m {
   display: none;
-  background-color: white;
-  position: fixed;
-  z-index: 1000;
-  bottom: 9%;
-  top: 7%;
-  height: 100%;
-  width: 100%;
-  padding: 30px 0 30px 0;
-  color: #595959; }
-  #form-m h3 {
-    margin: 20px 0 30px 30px;
-    color: #283e4a;
-    font-size: 35px; }
-  #form-m label {
-    margin-bottom: 0; }
-  #form-m .input-lg {
-    font-size: 25px;
-    height: 10%; }
+  font-size: 16px;
+  color: #ff0000;
+  margin-right: 10px; }
 
-.form-control {
-  border-radius: 0;
-  background-color: rgba(255, 250, 240, 0.8);
-  border: 1px solid #d6d1c9; }
-
-#leopouce {
-  display: none; }
+#existing-m {
+  font-size: 20px;
+  margin: 0 0 0 3px;
+  padding-bottom: 5px;
+  float: left; }
 
 #valid, #valid-m {
   font-size: 23px;
-  margin: 10px 0 0 0;
+  margin: 5% 0 0 0;
   display: none;
   background-color: rgba(0, 128, 0, 0.08);
   padding: 15px 10px 10px 10px;
@@ -152,46 +135,127 @@ body {
 
 #valid-m {
   font-size: 29px;
-  margin: 8% 0 0 3px;
   padding: 5px;
   float: left;
   text-align: center; }
 
-#existing, #existing-m, #wrong, #wrong-m, #empty-m {
-  display: none;
-  font-size: 16px;
-  color: #ff0000;
-  margin-right: 10px; }
-
-#existing-m {
-  font-size: 20px;
-  margin: 0 0 0 3px;
-  padding: 5px;
-  float: left; }
-
 #wrong-m {
   font-size: 20px;
   margin: 0 0 0 3px;
-  padding: 5px;
+  padding-bottom: 5px;
   float: left; }
 
 #empty-m {
   font-size: 20px;
   margin: 0 0 0 3px;
-  padding: 5px;
+  padding-bottom: 5px;
   float: left; }
+
+#form-m {
+  display: none;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  bottom: 9%;
+  top: 7%;
+  height: 100%;
+  width: 100%;
+  padding: 30px 0 30px 0;
+  color: #595959; }
+  #form-m h3 {
+    color: #283e4a;
+    font-size: 35px; }
+  #form-m label {
+    margin-bottom: 0; }
+
+@media screen and (max-width: 320px) {
+  #form-m h3 {
+    margin: 0 0 5% 7%;
+    font-size: 30px; }
+  #form-m .input-lg {
+    font-size: 20px; }
+
+  #valid-m {
+    margin: 5% 0 0 0;
+    font-size: 20px; }
+
+  #submit-m {
+    font-size: 25px;
+    margin: 0; }
+
+  #existing-m, #wrong-m, #empty-m {
+    font-size: 15px; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  #form-m h3 {
+    margin: 0 0 5% 7%; }
+  #form-m .input-lg {
+    font-size: 23px; }
+
+  #valid-m {
+    margin: 5% 0 0 0; } }
+@media screen and (min-width: 376px) {
+  #form-m h3 {
+    margin: 5% 0 7% 7%; }
+  #form-m .input-lg {
+    font-size: 25px;
+    height: 10%; }
+
+  #valid-m {
+    margin: 5% 0 0 3px; } }
+.form-control {
+  border-radius: 0;
+  background-color: rgba(255, 250, 240, 0.8);
+  border: 1px solid #d6d1c9; }
+
+#leopouce {
+  display: none; }
 
 h1 {
   color: #283e4a; }
 
-@media screen and (max-width: 414px) {
+@media screen and (min-width: 320px) {
+  h1 {
+    font-size: 30px; } }
+@media screen and (min-width: 321px) and (max-width: 414px) {
   h1 {
     font-size: 40px; } }
 @media screen and (min-width: 415px) {
   h1 {
     font-size: 35px; } }
 /*-------------------------------------------NAVBAR------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 320px) {
+  .navbar-text, .navbar-right {
+    display: none; }
+
+  #nav-question-mobile {
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    margin: 4% 0 0 1%; }
+
+  .navbar-header img {
+    display: inline-block;
+    margin-top: 0; }
+
+  .navbar-fixed-top {
+    padding: 1% 0 0 1%; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .navbar-text, .navbar-right {
+    display: none; }
+
+  #nav-question-mobile {
+    display: inline-block;
+    color: white;
+    font-size: 14px;
+    margin: 4% 0 0 1%; }
+
+  .navbar-header img {
+    display: inline-block;
+    margin-top: 0; }
+
+  .navbar-fixed-top {
+    padding: 0 0 0 1%; } }
+@media screen and (min-width: 376px) and (max-width: 414px) {
   .navbar-text, .navbar-right {
     display: none; }
 
@@ -250,7 +314,22 @@ h1 {
     border: solid 1px white; }
 
 /*-------------------------------------------HEADER------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 320px) {
+  .message {
+    margin-top: 70%; }
+    .message #desc {
+      display: none; }
+    .message h1 {
+      font-size: 39px; }
+
+  #try2-m {
+    display: block;
+    margin: 20% 0 10% 0;
+    font-size: 20px; }
+
+  #try2 {
+    display: none; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
   .message {
     margin-top: 90%; }
     .message #desc {
@@ -260,7 +339,23 @@ h1 {
 
   #try2-m {
     display: block;
-    margin: 20% 0 10% 0; }
+    margin: 20% 0 10% 0;
+    font-size: 25px; }
+
+  #try2 {
+    display: none; } }
+@media screen and (min-width: 376px) and (max-width: 414px) {
+  .message {
+    margin-top: 90%; }
+    .message #desc {
+      display: none; }
+    .message h1 {
+      font-size: 47px; }
+
+  #try2-m {
+    display: block;
+    margin: 20% 0 10% 0;
+    font-size: 30px; }
 
   #try2 {
     display: none; } }
@@ -326,7 +421,6 @@ h1 {
   to {
     box-shadow: 0 0 0 15px rgba(232, 76, 61, 0); } }
 #try2-m {
-  font-size: 30px;
   background-color: #24bb6f;
   color: white;
   border-radius: 2px;
@@ -359,7 +453,15 @@ h1 {
   to {
     box-shadow: 0 0 0 15px rgba(232, 76, 61, 0); } }
 /*-------------------------------------------LEO------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 320px) {
+  .description {
+    font-size: 20px;
+    margin: 15% 0 10% 0; } }
+@media screen and (min-width: 321px) and (max-width: 414px) {
+  .description {
+    font-size: 25px;
+    margin: 10% 0 5% 0; } }
+@media screen and (min-width: 321px) and (max-width: 414px) {
   .description {
     font-size: 25px;
     margin: 10% 0 5% 0; } }
@@ -429,7 +531,54 @@ h1 {
   padding-top: 20px; }
 
 /*-------------------------------------------MISSIONS------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+.missions {
+  background-color: #eeeeee;
+  padding: 3% 0 6% 0;
+  position: relative;
+  z-index: 900; }
+  .missions img {
+    float: left;
+    padding: 5px; }
+
+.text {
+  padding: 10px 20px 0 0; }
+  .text p {
+    padding: 10px 0 10px 0;
+    color: #283e4a;
+    font-size: 18px; }
+
+@media screen and (max-width: 320px) {
+  .title {
+    width: 100%;
+    margin-top: 8%; }
+    .title p {
+      font-size: 15px;
+      margin: 0 3% 6%; }
+
+  .text {
+    width: 100%; }
+    .text p {
+      display: none; }
+
+  .missions img {
+    padding: 10px; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .title {
+    width: 100%;
+    margin-top: 8%; }
+    .title p {
+      font-size: 16px;
+      margin-right: 3%; }
+
+  .text {
+    width: 100%;
+    padding: 10px 0 0 0; }
+    .text p {
+      padding: 0 0 10px 0; }
+
+  .missions img {
+    margin: 5px; } }
+@media screen and (min-width: 376px) and (max-width: 414px) {
   .title {
     width: 100%;
     margin-top: 8%; }
@@ -438,9 +587,13 @@ h1 {
       margin-right: 3%; }
 
   .text {
-    width: 100%; }
+    width: 100%;
+    padding: 10px 0 0 0; }
     .text p {
-      display: none; } }
+      padding: 0 0 10px 0; }
+
+  .missions img {
+    margin: 5px; } }
 @media screen and (min-width: 415px) {
   .title {
     width: 80%;
@@ -452,17 +605,10 @@ h1 {
   .text {
     width: 80%; }
     .text p {
-      display: block; } }
-.missions {
-  background-color: #eeeeee;
-  padding: 3% 0 6% 0;
-  position: relative;
-  z-index: 900; }
-  .missions img {
-    float: left;
-    margin: 10px;
-    padding: 5px; }
+      display: block; }
 
+  .missions img {
+    margin: 10px; } }
 #mi {
   color: #48649c;
   display: inline-block; }
@@ -476,15 +622,27 @@ h1 {
     text-transform: uppercase;
     color: #283e4a; }
 
-.text {
-  padding: 10px 20px 0 0; }
-  .text p {
-    padding: 10px 0 10px 0;
-    color: #283e4a;
-    font-size: 18px; }
-
 /*-------------------------------------------COMMENT------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 320px) {
+  .screenshot {
+    display: none; }
+
+  .one-m, .two-m, .three-m {
+    display: block; }
+
+  .one, .two, .three {
+    display: none; }
+
+  .border {
+    display: none; }
+
+  .comment h1 {
+    padding: 35% 0 60% 0;
+    font-size: 40px; }
+
+  .stapes {
+    margin: 10% 10% 20% 10%; } }
+@media screen and (min-width: 321px) and (max-width: 414px) {
   .screenshot {
     display: none; }
 
@@ -602,7 +760,53 @@ h1 {
   font-size: 20px; }
 
 /*-------------------------------------------PRICING------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 320px) {
+  .junior, .confirme, .expert {
+    margin: 20% 0 0 0; }
+    .junior h5, .confirme h5, .expert h5 {
+      display: none; }
+    .junior h2, .confirme h2, .expert h2 {
+      font-size: 40px; }
+    .junior h3, .confirme h3, .expert h3 {
+      font-size: 30px; }
+    .junior p, .confirme p, .expert p {
+      font-size: 17px; }
+
+  #try3 {
+    display: none; }
+
+  .juniorprice, .confirmeprice, .expertprice {
+    width: 100%; }
+    .juniorprice p, .confirmeprice p, .expertprice p {
+      font-size: 35px; }
+
+  .list p {
+    width: 230px;
+    padding: 15% 0 5% 0; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .junior, .confirme, .expert {
+    margin: 20% 0 0 0; }
+    .junior h5, .confirme h5, .expert h5 {
+      display: none; }
+    .junior h2, .confirme h2, .expert h2 {
+      font-size: 40px; }
+    .junior h3, .confirme h3, .expert h3 {
+      font-size: 30px; }
+    .junior p, .confirme p, .expert p {
+      font-size: 21px; }
+
+  #try3 {
+    display: none; }
+
+  .juniorprice, .confirmeprice, .expertprice {
+    width: 100%; }
+    .juniorprice p, .confirmeprice p, .expertprice p {
+      font-size: 35px; }
+
+  .list p {
+    width: 280px;
+    padding: 15% 0 5% 0; } }
+@media screen and (min-width: 376px) and (max-width: 414px) {
   .junior, .confirme, .expert {
     margin: 20% 0 0 0; }
     .junior h5, .confirme h5, .expert h5 {
@@ -780,7 +984,45 @@ h1 {
     border: solid 1px white; }
 
 /*-------------------------------------------CONTACT------------------------------------------------------*/
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 320px) {
+  .portrait {
+    padding: 25% 0 5%; }
+
+  .button-test {
+    display: none; }
+
+  .button-test-m {
+    display: block; }
+
+  #last p {
+    padding: 25% 0 30% 0;
+    font-size: 19px; }
+
+  .portrait h1 {
+    margin-bottom: 40%; }
+
+  #try4-m {
+    font-size: 20px; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .portrait {
+    padding: 25% 0 5%; }
+
+  .button-test {
+    display: none; }
+
+  .button-test-m {
+    display: block; }
+
+  #last p {
+    padding: 25% 0 30% 0;
+    font-size: 19px; }
+
+  .portrait h1 {
+    margin-bottom: 40%; }
+
+  #try4-m {
+    font-size: 25px; } }
+@media screen and (min-width: 376px) and (max-width: 414px) {
   .portrait {
     padding: 25% 0 5%; }
 
@@ -795,7 +1037,10 @@ h1 {
     font-size: 20px; }
 
   .portrait h1 {
-    margin-bottom: 40%; } }
+    margin-bottom: 40%; }
+
+  #try4-m {
+    font-size: 30px; } }
 @media screen and (min-width: 415px) {
   .portrait {
     padding: 5% 0 5%; }
@@ -848,7 +1093,6 @@ h1 {
   to {
     box-shadow: 0 0 0 5px rgba(232, 76, 61, 0); } }
 #try4-m {
-  font-size: 30px;
   background-color: #24bb6f;
   color: white;
   border-radius: 2px;
