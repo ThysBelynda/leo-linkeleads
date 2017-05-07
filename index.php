@@ -1,8 +1,18 @@
+<?php
+include ('config/config.php');
+include ('inscription.php');
+?>
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Découvrez Leo, votre nouvel assistant virtuel de Prospection sur Linkedin</title>
+    <meta name="description" content="Leo vous trouve de nouveaux clients en automatisant votre travail de prospection sur Linkedin. 30 jours d'essai gratuit !">
+    <meta name="author" content="Belynda Thys">
+
     <title>Leo</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
@@ -11,86 +21,38 @@
     <link rel="stylesheet" type="text/css" href="assets/sass/style.scss">
     <link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
     <script src="assets/bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
 
-<?php
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="navbar-header" id="head-machine">
+        <a href="#"><img alt="alex" src="img/Leosmile.png" height="38" width="38"></a>
+        <p id="nav-question-mobile">
+            Bonjour je suis Leo, et si on travaillait ensemble ?
+        </p>
+    </div>
+    <div class="navbar-text">
+        Bonjour, je suis <p id="nav-leo">Leo</p> votre nouvel assistant commercial, <p id="nav-question">et si on travaillait ensemble ?</p>
+    </div>
 
-$host="localhost";
-$dbName="leo";
-$user="root";
-$password="root";
+    <div class="navbar-right" id="right-machine">
+        <button class="btn navbar-btn try" id="try" type="button"><strong>Essayer gratuitement</strong></i></button>
+    </div>
+</nav>
 
-try{
-    $db = new PDO('mysql:host='.$host.';dbname='.$dbName.';charset=utf8',$user,$password);
-} catch (Exception $e){
-    die('Erreur :'.$e->getMessage());
-}
-
-if(!empty($_POST['name']) && (!empty($_POST['firstname'])) && (!empty($_POST['email'])) ){
-
-    $name=$_POST['name'];
-    $firstname=$_POST['firstname'];
-    $email=$_POST['email'];
-
-    $sql='INSERT INTO users(name, firstname, email) VALUES (:name, :firstname, :email)';
-
-    $req = $db->prepare($sql);
-    $req->execute(
-        array(
-            'name'=> $name,
-            'firstname'=> $firstname,
-            'email'=> $email
-        )
-    );
-
-} else {
-    echo 'error!!!!!!!!!!!!!!!';
-}
-
-?>
-
-<form action="index.php" method="post">
-    <div class="form-group">
-        <label>Nom</label>
-        <input name="name" type="text">
-
-        <label for="usr">Prénom</label>
-        <input name="firstname" type="text">
-
-        <label for="usr">Adresse e-mail</label>
-        <input name="email" type="email">
-
-        <button id="submit" type="submit" value="Envoyer">Envoyer</button>
-</form>
-
-<div class="navbar">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <div class="navbar-header">
-                    <a class="icon" href="#">
-                        <img alt="alex" src="img/Leoface.png" height="80%" width="80%">
-                    </a>
-                </div>
-
-                <p class="navbar-text">Bonjour, je suis <strong>Leo</strong> votre nouvel assistant commercial à base d'intelligence artificielle. <strong>Et si on travaillait ensemble ?</strong></p>
-
-                <div class="navbar-right">
-                    <button id="try" type="button" class="btn navbar-btn"><strong>Essayez gratuitement</strong></i></button>
-                </div>
+<div class="header">
+    <div class="row">
+        <div class="col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-1 col-lg-10">
+            <div class="message" align="center">
+                <h1>Trouvez de nouveaux clients avec Leo</h1>
+                <p id="desc">Découvrez Leo, l'assistant virtuel de prospection commerciale sur Linkedin</p>
+                <button id="try2" class="btn btn-pulse btn-lg try">Bénéficier d'un essai gratuit de 30 jours</button>
+                <button id="try2-m" class="btn btn-lg try-m">Bénéficier d'un essai gratuit</button>
             </div>
         </div>
-    </nav>
-</div>
-
-<div class="header" data-stellar-ratio="10">
-
-    <div class="slogan" align="center">
-        <h1>Trouvez de nouveaux clients grâce à Leo</h1>
-        <p>Découvrez Léo, l'assistant virtuel de prospection commerciale</p>
-        <button id="try2" class="btn btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
     </div>
 </div>
 
@@ -98,9 +60,10 @@ if(!empty($_POST['name']) && (!empty($_POST['firstname'])) && (!empty($_POST['em
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
             <div class="prospection" align="center">
-                <h1>Pourquoi confier vos actions de prospection à <strong>Leo</strong> ?</h1>
+                <h1>Pourquoi confier vos actions de prospection à <p id="leo">Leo</p> ?</h1>
                 <div class="description">
-                    <p>Autonome, Leo décuple vos opportunités commerciales en démarchant à votre place les prospects que vous ciblez sur Linkedin. <strong>En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</strong></p>
+                    Autonome, Leo décuple vos opportunités commerciales en démarchant à votre place vos cibles sur Linkedin.
+                    <p id="bold-prospect">En travaillant avec Leo, vous gagnerez ainsi du temps, et vous trouverez de nouveaux clients.</p>
                 </div>
             </div>
         </div>
@@ -111,35 +74,33 @@ if(!empty($_POST['name']) && (!empty($_POST['firstname'])) && (!empty($_POST['em
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
             <div class="levier" align="center">
-                <h1>Pourquoi faire de <strong>Linkedin</strong> un levier commercial ?</h1>
+                <h1>Pourquoi faire de <p id="linkedin">Linkedin</p> un levier commercial ?</h1>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-offset-1 col-lg-10">
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="users">
-                    <div class="profils">
-                        <img src="img/user-7.png" width="40px" height="40px">
-                    </div>
-                    <p>Parce que vos prospects font partie des <strong>450 millions</strong> d'utilisateurs.</p>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="users">
+                <div class="profils">
+                    <img src="img/user-7.png" width="40" height="40">
                 </div>
+                <p>Parce que vos cibles font partie des <strong>450 millions</strong> d'utilisateurs.</p>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="time">
-                    <div class="hourglass">
-                        <img src="img/wait.png" width="40px" height="40px">
-                    </div>
-                    <p>Parce que vos prospects y passent en moyenne plus de <strong>3 heures</strong> pas semaine.</p>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="time">
+                <div class="hourglass">
+                    <img src="img/wait.png" width="40" height="40">
                 </div>
+                <p>Parce que vos cibles y passent en moyenne plus de <strong>3 heures</strong> /semaine.</p>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="messenger">
-                    <div class="mail">
-                        <img src="img/mail.png" width="40px" height="40px">
-                    </div>
-                    <p>Parce que <strong>93%</strong> des messages que vous adressez à vos prospects seront lus.</p>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="messages">
+                <div class="mail">
+                    <img src="img/mail.png" width="40" height="40">
                 </div>
+                <p>Parce que vos cibles lisent <strong>93%</strong> des messages privés qu'ils recoivent.</p>
             </div>
         </div>
     </div>
@@ -147,56 +108,66 @@ if(!empty($_POST['name']) && (!empty($_POST['firstname'])) && (!empty($_POST['em
 
 <div class="missions" align="center">
     <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <h1>Quelles sont les <strong>missions</strong> que Leo peut réaliser pour vous ?</h1>
+        <div class="col-lg-offset-1 col-lg-10">
+            <h1>Quelles sont les <p id="mi">missions</p> que Leo peut réaliser pour vous ?</h1>
         </div>
     </div>
-
     <div class="row">
-        <div class="col-sm-3 col-md-3 col-lg-3">
-            <h3><strong>Consulter des profils</strong></h3>
-            <div class="cards">
-                <p class="pour">Pour vous faire connaître de vos cibles.</p>
-                <img src="img/loupe.png" height="100px" width="100px">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="title" align="right">
+                <img src="img/loupe.png" height="50" width="50">
+                <p class="bold-consult">
+                    Consulter des profils
+                </p>
+            </div>
+            <div class="text" align="right">
+                <p>Pour vous faire connaître de vos cibles.</p>
             </div>
         </div>
-
-        <div class="col-sm-3 col-md-3 col-lg-3">
-            <h3><strong>Entrer en relation</strong></h3>
-            <div class="cards">
-                <p class="pour">Pour élargir votre réseau professionnel.</p>
-                <img src="img/reseau.png" height="100px" width="100px">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="title" align="right">
+                <img src="img/reseau.png" height="50" width="50">
+                <p class="bold-consult">Entrer en relation</p>
+            </div>
+            <div class="text" align="right">
+                <p>Pour élargir votre réseau professionnel.</p>
             </div>
         </div>
-
-        <div class="col-sm-3 col-md-3 col-lg-3">
-            <div class="titles">
-                <h3><strong>Engager des conversations</strong></h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="title" align="right">
+                <img src="img/chat.png" height="50" width="50">
+                <p class="bold-consult">Envoyer des messages</p>
             </div>
-            <div class="cards">
-                <p class="pour">Pour présenter et vendre vos offres à vos cibles.</p>
-                <img src="img/chat.png" height="100px" width="100px">
-            </div>
-        </div>
-
-        <div class="col-sm-3 col-md-3 col-lg-3">
-            <div class="titles">
-                <h3><strong>Extraire des coordonnées</strong></h3>
-            </div>
-            <div class="cards">
-                <p class="pour">Pour mener des campagnes d'e-mailing ciblées.</p>
-                <img src="img/courrier.png" height="100px" width="100px">
+            <div class="text" align="right">
+                <p>Pour présenter votre offre à votre cible.</p>
             </div>
         </div>
-
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="title" align="right">
+                <img src="img/courrier.png" height="50" width="50">
+                <p class="bold-consult">
+                    Extraire des coordonnées
+                </p>
+            </div>
+            <div class="text" align="right">
+                <p>Pour mener des campagnes d'e-mailing ciblées.</p>
+            </div>
+        </div>
     </div>
 </div>
 
 <div class="comment" align="center">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-            <h1><strong>Comment</strong> travailler avec Leo ?</h1>
+            <h1>Leo démarche jusqu'à <p id="perf">1000 prospects /mois</p> sur Linkedin !</h1>
+        </div>
+    </div>
 
+    <div class="row">
+
+        <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="one"> <p>1</p> </div>
 
             <div class="border"></div>
@@ -211,241 +182,339 @@ if(!empty($_POST['name']) && (!empty($_POST['firstname'])) && (!empty($_POST['em
     </div>
 
     <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="stapes">
-                    <p id="one"><strong>Indiquez à Leo les prospects que vous ciblez depuis votre profil Linkedin</strong></p>
-                </div>
-
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="one-m"> <p>1</p> </div>
+            <div class="stapes">
+                <p>Indiquez à Leo les prospects que vous ciblez sur Linkedin</p>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="stapes">
-                    <p id="two"><strong>Indiquez à Leo les missions qu'il foit effectuer pour vous</strong></p>
-                </div>
+        </div>
 
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="two-m"> <p>2</p> </div>
+            <div class="stapes">
+                <p>Indiquez à Leo les missions qu'il doit effectuer pour vous</p>
             </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-                <div class="stapes">
-                    <p id="three"><strong>Laissez travailler Leo, il vous previent lorsqu'il termine</strong></p>
-                </div>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="three-m"> <p>3</p> </div>
+            <div class="stapes">
+                <p>Laissez travailler Leo, il vous reporte l'ensemble de ses actions</p>
             </div>
         </div>
     </div>
-    <div class="analyse">
-        <p>Leo démarche à votre place sur Linkedin jusqu'à <strong>1000 prospects/mois !</strong></p>
+
+    <div class="screenshot">
+        <img src="img/screenshot.png" width="80%" height="80%">
     </div>
 </div>
-
-
 
 <div class="pricing" align="center">
-    <h1>Une rémunération simple et transparente</h1>
+    <h1>Un pricing simple et transparent </h1>
+
     <div class="row">
-        <div class="col-sm-6 col-md-6 col-lg-offset-1 col-lg-5">
+        <div class="col-sm-4 col-md-4 col-lg-4">
             <div class="junior">
                 <div class="list">
-                    <h2><strong>Leo Junior</strong></h2>
-                    <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
-                    <h3><strong>500 clients</strong></h3>
+                    <div class="test">
+                        <h2>Start</h2>
+                        <h5>Leo démarche pour vous jusqu'à</h5>
+                        <h3 id="cent">100 clients /mois</h3>
+                    </div>
                     <br>
-                    <p>Reporting <br><br>Visite de profils cibles <br><br>Mise en relation <br><br>Envoi de messages <br><br>Extraction de coordonnées</p>
-                </div>
-                <div class="valid">
-                    <p><i class="fa fa-check-circle" aria-hidden="true"></i>
-                        <br><br>
-                        <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        <br><br>
-                        <i class="fa fa-check-circle" aria-hidden="true"></i>
-                        <br><br>
-                        <i class="fa fa-times-circle" aria-hidden="true"></i>
-                        <br><br>
-                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    <p>
+                        Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i>
                     </p>
                 </div>
             </div>
-            <div class="juniorprice">
-                <p><strong> 59€ /mois </strong></p>
+            <div id="j-price" class="juniorprice">
+                <p> 19€ /mois</p>
+                <div class="engagement">
+                    <p>Sans engagement</p>
+                </div>
+            </div>
+            <div id="j-price" class="juniorprice-m">
+                <p> 19€ /mois</p>
                 <div class="engagement">
                     <p>Sans engagement</p>
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-6 col-md-6 col-lg-5">
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <div class="confirme">
+                <div class="list">
+                    <div class="test">
+                        <h2>Pro</h2>
+                        <h5>Leo démarche pour vous jusqu'à</h5>
+                        <h3 id="cinq">500 clients /mois</h3>
+                    </div>
+                    <br>
+                    <p>
+                        Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </p>
+                </div>
+            </div>
+            <div id="c-price" class="confirmeprice">
+                <p> 59€ /mois</p>
+                <div class="engagement">
+                    <p>Sans engagement</p>
+                </div>
+            </div>
+            <div id="c-price" class="confirmeprice-m">
+                <p> 59€ /mois</p>
+                <div class="engagement">
+                    <p>Sans engagement</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 col-md-4 col-lg-4">
             <div class="expert">
                 <div class="list">
-                    <h2><strong>Leo Expert</strong></h2>
-                    <h5><strong>Il démarche pour vous jusqu'à</strong></h5>
-                    <h3><strong>1000 clients</strong></h3>
+                    <h2>Business</h2>
+                    <h5>Leo démarche pour vous jusqu'à</h5>
+                    <h3 id="mille">1000 clients /mois</h3>
                     <br>
-                    <p>Reporting <br><br>Visite de profils cibles <br><br>Mise en relation <br><br>Envoi de messages <br><br>Extraction de coordonnées</p>
-                </div>
-                <div class="valid">
-                    <p><i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
-                        <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
-                        <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
-                        <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
-                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <p>
+                        Visites de profils cibles <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Mises en relation <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Envois de messages <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Reporting <i class="fa fa-check-circle" aria-hidden="true"></i> <br><br>
+                        Extractions de coordonnées <i class="fa fa-check-circle" aria-hidden="true"></i>
                     </p>
                 </div>
             </div>
-            <div class="proprice">
-                <p> <strong>99€ /mois</strong></p>
+            <div id="e-price" class="expertprice">
+                <p>99€ /mois</p>
+                <div class="engagement">
+                    <p>Sans engagement</p>
+                </div>
+            </div>
+            <div id="e-price" class="expertprice-m">
+                <p>99€ /mois</p>
                 <div class="engagement">
                     <p>Sans engagement</p>
                 </div>
             </div>
         </div>
+
     </div>
 
+    <div class="gratis">
+        <button id="try3" class="btn btn-lg">Essayer gratuitement pendant 30 jours et décider ensuite</button>
+        <button id="try3-m" class="btn btn-lg">Bénéficier d'un essai gratuit de 30 jours</button>
+    </div>
+
+
+</div>
+
+<div id="last" align="center">
     <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-offset-1 col-lg-10">
-            <div id="try3" class="btn btn-success btn-block btn-group-lg">
-                Bénéficiez d'un essai <strong>gratuit</strong> de 30 jours
+        <div class="col-sm-12">
+            <div class="button-test-m">
+                <button id="try4-m" type="button" class="btn btn-lg try-m">Bénéficier d'un essai gratuit</button>
+                <p>À l'issue de cette période d'essai de 30 jours, vous déciderez de le garder ou non</p>
             </div>
         </div>
     </div>
-</div>
 
 
-<div id="last" align="center">
     <div class="portrait">
-        <img src="img/Leosmile.png" height="125px" width="125px">
-        <h1>Engagez-moi, c’est sans engagement.</h1>
+        <div class="row">
+            <div class="col-sm-12">
+                <img src="img/Leosmile.png" height="145" width="145">
+                <h1>Engagez-moi, c’est sans engagement.</h1>
+            </div>
+        </div>
     </div>
-
-    <br>
-
     <div class="button-test">
-        <button id="try4" type="button" class="btn btn-info btn-lg">Bénéficiez d'un essai gratuit de 30 jours</button>
+        <button id="try4" type="button" class="btn btn-lg try">Bénéficier d'un essai gratuit de 30 jours</button>
         <p>À l'issue de cette période d'essai, vous déciderez de le garder ou non</p>
     </div>
-
-    <br>
-    <br>
-
 </div>
 
-<div class="footer">
-    <p>Leo est un assistant virtuel commercial développé avec rigueur et professionnalisme par la société Linkeleads</p>
-    <div class="asap">
-        <p><strong>N'hésitez pas à me contacter, je vous répondrai ASAP :</strong></p>
-    </div>
-    <div class="contact">
-        <div class="lin">
-            <a href="#"><img src="img/linkedin.png" height="40px" width="40px"></a>
+<div class="footer" align="center">
+    <div class="row" style="margin: 0">
+        <div class="col-sm-7 col-md-7 col-lg-5">
+            <p>Leo est un assistant virtuel commercial développé par la société Linkeleads.</p>
         </div>
-
-        <div class="gmail">
-            <a href="#"><img src="img/gmail.png" height="40px" width="40px"></a>
+        <div class="col-sm-5 col-md-5 col-lg-7 contact">
+            <a href="mailto:leo@linkeleads.com"><img src="img/gmail.png" height="22" width="22"></a>
+            <a href="https://www.linkedin.com/in/leo-linkeleads/"  target="_blank"><img src="img/linkedin.png" height="22" width="22"></a>
         </div>
     </div>
 </div>
 
-
-
-<!--
-<div id="form">
-    <form action="index.php" method="post">
-        <div class="form-group">
-            <label for="usr">Nom</label>
-            <input name="name" type="text" class="form-control" id="nameUsr">
-
-            <div id="errorName" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-
-            <label for="usr">Prénom</label>
-            <input name="firstname" type="text" class="form-control" id="firstnameUsr">
-
-            <div id="errorFirstname" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-
-            <label for="usr">Adresse e-mail</label>
-            <input name="email" type="email" class="form-control" id="emailUsr">
-
-            <div id="errorEmail" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-
-            <button id="submit" type="button" value="Envoyer" class="btn btn-default">Envoyer</button>
-    </form>
+<div class="footer-m" align="center">
+    <div class="col-sm-5 col-md-5 col-lg-2">
+        <a href="mailto:leo@linkeleads.com"><img src="img/gmail.png" height="22" width="22"></a>
+        <a href="https://www.linkedin.com/in/leo-linkeleads/"><img src="img/linkedin.png" height="22" width="22"></a>
+    </div>
+    <div class="row" style="margin: 0">
+        <div class="col-sm-7 col-md-7 col-lg-5">
+            <p>Leo est un assistant virtuel commercial développé par la société Linkeleads.</p>
+        </div>
+    </div>
 </div>
--->
-<script>
-    $("#submit").click(function () {
-        if ($("#nameUsr").val() == ""){
-            $("#errorName").show();
-        } else {
-            $("#errorName").hide();
-        }
-        if ($("#firstnameUsr").val() == ""){
-            $("#errorFirstname").show();
-        } else {
-            $("#errorFirstname").hide();
-        }
-        if ($("#emailUsr").val() == ""){
-            $("#errorEmail").show();
-        } else {
-            $("#errorEmail").hide();
-        }
-    });
-</script>
 
 
-
-<!-- Modal -->
-<!--
-<form action="index.php" method="post">
-    <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title">Inscription</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="usr">Nom</label>
-                        <input type="text" name="name" class="form-control" id="nameUsr" required>
-                        <div id="error1" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                        <label for="usr">Prénom</label>
-                        <input type="text" name="firstname" class="form-control" id="firstnameUsr" required>
-                        <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
-                        <label for="usr">Adresse e-mail</label>
-                        <input type="email" name="email" class="form-control" id="emailUsr" required>
-                        <div class="error" style="color:red;display:none">ce champs n'est pas correctement rempli</div>
+<div class="overlay">
+    <div id="form">
+        <button type="button" value="Close" id="close">x</button>
+        <h3 align="left">Inscription</h3>
+        <form action="index.php" method="post">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <label for="usr">Nom*</label>
+                        <input class="form-control input-lg" name="name" type="text" id="userName" required>
+                        <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
                     </div>
-                    <div class="modal-footer">
-                        <button type="submit" value="Envoyer" class="btn btn-default">Envoyer</button>
+                    <div class="col-xs-6">
+                        <label for="usr">Prénom*</label>
+                        <input class="form-control input-lg" name="firstname" type="text" id="userFirstname" required>
+                        <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
                     </div>
                 </div>
-            </div><!-- /.modal-content -->
-<!--</div><!-- /.modal-dialog -->
-<!--</div><!-- /.modal -->
-<!--</form>-->
+            </div>
 
-<script>
-    /*
-     $('#try').click(function(){
-     $('#form').modal({
-     show:true
-     })
-     });
-     $('#try2').click(function(){
-     $('#form').modal({
-     show:true
-     })
-     });
-     $('#try3').click(function(){
-     $('#form').modal({
-     show:true
-     })
-     });
-     $('#try4').click(function(){
-     $('#form').modal({
-     show:true
-     })
-     });
-     */
-</script>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="usr">Adresse mail*</label>
+                        <input class="form-control input-lg" name="email" type="email" id="userEmail" required>
+                        <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                    </div>
+                </div>
+            </div>
 
-<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="usr">Confirmez votre adresse mail*</label>
+                        <input class="form-control input-lg" name="confirmation" type="email" id="userEmail" required>
+                        <p id="error3" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                    </div>
+                </div>
+            </div>
 
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="usr">Téléphone</label>
+                        <input class="form-control input-lg" name="telephone" type="tel" id="userTelephone">
+                        <p id="error4" style="color: red;display: none">Veuillez renseigner ce champs correctement</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-8">
+                    <div id="valid">
+                        <p>Votre inscription est validée. <br> Merci et à bientôt ! </p>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div id="leopouce">
+                        <img src="img/Leobody.png" height="100" width="100">
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div id="existing">L'adresse mail que vous avez rentrée est déjà enregistrée</div>
+                </div>
+                <div class="col-xs-9">
+                    <div id="wrong">Veuillez reconfirmer votre adresse mail</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <input class="btn btn-default" type="submit" value="Bénéficier d'un essai gratuit de 30 jours" id="submit">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="overlay">
+        <div id="form-m">
+            <button type="button" value="Close" id="close-m">x</button>
+            <h3>Inscription</h3>
+            <form action="index.php" method="post">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input class="form-control input-lg" placeholder="Nom" name="name" type="text" id="userName">
+                            <p id="error1" style="color: red; display: none">Veuillez renseigner ce champs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input class="form-control input-lg" placeholder="Prénom" name="firstname" type="text" id="userFirstname">
+                            <p id="error2" style="color: red;display: none">Veuillez renseigner ce champs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input class="form-control input-lg" placeholder="Adresse mail" name="email" type="email" id="userEmail">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input class="form-control input-lg" placeholder="Confirmez votre adresse mail" name="confirmation" type="email" id="userConf">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <input class="form-control input-lg" placeholder="Téléphone" name="telephone" type="tel" id="userTelephone">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div id="valid-m">Votre inscription est validée. Merci, à bientôt !</div>
+                        <div id="existing-m">L'adresse mail renseignée est déjà enregistrée</div>
+                        <div id="wrong-m">Veuillez reconfirmer votre adresse mail</div>
+                        <div id="empty-m">Attention, un ou plusieurs champs sont vides</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <input class="btn btn-default" type="submit" value="Valider" id="submit-m">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="overlay-back"></div>
+        <div id="overlay"></div>
+
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/app.js"></script>
+
+        <?php
+        include ('validation.php');
+        ?>
 </body>
 </html>
+
