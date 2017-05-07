@@ -510,7 +510,7 @@ include ('inscription.php');
         <div id="overlay"></div>
 
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="app.js"></script>
+        <script src="assets/js/app.js"></script>
 
         <?php
         include ('validation.php');
