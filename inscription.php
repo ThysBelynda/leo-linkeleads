@@ -74,16 +74,22 @@ Ceci est un mail automatique. Merci de ne pas y répondre.
 
                 ';
 
-                mail($destinataire, $sujet, $message, $entete);
+                //mail($destinataire, $sujet, $message, $entete);
 
-                header('Location: index.php?valid=1');
+                //header('Location: index.php?valid=1');
+
+                //mail($destinataire, $sujet, $message, $entete);
+
+                header('Location: http://linkeleads.com/mailpre.php?email='.urlencode($email).'');
 
             } else {
                 header('Location: index.php?valid=2');
             }
+
         } else {
             header('Location: index.php?valid=3');
         }
+        
     } else {
         header('Location: index.php?valid=0');
     }
